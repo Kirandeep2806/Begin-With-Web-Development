@@ -1,0 +1,76 @@
+@mixin commonForTable($color) {
+    border: 1px solid $color;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#first-table {
+    @include commonForTable(#000);
+    width: 100%;
+    tr {
+        td, th {
+            @include commonForTable(#000);
+            height: 2em;
+        }
+    }
+}
+
+#second-table {
+    border: 10px outset rgb(230, 224, 224);
+    tr {
+        th, td {
+            border: 1px inset rgb(230, 224, 224);
+        }
+        th, td {
+            &:not(:nth-child(2)) {
+                width: 20%;
+                height: 2em;
+            }
+        }
+    }
+}
+
+#third-table {
+    $brown: #844404;
+    $orange: #f88204;
+    @include commonForTable(#fff);
+    width: 35%;
+    tr {
+        td {
+            &:first-child{
+                background-color: $orange;
+                color: $brown;
+                font-size: 2em;
+                text-align: center;
+                width: 20%;
+                font-weight: bold;
+            }
+            &:nth-child(2){
+                color: $orange;
+                background-color: $brown;
+                text-align: center;
+                font-size: 2em;
+                width: auto;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            &:last-child{
+                background-color: $orange;
+                width: 20%;
+            }
+        }
+        &:first-child{
+            td {
+                &:first-child {
+                    padding-top: 0.7em;
+                }
+            }
+        }
+        &:last-child{
+            td {
+                &:first-child {
+                    padding-bottom: 0.7em;
+                }
+            }
+        }
+    }
+}
