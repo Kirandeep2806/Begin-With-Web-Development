@@ -1,16 +1,20 @@
 $font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-@mixin set-no-user-select {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+@mixin set-no-user-select($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        @if $prefix == "webkit" {
+            -#{$prefix}-#{$property}: $value;
+            -#{$prefix}-touch-callout: $value;
+        }
+        @else {
+            -#{$prefix}-#{$property}: $value;
+        }
+    }
+    #{$property}: $value;
 }
 
 * {
-    @include set-no-user-select;
+    @include set-no-user-select(user-select, none, webkit moz ktml ms);
     font-family: $font;
 }
 
