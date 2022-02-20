@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto&display=swap');
+
+
+@mixin align-center-text {
+    text-align: center;
+}
+
+@mixin set-select-none($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        @if $prefix == "webkit" {
+            -#{$prefix}-#{$property}: $value;
+            -#{$prefix}-touch-callout: $value;
+        }
+        @else {
+            -#{$prefix}-#{$property}: $value;
+        }
+    }
+    #{$property}: $value;
+}
+
+* {
+    color: #fff;
+    @include set-select-none(user-select, none, webkit moz ktml ms);
+}
+
+body {
+    background: linear-gradient(to right, rgb(252, 251, 251), #f8f8f8);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container {
+    width: 90%;
+    background: linear-gradient(223deg, rgb(56, 54, 190) 0%, 10%, rgb(153, 15, 158) 20%, 80%, rgb(56, 54, 190) 90%);
+    border-radius: 10px;
+    padding: 1em 3em;
+    margin: 1em 2em;
+    box-shadow: .5em 1em 10px rgba(0, 0, 0, 0.5);
+    h1 {
+        @include align-center-text;
+        font-size: 2.6em;
+        font-family: 'Fredericka the Great', cursive;
+        text-decoration: underline dashed 5px;
+        text-underline-offset: 10px;
+    }
+    p {
+        font-size: 1.2em;
+        font-family: 'Roboto', sans-serif;
+        margin: 1em 0;
+    }
+}
