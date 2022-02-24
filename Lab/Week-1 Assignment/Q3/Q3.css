@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat&family=Roboto&family=Roboto+Slab:wght@300&display=swap");
 * {
   color: #fff;
   -webkit-user-select: none;
@@ -17,10 +17,10 @@ body {
 
 .container {
   width: 90%;
-  background: linear-gradient(223deg, #3836be 0%, 10%, #990f9e 20%, 80%, #3836be 90%);
+  background: linear-gradient(223deg, #6441a5 0%, 10%, #990f9e 20%, 80%, #6441a5 90%);
   border-radius: 10px;
   padding: 1em 3em;
-  margin: 1em 2em;
+  margin: 1em 0;
   box-shadow: 0.5em 1em 10px rgba(0, 0, 0, 0.5);
 }
 .container h1 {
@@ -34,4 +34,43 @@ body {
   font-size: 1.2em;
   font-family: "Roboto", sans-serif;
   margin: 1em 0;
+}
+.container .personal-info {
+  position: relative;
+  line-height: 10px;
+}
+.container .personal-info p {
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+}
+.container .personal-info .right-align {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.container .heading h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+}
+.container .heading p {
+  font-size: 1em;
+}
+.container .heading table {
+  border-collapse: collapse;
+  width: 78%;
+}
+.container .heading table tr td {
+  font-family: "Roboto", sans-serif;
+  border: 1px solid white;
+  padding: 0 0 0 4px;
+}
+.container .heading table tr th {
+  border: 1px solid white;
+  font-family: "Roboto Slab", serif;
+}
+.container .heading table tr:last-child td:last-child[colspan="2"] {
+  text-align: center;
+}
+.container .heading ul li {
+  font-family: "Roboto", sans-serif;
 }
