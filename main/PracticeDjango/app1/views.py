@@ -4,7 +4,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    mydata = {'name': 'Django', 'language': 'Python'}
+    return render(request, 'app1/home.html', {'mydata': mydata})
 
 def print_hello(request):
     return HttpResponse("Hello, world. You're at the polls index (print).")
