@@ -14,6 +14,15 @@
     <a href="{% url 'p2-url' %}">Page 2 - Link</a><br>
     <a href="{% url 'p3-url' %}">Page 3 - Link</a><br>
     <a href="{% url 'p4-url' mydata.uname %}">Page 4 - Link</a><br>
+    {% comment %}
+    What actually happens in this p4-url is,
+    Initially, when "index" fn from the  views.py is invoked, "mydata" context passes both name and uname.
+    The "uname" is passed again as context for "p4-url".
+    This 'p4-url' finds the match as the slug in the 4th url of urls.py
+    Now, in this 4th URL, the 'mydata.uname' is passed as parameter to views.p4 along with HttpRequest
+    It is called like views.p4(HttpRequest, userName='Patcha-Kiran-Deep')
+    So now we have a dedicated link/url for that username and can perform required operations via render in that p4 function -->
+    {% endcomment %}
 </body>
 <script src="{% static 'js/home.js' %}"></script>
 </html>
