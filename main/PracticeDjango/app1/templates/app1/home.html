@@ -9,7 +9,10 @@
     <title>Hello</title>
 </head>
 <body>
-    <h1>This is the home page, {{mydata.name}}</h1>
+    <h1>This is the home page, Used - {{mydata.name}}</h1>
+    <a href="{% url 'p1-url' %}">Page 1 - Link</a><br>
+    <a href="{% url 'p2-url' %}">Page 2 - Link</a><br>
+    <a href="{% url 'p3-url' %}">Page 3 - Link</a><br>
 </body>
 <script src="{% static 'js/home.js' %}"></script>
 </html>

@@ -19,6 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('print_hello/', views.print_hello, name='print_hello'),
-    path('print_hello_2/', views.print_hello_2, name='print_hello_2'),
+    path('p1/', views.p1, name='p1-url'),
+    path('p2/', views.p2, name='p2-url'),
+    path('p3/', views.p3, name='p3-url'),
 ]
