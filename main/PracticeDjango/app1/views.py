@@ -4,14 +4,19 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    mydata = {'name': 'Django', 'language': 'Python'}
+    mydata = {'name': 'Django', 'uname': 'Kiran-Deep-Patcha'}
     return render(request, 'app1/home.html', {'mydata': mydata})
 
 def p1(request):
-    return HttpResponse("Hello, world. You're at the polls index (print_1).")
+    return render(request, 'app1/page1.html')
 
 def p2(request):
-    return HttpResponse("Hello, world. You're at the polls index (print_2).")
+    return render(request, 'app1/page2.html')
 
 def p3(request):
-    return HttpResponse("Hello, world. You're at the polls index (print_3).")
+    return render(request, 'app1/page3.html')
+
+def p4(request, userName):
+    print(userName, type(userName))
+    mydata = {'value': userName+" is a good"}
+    return render(request, 'app1/page4.html', {'mydata': mydata})
