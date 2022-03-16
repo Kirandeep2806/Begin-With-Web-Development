@@ -7,6 +7,9 @@
     <title>Page 2</title>
 </head>
 <body>
-    <h2>I am the Page 2</h2>
+    <form action="{% url 'p3-url' %}" method="post">
+        {% csrf_token %}
+        Name : <input name="name" type="text" value="{{  }}">
+    </form>
 </body>
 </html>

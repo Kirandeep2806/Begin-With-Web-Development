@@ -13,7 +13,7 @@ def p1(request):
     data = user.place_set.all()
     return render(request, 'app1/page1.html', {'displayInPublic': data})
 
-def p2(request):
+def p2(request, passwordHashKey, id):
     return render(request, 'app1/page2.html')
 
 def p3(request):

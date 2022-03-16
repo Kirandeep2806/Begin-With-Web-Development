@@ -19,8 +19,6 @@
     {% endfor %}
     {% block eliminate %}
         <a href="{% url 'p1-url' %}">Only User published posts</a><br>
-        <a href="{% url 'p2-url' %}">Page 2 - Link</a><br>
-        <a href="{% url 'p3-url' %}">Page 3 - Link</a><br>
         {% comment %}
         What actually happens in this p4-url is,
         Initially, when "index" fn from the  views.py is invoked, "mydata" context passes both name and uname.
