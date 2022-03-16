@@ -22,5 +22,4 @@ urlpatterns = [
     path('p1/', views.p1, name='p1-url'),
     path('p2/', views.p2, name='p2-url'),
     path('p3/', views.p3, name='p3-url'),
-    path('p4/<slug:userName>', views.p4, name='p4-url'),
 ]
