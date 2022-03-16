@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -19,4 +19,8 @@ def p3(request):
 def p4(request, userName):
     print(userName, type(userName))
     mydata = {'value': userName+" is a good"}
+    print("User : ", User)
+    print("User.objects.all() : ", User.objects)
+    print(User.objects.all())
     return render(request, 'app1/page4.html', {'mydata': mydata})
+
