@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from .models import Place
 from django.http import Http404
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 
@@ -16,7 +17,10 @@ def p1(request):
 
 def p2(request, id):
     userPassword = User.objects.last().password
-    data = Place.objects.get(id=id)
+    try:
+        data = Place.objects.get(id=id)
+    except ObjectDoesNotExist:
+        raise Http404('Page not found')
     if userPassword == data.postedBy.password:
         return render(request, 'app1/page2.html', {'editData': data})
     raise Http404("Page not found")
