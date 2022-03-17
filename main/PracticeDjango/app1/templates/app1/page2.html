@@ -7,9 +7,12 @@
     <title>Page 2</title>
 </head>
 <body>
-    <form action="{% url 'p3-url' %}" method="post">
+    <form action="{% url 'p3-url' editData.id %}" method="post">
         {% csrf_token %}
-        Name : <input name="name" type="text" value="{{  }}">
+        Name : <input name="name" type="text" value="{{ editData.name }}"><br>
+        Location : <input name="location" type="text" value="{{ editData.location }}"><br>
+        Description : <input name="description" type="text" value="{{ editData.description }}"><br>
+        <input type="submit" value="SUBMIT">
     </form>
 </body>
 </html>

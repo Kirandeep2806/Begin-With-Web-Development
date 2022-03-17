@@ -20,6 +20,6 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('p1/', views.p1, name='p1-url'),
-    path('p2/<uuid:passwordHashKey>/<int:id>', views.p2, name='p2-url'),
-    path('p3/', views.p3, name='p3-url'),
+    path('p2/<int:id>/', views.p2, name='p2-url'),
+    path('p3/<int:id>', views.p3, name='p3-url'),
 ]

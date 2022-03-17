@@ -1,7 +1,8 @@
 {% extends "app1/home.html" %}
-{% block eliminate %}
-<a href="{% url 'p2-url' %}">Click here to edit</a>
+{% block addContent %}
+    <a href="{% url 'p2-url' eachData.id %}">Click here to edit</a>
 {% endblock %}
+{% block eliminate %}{% endblock %}
 {% block unlink-js %}{% endblock %}
 
 </body>
