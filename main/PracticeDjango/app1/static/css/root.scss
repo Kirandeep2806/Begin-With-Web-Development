@@ -48,7 +48,7 @@
 .title {
   width: 100%;
   float: left;
-  line-height: 46px;
+  line-height: 26px;
   font-size: 34px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -158,14 +158,14 @@
     border: none;
     background: transparent;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 300;
   }
 
   label {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 300;
   }
@@ -173,7 +173,7 @@
 
 .button button {
   font-family: 'Roboto', sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 300;
 }
@@ -216,7 +216,7 @@
   left: 0;
   z-index: 2;
   cursor: pointer;
-  line-height: 60px;
+  line-height: 20px;
 }
 
 .button {
@@ -226,24 +226,24 @@
 
     button {
       width: 100%;
-      line-height: 64px;
+      line-height: 24px;
       left: 0%;
       background-color: transparent;
       border: 3px solid rgba(0, 0, 0, 0.1);
       font-weight: 900;
-      font-size: 18px;
+      font-size: 12px;
       color: rgba(0, 0, 0, 0.2);
     }
   }
 
   button {
     width: 100%;
-    line-height: 64px;
+    line-height: 24px;
     left: 0%;
     background-color: transparent;
     border: 3px solid rgba(0, 0, 0, 0.1);
     font-weight: 900;
-    font-size: 18px;
+    font-size: 12px;
     color: rgba(0, 0, 0, 0.2);
   }
 
@@ -285,7 +285,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      line-height: 60px;
+      line-height: 20px;
       transform: scale(0) rotate(-45deg);
       -webkit-transform: scale(0) rotate(-45deg);
       -ms-transform: scale(0) rotate(-45deg);
@@ -313,7 +313,7 @@
   float: left;
   text-align: center;
   color: rgba(0, 0, 0, 0.4);
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .click-efect {
