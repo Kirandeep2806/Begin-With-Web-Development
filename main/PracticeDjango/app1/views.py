@@ -6,6 +6,9 @@ from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 
+def root(request):
+    return render(request, "app1/root.html")
+
 def index(request):
     data = Place.objects.all()
     return render(request, 'app1/home.html', {'displayInPublic': data})
