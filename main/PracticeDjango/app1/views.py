@@ -11,12 +11,12 @@ def index(request):
     return render(request, 'app1/home.html', {'displayInPublic': data})
 
 def p1(request):
-    user = User.objects.last()
+    user = User.objects.first()
     data = user.place_set.all()
     return render(request, 'app1/page1.html', {'displayInPublic': data})
 
 def p2(request, id):
-    userPassword = User.objects.last().password
+    userPassword = User.objects.first().password
     try:
         data = Place.objects.get(id=id)
     except ObjectDoesNotExist:
@@ -32,3 +32,5 @@ def p3(request, id):
     data.description = request.POST.get('description')
     data.save()
     return redirect('/')
+
+
