@@ -18,6 +18,9 @@
         <div class="form sign-in">
             <form action="/login/" method="post">
                 {% csrf_token %}
+                {% if message %}
+                    {{ message }}
+                {% endif %}
                 <h2>Welcome</h2>
                 <label>
                     <span>Email</span>

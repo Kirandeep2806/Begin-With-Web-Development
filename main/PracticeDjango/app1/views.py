@@ -1,3 +1,4 @@
+import time
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -5,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Place
 from django.http import Http404
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib import messages
 
 # Create your views here.
 
@@ -52,8 +54,11 @@ def UserLogin(request):
         user = authenticate(username=email, password=password)
         if user is not None:
             login(request, user)
+            messages.success(request, 'You are logged in')
             return redirect("/index")
-    return redirect("/")
+        print('Invalid credentials')
+        # time.sleep(2)
+    return render(request, "app1/root.html", {"message":"Invalid credentials"})
 
 def UserRegister(request):
     if request.POST and "register" in request.POST:
@@ -61,6 +66,12 @@ def UserRegister(request):
         lname = request.POST.get('lname')
         password = request.POST.get('pass')
         email = request.POST.get('email')
+
+        user = authenticate(username=email, password=password)
+        if user is not None:
+            print('User already exists')
+            # time.sleep(2)
+            return redirect("/login")
         newUser = User.objects.create_user(username=email, password=password)
         newUser.first_name = fname
         newUser.last_name = lname
