@@ -15,11 +15,13 @@ def root(request):
 def index(request):
     data = Place.objects.all()
     return render(request, 'app1/home.html', {'displayInPublic': data})
+    
 @login_required
 def p1(request):
     user = User.objects.first()
     data = user.place_set.all()
     return render(request, 'app1/page1.html', {'displayInPublic': data})
+    
 @login_required
 def p2(request, id):
     userPassword = User.objects.first().password
@@ -30,6 +32,7 @@ def p2(request, id):
     if userPassword == data.postedBy.password:
         return render(request, 'app1/page2.html', {'editData': data})
     raise Http404("Page not found")
+    
 @login_required
 def p3(request, id):
     data = Place.objects.get(id=id)
