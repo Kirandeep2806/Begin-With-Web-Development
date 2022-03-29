@@ -16,19 +16,19 @@
     <br>
     <div class="cont">
         <div class="form sign-in">
-            <form action="#" method="post" name="login">
+            <form action="/login/" method="post">
                 {% csrf_token %}
                 <h2>Welcome</h2>
                 <label>
-                    <span>Email</span>
-                    <input type="email" name="email"/>
+                    <span>Username</span>
+                    <input type="text" name="username"/>
                 </label>
                 <label>
                     <span>Password</span>
-                    <input type="password" name="pass"/>
+                    <input type="password" name="password"/>
                 </label>
                 <p class="forgot-pass">Forgot password?</p>
-                <button type="button" class="submit">Sign In</button>
+                <button type="submit" class="submit" name="login">Sign In</button>
             </form>
         </div>
         <div class="sub-cont">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="form sign-up">
-                <form action="#" method="post" name="register">
+                <form action="/register/" method="post">
                     {% csrf_token %}
                     <h2>Create your Account</h2>
                     <label>
@@ -66,7 +66,7 @@
                         <span>Password</span>
                         <input type="password" name="pass"/>
                     </label>
-                    <button type="button" class="submit">Sign Up</button>
+                    <button type="submit" class="submit" name="register">Sign Up</button>
                 </form>
             </div>
         </div>
