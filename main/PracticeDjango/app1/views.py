@@ -1,4 +1,3 @@
-import time
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -6,7 +5,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Place
 from django.http import Http404
 from django.core.exceptions import ObjectDoesNotExist
-from django.contrib import messages
 
 # Create your views here.
 
@@ -54,7 +52,7 @@ def UserLogin(request):
         user = authenticate(username=email, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, 'You are logged in')
+            print('You are logged in!!')
             return redirect("/index")
         print('Invalid credentials')
         # time.sleep(2)
