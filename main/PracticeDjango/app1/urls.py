@@ -25,4 +25,5 @@ urlpatterns = [
     path('p3/<int:id>', views.p3, name='p3-url'),
     path('login/', views.UserLogin, name='login-url'),
     path('register/', views.UserRegister, name='register-url'),
+    path('logout/', views.UserLogout, name='logout-url'),
 ]
