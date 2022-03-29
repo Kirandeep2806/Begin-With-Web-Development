@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render, HttpResponse
+from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -16,13 +16,13 @@ def index(request):
     data = Place.objects.all()
     return render(request, 'app1/home.html', {'displayInPublic': data})
 
-@login_required
+@login_required(login_url="/login/")
 def p1(request):
     user = User.objects.first()
     data = user.place_set.all()
     return render(request, 'app1/page1.html', {'displayInPublic': data})
 
-@login_required
+@login_required(login_url="/login/")
 def p2(request, id):
     userPassword = User.objects.first().password
     try:
@@ -33,7 +33,7 @@ def p2(request, id):
         return render(request, 'app1/page2.html', {'editData': data})
     raise Http404("Page not found")
 
-@login_required
+@login_required(login_url="/login/")
 def p3(request, id):
     data = Place.objects.get(id=id)
     data.name = request.POST.get('name')
@@ -47,9 +47,9 @@ def p3(request, id):
 
 def UserLogin(request):
     if request.POST and "login" in request.POST:
-        uname = request.POST.get('username')
+        email = request.POST.get('email')
         password = request.POST.get('password')
-        user = authenticate(username=uname, password=password)
+        user = authenticate(username=email, password=password)
         if user is not None:
             login(request, user)
             return redirect("/index")
@@ -57,7 +57,20 @@ def UserLogin(request):
 
 def UserRegister(request):
     if request.POST and "register" in request.POST:
-        return HttpResponse("Register")
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        password = request.POST.get('pass')
+        email = request.POST.get('email')
+        newUser = User.objects.create_user(username=email, password=password)
+        newUser.first_name = fname
+        newUser.last_name = lname
+        newUser.save()
+
+        user = authenticate(username=email, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("/index")
+
     return redirect("/")
 
 def UserLogout(request):
