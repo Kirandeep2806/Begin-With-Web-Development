@@ -1,0 +1,31 @@
+ul, ol {
+    text-align: left;
+  
+    &{
+      padding: {
+        bottom: 0;
+        left: 0;
+      }
+    }
+  } 
+
+
+.alert {
+    :not(&) {
+        padding: {
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+.gray {
+  @include prefix(filter, grayscale(50%), moz webkit);
+}

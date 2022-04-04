@@ -1,0 +1,59 @@
+frame[name="first"] {
+    background-color: yellow;
+}
+
+frame[name="second"] {
+    background-color: lightseagreen;
+}
+
+frame[name="first_row"] {
+    background-color: cyan;
+}
+
+/* a.css */
+
+a:visited {
+    color: green;
+}
+
+a:active {
+    color: magenta;
+}
+
+a:link {
+    color: black;
+}
+
+/* b.css */
+
+#b {
+    color: violet;
+}
+
+/* c.css */
+
+#c {
+    background-color: lightcoral;
+}
+
+/* d.css */
+
+#d {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+}
+
+/* e.css */
+
+#e {
+    font-size: 2em;
+    font-weight: bold;;
+    color: orange;
+    text-align: center;
+}
+
+/* f.css */
+
+ol {
+    list-style-type: upper-roman;
+}

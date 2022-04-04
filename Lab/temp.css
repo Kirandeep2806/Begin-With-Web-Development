@@ -1,0 +1,18 @@
+ul, ol {
+  text-align: left;
+}
+ul, ol {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+:not(.alert) {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.gray {
+  -moz-filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+}
