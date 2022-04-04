@@ -1,0 +1,45 @@
+* {
+  font-family: Calibri;
+}
+
+body {
+  background: #FFBFCD;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+select {
+  outline: none;
+  border: 2px inset;
+}
+select:not([name=course]) {
+  text-transform: uppercase;
+}
+
+input {
+  border: 2px inset;
+}
+input[type=text] {
+  outline: none;
+}
+input[type=reset], input[type=submit] {
+  width: fit-content;
+  font-size: 1em;
+  outline: none;
+}
+input[type=email] {
+  outline: none;
+}
+
+br {
+  display: block;
+  margin: 8px 0;
+  content: " ";
+}

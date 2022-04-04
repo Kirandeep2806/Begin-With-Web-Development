@@ -1,0 +1,53 @@
+@mixin upper {
+    text-transform: uppercase;
+}
+
+@mixin set-outline-none {
+    outline: none;
+}
+
+* {
+    font-family: Calibri;
+}
+
+body {
+    background: #FFBFCD;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+h2 {
+    @include upper;
+}
+
+select {
+    &:not([name="course"]) {
+        @include upper;
+    }
+    @include set-outline-none;
+    border: 2px inset;
+}
+
+input {
+    &[type=text] {
+        @include set-outline-none;
+    }
+    &[type=reset], &[type=submit] {
+        width: fit-content;
+        font-size: 1em;
+        @include set-outline-none;
+    }
+    &[type=email] {
+        @include set-outline-none;
+    }
+    border: 2px inset;
+}
+
+br {
+    display: block;
+    margin: 8px 0;
+    content: " ";
+}
