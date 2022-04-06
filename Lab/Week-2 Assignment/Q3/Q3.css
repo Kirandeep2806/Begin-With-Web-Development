@@ -1,0 +1,26 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: #F0F0F0;
+  width: 80%;
+}
+.container #main .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1em;
+}
+.container #main .row div input {
+  outline: none;
+  border: 1px inset;
+}
+.container #main .row div input[name=address-1] {
+  line-height: 5em;
+  width: 69%;
+}
