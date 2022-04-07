@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<employeeInfo>
+    <employee empno="8371941054">
+        <name>P. Kiran Deep</name>
+        <department>HR</department>
+        <telephone>040-291362</telephone>
+        <email>kirandeep10203040@gmail.com</email>
+    </employee>
+</employeeInfo>

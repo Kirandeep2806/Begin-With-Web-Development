@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stock SYSTEM "Q1.dtd">
+
+<stock>
+  <new-car>
+    <model>Fiat</model>
+    <price>12000</price>
+  </new-car>
+  <used-car>
+    <model>Fiat Bravo</model>
+    <price>4000</price>
+    <mileage>1000</mileage>
+    <condition>Good</condition>
+  </used-car>
+  <used-car>
+    <model>Ferrari</model>
+    <price>400000</price>
+    <mileage>100</mileage>
+  </used-car>
+</stock>
