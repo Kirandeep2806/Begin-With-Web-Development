@@ -55,3 +55,44 @@ body {
 .container #main .span-last-row {
   grid-column: span 2;
 }
+.container #main .btns {
+  width: 100%;
+  grid-column: 1/span 6;
+  position: relative;
+}
+.container #main .btns .set-left {
+  display: inline;
+  margin-left: 8%;
+}
+.container #main .btns .set-left span {
+  margin-left: 0.5em;
+}
+.container #main .btns .set-left input {
+  border: 2px outset #ccc;
+  cursor: pointer;
+}
+.container #main .btns .set-left input[type=button] {
+  width: 9%;
+}
+.container #main .btns .set-right {
+  position: absolute;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  left: 100%;
+  transform: translate(-30%, -50%);
+}
+.container #main .btns .set-right input {
+  border: 2px outset #ccc;
+  cursor: pointer;
+}
+.container #main .btns .set-right input[type=reset] {
+  width: 10%;
+}
+.container #main .btns .set-right input[type=submit] {
+  width: 20%;
+}
+.container #main .btns .set-right > * {
+  padding: 0.5em 0;
+}

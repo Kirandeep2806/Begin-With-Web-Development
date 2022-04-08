@@ -1,9 +1,13 @@
+@mixin set-width($width) {
+  width: $width;
+}
+
 @mixin set-outline-none {
   outline: none;
 }
 
-@mixin postion-center($top-value) {
-    position: relative;
+@mixin postion-center($pos, $top-value) {
+    position: $pos;
     top: $top-value;
     transform: translateY(-50%);
 }
@@ -40,25 +44,65 @@ body {
             @include set-outline-none;
             border: 1px inset #ccc;
             padding: 0.3em;
-            @include postion-center(50%);
+            @include postion-center(relative, 50%);
         }
         select {
             @include set-outline-none;
-            @include postion-center(50%);
+            @include postion-center(relative, 50%);
             border: 1px inset #ccc;
         }
         label {
             &:nth-child(2n+1) {
                 text-align: right;
                 margin-right: .5em;
-                @include postion-center(calc(100% - 1em));
+                @include postion-center(relative, calc(100% - 1em));
             }
             &[for="male"], &[for="female"] {
-                @include postion-center(15%);
+                @include postion-center(relative, 15%);
             }
         }
         .span-last-row {
             grid-column: span 2;
+        }
+        .btns {
+            width: 100%;
+            grid-column: 1 / span 6;
+            position: relative;
+            // Starting from the first column and spanning through the 6th column.
+            .set-left {
+                display: inline;
+                margin-left: 8%;
+                span {
+                    margin-left: .5em;
+                }
+                input {
+                    border: 2px outset #ccc;
+                    cursor: pointer;
+                    &[type="button"] {
+                        @include set-width(9%);
+                    }
+                }
+            }
+            .set-right {
+                position: absolute;
+                width: 100%;
+                @include postion-center(absolute, 100%);
+                left: 100%;
+                transform: translate(-30%, -50%);
+                input {
+                    border: 2px outset #ccc;
+                    cursor: pointer;
+                    &[type="reset"] {
+                        @include set-width(10%);
+                    }
+                    &[type="submit"] {
+                        @include set-width(20%);
+                    }
+                }
+                &>* {
+                    padding: .5em 0;
+                }
+            }
         }
     }
 }
