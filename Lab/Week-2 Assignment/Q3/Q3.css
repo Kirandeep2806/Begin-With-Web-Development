@@ -9,18 +9,49 @@ body {
 
 .container {
   background-color: #F0F0F0;
+  padding: 1em 2em 1em 0;
   width: 80%;
 }
-.container #main .row {
-  display: flex;
-  justify-content: space-between;
-  margin: 1em 1em;
+.container h2 {
+  text-align: center;
 }
-.container #main .row div input {
+.container #main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.container #main > * {
+  margin-bottom: 1em;
+}
+.container #main .place-right {
+  grid-column-start: 5;
+}
+.container #main input {
   outline: none;
-  border: 1px inset;
+  border: 1px inset #ccc;
+  padding: 0.3em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.container #main .row div input[name=address-1] {
-  line-height: 5em;
-  width: 69%;
+.container #main select {
+  outline: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px inset #ccc;
+}
+.container #main label:nth-child(2n+1) {
+  text-align: right;
+  margin-right: 0.5em;
+  position: relative;
+  top: calc(100% - 1em);
+  transform: translateY(-50%);
+}
+.container #main label[for=male], .container #main label[for=female] {
+  position: relative;
+  top: 15%;
+  transform: translateY(-50%);
+}
+.container #main .span-last-row {
+  grid-column: span 2;
 }

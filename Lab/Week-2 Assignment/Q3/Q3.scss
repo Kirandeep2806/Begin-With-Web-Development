@@ -1,3 +1,13 @@
+@mixin set-outline-none {
+  outline: none;
+}
+
+@mixin postion-center($top-value) {
+    position: relative;
+    top: $top-value;
+    transform: translateY(-50%);
+}
+
 $bg-color: #F0F0F0;
 $font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -12,23 +22,45 @@ body {
 
 .container {
     background-color: $bg-color;
+    padding: 1em 2em 1em 0;
     width: 80%;
+    h2 {
+        text-align: center;
+    }
     #main {
-        .row {
-            display: flex;
-            justify-content: space-between;
-            margin: 1em 1em;
-            div {
-                input {
-                    outline: none;
-                    border: 1px inset;
-                    &[name="address-1"] {
-                        line-height: 5em;
-                        width: 69%;
-                        // padding: 0 !important;
-                    }
-                }
+        &>* {
+            margin-bottom: 1em;
+        }
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        .place-right {
+            grid-column-start: 5;
+        }
+        input {
+            @include set-outline-none;
+            border: 1px inset #ccc;
+            padding: 0.3em;
+            @include postion-center(50%);
+        }
+        select {
+            @include set-outline-none;
+            @include postion-center(50%);
+            border: 1px inset #ccc;
+        }
+        label {
+            &:nth-child(2n+1) {
+                text-align: right;
+                margin-right: .5em;
+                @include postion-center(calc(100% - 1em));
             }
+            &[for="male"], &[for="female"] {
+                @include postion-center(15%);
+            }
+        }
+        .span-last-row {
+            grid-column: span 2;
         }
     }
 }
+
+// See "grid-column" property for more info
