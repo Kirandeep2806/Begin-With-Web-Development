@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+    <xs:element name="employeeinfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employeeelement">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="department" type="xs:string" />
+                            <xs:element name="telephone" type="xs:integer" />
+                            <xs:element name="email" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="employeeno" type="xs:integer" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
