@@ -13,3 +13,6 @@ body {
 body input {
   outline: none;
 }
+body input[type=button] {
+  cursor: pointer;
+}
