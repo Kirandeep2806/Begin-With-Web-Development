@@ -9,4 +9,17 @@
 <body>
     
 </body>
+<script>
+    let arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+    let obj = {};
+    let max = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        const element = arr1[i];
+        obj[element] = obj[element]+1 || 1;
+        if(obj[element] > max)
+            max = element;
+    }
+    document.write(`Given array : ${arr1} <br/> ${max} (${obj[max]} times)`);
+
+</script>
 </html>
