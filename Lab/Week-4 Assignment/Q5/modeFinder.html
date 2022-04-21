@@ -10,13 +10,15 @@
     
 </body>
 <script>
-    let arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+    let arr1 = prompt("Enter the array with space separated values :", "1 3 1 2 3 2 2").split(' ');
+    console.log(arr1);
     let obj = {};
     let max = 0;
     for (let i = 0; i < arr1.length; i++) {
         const element = arr1[i];
         obj[element] = obj[element]+1 || 1;
-        if(obj[element] > max)
+        console.log(max + " " + obj + " ", obj[element]);
+        if(!obj[max] || obj[element] > obj[max])
             max = element;
     }
     document.write(`Given array : ${arr1} <br/> ${max} (${obj[max]} times)`);
