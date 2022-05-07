@@ -13,37 +13,105 @@ body {
     .header {
         span {
             line-height: 2rem;
+
             img {
                 float: left;
                 height: 5rem;
                 margin-right: .2em;
             }
+
             &#sub-heading {
                 font-size: 1rem;
                 position: absolute;
             }
         }
+
         .search-box {
             position: relative;
             right: 1rem;
             bottom: 1rem;
             float: right;
+
             #search-box {
                 color: $COLOR-SECOND;
                 background-color: #E0E3E6;
                 border: none;
                 padding: .3rem .2rem;
-                min-width: 12rem;
+                width: 14rem;
+
                 &:focus {
                     outline: none;
                 }
             }
+
             #search-button {
                 font-weight: bold;
                 color: $COLOR-SECOND;
                 border: 1px outset #000;
                 background-color: #202228;
                 padding: .3rem .8rem;
+            }
+        }
+    }
+
+    .sub-choices {
+        z-index: 999;
+    }
+
+    nav {
+        margin-top: 3rem;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        font-size: 1.5rem;
+        background: #202020;
+        width: max-content;
+        clear: both;
+
+        ul {
+            li {
+                padding: .5rem;
+
+                .langs-nav {
+                    padding: .5rem;
+                    background: #33353D;
+                    font-size: 1rem;
+                    color: #F2FFFF;
+                    border-radius: .3rem;
+                }
+
+                background: #202020;
+                list-style: none;
+                position: relative;
+                display: inline-block;
+
+                ul {
+                    position: absolute;
+                    left: -2.2rem;
+                    top: 2.8rem;
+                    display: none;
+
+                    li {
+                        width: 200px;
+                        float: none;
+                        display: list-item;
+                    }
+                }
+
+                &:hover {
+                    &>ul {
+                        display: block;
+                    }
+                }
+            }
+
+            a {
+                font-size: 1rem;
+                text-decoration: none;
+                display: block;
+                color: #989eae;
+
+                &:hover {
+                    color: $COLOR-PRIMARY;
+                }
             }
         }
     }
