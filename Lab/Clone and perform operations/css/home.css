@@ -2,5 +2,41 @@
 body {
   background: #202228 url("../static/diagonal-stripes.png");
   color: #cccfd7;
-  font: 400 35px/47px "Inter", sans-serif;
+  font: 400 35px "Inter", sans-serif;
+}
+
+.container .header span {
+  line-height: 2rem;
+}
+.container .header span img {
+  float: left;
+  height: 5rem;
+  margin-right: 0.2em;
+}
+.container .header span#sub-heading {
+  font-size: 1rem;
+  position: absolute;
+}
+.container .header .search-box {
+  position: relative;
+  right: 1rem;
+  bottom: 1rem;
+  float: right;
+  color: #666c7f;
+  font-weight: 600;
+}
+.container .header .search-box #search-box {
+  background-color: #E0E3E6;
+  border: none;
+  padding: 0.3rem 0.2rem;
+  min-width: 12rem;
+}
+.container .header .search-box #search-box:focus {
+  outline: none;
+}
+.container .header .search-box #search-button {
+  color: inherit;
+  border: 1px solid #000;
+  background-color: #202228;
+  padding: 0.3rem 0.8rem;
 }
