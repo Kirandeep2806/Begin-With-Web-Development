@@ -28,9 +28,8 @@ body {
             right: 1rem;
             bottom: 1rem;
             float: right;
-            color: $COLOR-SECOND;
-            font-weight: 600;
             #search-box {
+                color: $COLOR-SECOND;
                 background-color: #E0E3E6;
                 border: none;
                 padding: .3rem .2rem;
@@ -40,8 +39,9 @@ body {
                 }
             }
             #search-button {
-                color: inherit;
-                border: 1px solid #000;
+                font-weight: bold;
+                color: $COLOR-SECOND;
+                border: 1px outset #000;
                 background-color: #202228;
                 padding: .3rem .8rem;
             }

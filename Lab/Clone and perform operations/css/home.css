@@ -22,10 +22,9 @@ body {
   right: 1rem;
   bottom: 1rem;
   float: right;
-  color: #666c7f;
-  font-weight: 600;
 }
 .container .header .search-box #search-box {
+  color: #666c7f;
   background-color: #E0E3E6;
   border: none;
   padding: 0.3rem 0.2rem;
@@ -35,8 +34,9 @@ body {
   outline: none;
 }
 .container .header .search-box #search-button {
-  color: inherit;
-  border: 1px solid #000;
+  font-weight: bold;
+  color: #666c7f;
+  border: 1px outset #000;
   background-color: #202228;
   padding: 0.3rem 0.8rem;
 }
