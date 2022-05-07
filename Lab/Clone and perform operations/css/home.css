@@ -43,8 +43,11 @@ body {
 .container .sub-choices {
   z-index: 999;
 }
+.container .sub-choices li a {
+  background: #666c7f;
+}
 .container nav {
-  margin-top: 3rem;
+  clear: left;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   font-size: 1.5rem;
   background: #202020;
@@ -60,10 +63,12 @@ body {
 }
 .container nav ul li .langs-nav {
   padding: 0.5rem;
-  background: #33353D;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #F2FFFF;
   border-radius: 0.3rem;
+}
+.container nav ul li .langs-nav.active {
+  background: #33353D;
 }
 .container nav ul li ul {
   position: absolute;
@@ -80,7 +85,7 @@ body {
   display: block;
 }
 .container nav ul a {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-decoration: none;
   display: block;
   color: #989eae;

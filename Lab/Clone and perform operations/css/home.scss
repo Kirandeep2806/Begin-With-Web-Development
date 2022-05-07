@@ -56,10 +56,15 @@ body {
 
     .sub-choices {
         z-index: 999;
+        li {
+            a {
+                background: #666c7f;
+            }
+        }
     }
 
     nav {
-        margin-top: 3rem;
+        clear: left;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         font-size: 1.5rem;
         background: #202020;
@@ -72,10 +77,12 @@ body {
 
                 .langs-nav {
                     padding: .5rem;
-                    background: #33353D;
-                    font-size: 1rem;
+                    font-size: .9rem;
                     color: #F2FFFF;
                     border-radius: .3rem;
+                    &.active {
+                        background: #33353D;
+                    }
                 }
 
                 background: #202020;
@@ -104,11 +111,10 @@ body {
             }
 
             a {
-                font-size: 1rem;
+                font-size: .8rem;
                 text-decoration: none;
                 display: block;
                 color: #989eae;
-
                 &:hover {
                     color: $COLOR-PRIMARY;
                 }
