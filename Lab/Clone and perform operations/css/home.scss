@@ -5,6 +5,7 @@ $COLOR-SECOND : #666c7f;
 $COLOR-THIRD : #34363B;
 $BG-1 : #202228;
 $BG-2 : #202020;
+$YELLOW : #FF7B09;
 
 body {
     position: absolute;
@@ -145,5 +146,28 @@ body {
                 color: #989eae;
             }
         }
+    }
+
+    .caption {
+        font-size: .8rem;
+        margin-top: -.8rem;
+        color: #fff;
+
+        p {
+            a {
+                &:first-child {
+                    color: rgb(196, 36, 148);
+                    text-decoration: none;
+                }
+
+                &:not(:first-child) {
+                    color: $YELLOW;
+                }
+            }
+        }
+
+        border: 1px solid $YELLOW;
+        background: linear-gradient(#272727, #070707);
+        text-align: center;
     }
 }

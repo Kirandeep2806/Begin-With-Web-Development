@@ -106,3 +106,18 @@ body {
   display: block;
   color: #989eae;
 }
+.container .caption {
+  font-size: 0.8rem;
+  margin-top: -0.8rem;
+  color: #fff;
+  border: 1px solid #FF7B09;
+  background: linear-gradient(#272727, #070707);
+  text-align: center;
+}
+.container .caption p a:first-child {
+  color: #c42494;
+  text-decoration: none;
+}
+.container .caption p a:not(:first-child) {
+  color: #FF7B09;
+}
