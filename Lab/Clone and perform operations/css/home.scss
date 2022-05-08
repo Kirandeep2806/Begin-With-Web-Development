@@ -170,4 +170,42 @@ body {
         background: linear-gradient(#272727, #070707);
         text-align: center;
     }
+
+    .display-two {
+        display: flex;
+
+        // justify-content: space-evenly;
+        .view-1 {
+            p {
+                &::after {
+                    content: "Sarkaru Vaari Paata (2022) Telugu Official Trailer – Mahesh Babu, Keerthy Suresh – Thaman S – Parasuram Petla";
+                }
+            }
+        }
+
+        .view-2 {
+            p {
+                &::after {
+                    content: "Ante Sundharaniki (2022) Telugu Teaser – Nani, Nazriya Fahadh, Vivek Sagar – Vivek Athreya";
+                }
+            }
+        }
+
+        * {
+            display: flex;
+            align-items: center;
+
+            p {
+                background: $BG-2;
+                font-size: .8rem;
+            }
+
+            img {
+                float: left;
+                width: 50px;
+                height: 50px;
+                margin: 0 .7rem;
+            }
+        }
+    }
 }
