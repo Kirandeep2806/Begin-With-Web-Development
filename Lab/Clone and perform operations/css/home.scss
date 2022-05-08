@@ -2,9 +2,12 @@
 
 $COLOR-PRIMARY : #cccfd7;
 $COLOR-SECOND : #666c7f;
+$COLOR-THIRD : #34363B;
+$BG-1 : #202228;
+$BG-2 : #202020;
 
 body {
-    background: #202228 url("../static/diagonal-stripes.png");
+    background: $BG-1 url("../static/diagonal-stripes.png");
     color: $COLOR-PRIMARY;
     font: 400 35px "Inter", sans-serif;
 }
@@ -48,7 +51,7 @@ body {
                 font-weight: bold;
                 color: $COLOR-SECOND;
                 border: 1px outset #000;
-                background-color: #202228;
+                background-color: $BG-1;
                 padding: .3rem .8rem;
             }
         }
@@ -56,56 +59,76 @@ body {
 
     .sub-choices {
         z-index: 999;
-        li {
-            a {
-                background: #666c7f;
-            }
-        }
     }
 
     nav {
-        clear: left;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         font-size: 1.5rem;
-        background: #202020;
+        background: $BG-2;
         width: max-content;
         clear: both;
+        border-radius: .4rem;
+        padding: 0 .8rem;
+
+        #navbar {
+            &>li {
+                &>a {
+                    &:hover {
+                        background-color: $COLOR-THIRD;
+                    }
+                }
+            }
+        }
 
         ul {
+            padding: 0 !important;
+
             li {
-                padding: .5rem;
+                padding: .5rem .2rem;
 
                 .langs-nav {
                     padding: .5rem;
                     font-size: .9rem;
                     color: #F2FFFF;
                     border-radius: .3rem;
+
                     &.active {
-                        background: #33353D;
+                        background: $COLOR-THIRD;
                     }
                 }
 
-                background: #202020;
+                background: $BG-2;
                 list-style: none;
                 position: relative;
                 display: inline-block;
 
                 ul {
                     position: absolute;
-                    left: -2.2rem;
-                    top: 2.8rem;
+                    top: 3.1rem;
                     display: none;
 
                     li {
                         width: 200px;
                         float: none;
                         display: list-item;
+                        padding-left: .5rem;
+
+                        &:hover>a {
+                            color: #fff;
+                            background: $COLOR-THIRD;
+                        }
                     }
                 }
 
                 &:hover {
                     &>ul {
                         display: block;
+
+                        li {
+                            &:hover {
+                                background-color: $COLOR-THIRD;
+                            }
+                        }
                     }
                 }
             }
@@ -115,9 +138,6 @@ body {
                 text-decoration: none;
                 display: block;
                 color: #989eae;
-                &:hover {
-                    color: $COLOR-PRIMARY;
-                }
             }
         }
     }

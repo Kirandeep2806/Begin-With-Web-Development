@@ -43,19 +43,23 @@ body {
 .container .sub-choices {
   z-index: 999;
 }
-.container .sub-choices li a {
-  background: #666c7f;
-}
 .container nav {
-  clear: left;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   font-size: 1.5rem;
   background: #202020;
   width: max-content;
   clear: both;
+  border-radius: 0.4rem;
+  padding: 0 0.8rem;
+}
+.container nav #navbar > li > a:hover {
+  background-color: #34363B;
+}
+.container nav ul {
+  padding: 0 !important;
 }
 .container nav ul li {
-  padding: 0.5rem;
+  padding: 0.5rem 0.2rem;
   background: #202020;
   list-style: none;
   position: relative;
@@ -68,28 +72,32 @@ body {
   border-radius: 0.3rem;
 }
 .container nav ul li .langs-nav.active {
-  background: #33353D;
+  background: #34363B;
 }
 .container nav ul li ul {
   position: absolute;
-  left: -2.2rem;
-  top: 2.8rem;
+  top: 3.1rem;
   display: none;
 }
 .container nav ul li ul li {
   width: 200px;
   float: none;
   display: list-item;
+  padding-left: 0.5rem;
+}
+.container nav ul li ul li:hover > a {
+  color: #fff;
+  background: #34363B;
 }
 .container nav ul li:hover > ul {
   display: block;
+}
+.container nav ul li:hover > ul li:hover {
+  background-color: #34363B;
 }
 .container nav ul a {
   font-size: 0.8rem;
   text-decoration: none;
   display: block;
   color: #989eae;
-}
-.container nav ul a:hover {
-  color: #cccfd7;
 }
