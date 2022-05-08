@@ -7,9 +7,14 @@ $BG-1 : #202228;
 $BG-2 : #202020;
 
 body {
+    position: absolute;
+    left: 50%;
+    top: 3rem;
+    transform: translateX(-50%);
     background: $BG-1 url("../static/diagonal-stripes.png");
     color: $COLOR-PRIMARY;
     font: 400 35px "Inter", sans-serif;
+    max-width: 962px;
 }
 
 .container {

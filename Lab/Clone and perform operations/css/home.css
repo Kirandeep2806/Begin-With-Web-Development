@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 body {
+  position: absolute;
+  left: 50%;
+  top: 3rem;
+  transform: translateX(-50%);
   background: #202228 url("../static/diagonal-stripes.png");
   color: #cccfd7;
   font: 400 35px "Inter", sans-serif;
+  max-width: 962px;
 }
 
 .container .header span {
