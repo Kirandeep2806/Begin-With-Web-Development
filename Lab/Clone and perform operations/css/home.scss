@@ -7,6 +7,10 @@ $BG-1 : #202228;
 $BG-2 : #202020;
 $YELLOW : #FF7B09;
 
+* {
+    user-select: none;
+}
+
 body {
     position: absolute;
     left: 50%;
