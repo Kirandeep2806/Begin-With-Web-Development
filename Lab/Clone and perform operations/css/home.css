@@ -125,6 +125,9 @@ body {
 .container .display-two {
   display: flex;
 }
+.container .display-two .view-1 {
+  margin-right: 1rem;
+}
 .container .display-two .view-1 p::after {
   content: "Sarkaru Vaari Paata (2022) Telugu Official Trailer – Mahesh Babu, Keerthy Suresh – Thaman S – Parasuram Petla";
 }
@@ -136,12 +139,19 @@ body {
   align-items: center;
 }
 .container .display-two * p {
-  background: #202020;
   font-size: 0.8rem;
+  padding-right: 0.1rem;
+  background: #111111;
+  border: 0.3rem solid #202228;
+  outline: 1px solid #444855;
+}
+.container .display-two * p:hover {
+  color: #FF7B09;
+  cursor: pointer;
 }
 .container .display-two * img {
   float: left;
-  width: 50px;
+  width: 70px;
   height: 50px;
-  margin: 0 0.7rem;
+  margin: 0 0.7rem 0 0;
 }
