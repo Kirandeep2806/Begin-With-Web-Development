@@ -1,0 +1,27 @@
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#display {
+    width: 100%;
+    border: 1px solid #000;
+    font-size: 3rem;
+}
+
+.container {
+    width: 50rem;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+button {
+    cursor: pointer;
+    /* height: 2rem; */
+    font-size: 3rem;
+}
