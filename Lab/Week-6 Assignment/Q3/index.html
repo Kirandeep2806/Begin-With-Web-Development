@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        * {
+            user-select: none;
+            cursor: pointer;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p">Mouse Over</p>
+            <p>Mouse Out</p>
+            <p>Mouse Move</p>
+            <p>Mouse Down</p>
+            <p>Mouse Up</p>
+            <p>Mouse Enter</p>
+            <p>Mouse Leave</p>
+            <p onclick="alert('Hi!, You clicked me')">Click</p>
+            <p ondblclick="alert('Hi!, You Double clicked me')">Dbl Click</p>
+            <p oncontextmenu="alert('Hi!, You Right clicked me')">Right Click</p>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
