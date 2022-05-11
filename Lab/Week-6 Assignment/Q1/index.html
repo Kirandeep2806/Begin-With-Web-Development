@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Form</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <form name="pizzaOrder">
+    <h1>Pizza Order Form</h1>
+    <table>
+      <tr>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+      <tr>
+        <td>Chicken Pizza</td>
+        <td>100</td>
+        <td>
+          <input type="number" name="cp" id="cp" onkeyup="calculateCost()" />
+        </td>
+      </tr>
+      <tr>
+        <td>Paneer Pizza</td>
+        <td>80</td>
+        <td>
+          <input type="number" name="pp" id="pp" onkeyup="calculateCost()" />
+        </td>
+      </tr>
+      <tr>
+        <td>Veg Pizza</td>
+        <td>70</td>
+        <td>
+          <input type="number" name="vp" id="vp" onkeyup="calculateCost()" />
+        </td>
+      </tr>
+    </table>
+    <br />
+    <button>totalcost</button>
+    <input type="text" name="tc" id="tc" disabled value="0" />
+    <br /><br />
+    <input type="submit" value="Confirm order" />
+    <input type="reset" value="Cancel Order" />
+  </form>
+</body>
+<script src="./index.js"></script>
+
+</html>
