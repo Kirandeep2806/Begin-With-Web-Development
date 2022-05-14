@@ -31,6 +31,10 @@
 .nav__listlogo .k-logo {
   transition: fill 200ms ease-in-out;
   font-size: 13px;
+  height: 27px;
+  width: 85px;
+  fill: #000;
+  cursor: pointer;
 }
 .nav__listlogo .k-logo:hover {
   fill: #D13639;
@@ -41,6 +45,7 @@
   position: relative;
   font-size: 13px;
   text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
 }
 .nav__list-item:not(:last-child)::after {
@@ -90,11 +95,57 @@
   position: absolute;
   right: 0;
   justify-content: flex-end;
+  align-items: center;
 }
-.nav__align-right li .lang {
+.nav__align-right__lang .lang-icon {
   height: 1.3rem;
   width: 1.3rem;
+  fill: #D13639;
   cursor: pointer;
+  margin-right: 1rem;
+}
+.nav__align-right__search {
+  display: flex;
+  width: 12rem;
+  background-color: #D13639;
+  padding: 0.5rem 0.6rem;
+  border-radius: 50px;
+  align-items: center;
+  margin-right: 1rem;
+}
+.nav__align-right__search .search-icon {
+  margin-right: 0.4rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  fill: #fff;
+  cursor: pointer;
+}
+.nav__align-right__search .search-box {
+  color: #fff;
+  border: none;
+  font-size: 0.7rem;
+  outline: none;
+  background-color: #D13639;
+  width: 100%;
+}
+.nav__align-right__search .search-box::placeholder {
+  color: #fff;
+  text-transform: uppercase;
+}
+.nav__align-right__signin {
+  background-color: #D13639;
+  padding: 0.7rem 0.6rem;
+  border-radius: 50px;
+  margin-right: 1rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.7rem;
+}
+.nav__align-right__signin a {
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.css.map */

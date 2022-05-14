@@ -1,4 +1,16 @@
 $PRIMARY-COLOR: #D13639;
+$PRIMARY-TEXT-COLOR: #fff;
+
+@mixin common-for-svg($color, $h, $w) {
+    height: $h;
+    width: $w;
+    fill: $color;
+    cursor: pointer;
+}
+
+@mixin set-letter-spacing {
+    letter-spacing: 1px;
+}
 
 @font-face {
     font-family: 'FF Mark';
@@ -13,7 +25,7 @@ $PRIMARY-COLOR: #D13639;
 
     &::selection {
         background: $PRIMARY-COLOR;
-        color: #fff;
+        color: $PRIMARY-TEXT-COLOR;
     }
 }
 
@@ -22,7 +34,6 @@ $PRIMARY-COLOR: #D13639;
     align-items: center;
     position: fixed;
     width: 100vw;
-    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     &__list {
         &logo {
@@ -31,6 +42,7 @@ $PRIMARY-COLOR: #D13639;
             .k-logo {
                 transition: fill 200ms ease-in-out;
                 font-size: 13px;
+                @include common-for-svg(#000, 27px, 85px);
 
                 &:hover {
                     fill: $PRIMARY-COLOR;
@@ -49,6 +61,7 @@ $PRIMARY-COLOR: #D13639;
             position: relative;
             font-size: 13px;
             text-transform: uppercase;
+            @include set-letter-spacing;
 
             &:not(:last-child) {
                 &::after {
@@ -71,8 +84,6 @@ $PRIMARY-COLOR: #D13639;
                 transition: text-decoration 200ms ease-in-out;
             }
 
-            // transition: color 200ms ease-in-out;
-
             &:hover ul,
             &:focus ul {
                 opacity: 1;
@@ -85,7 +96,7 @@ $PRIMARY-COLOR: #D13639;
                 width: 9rem;
                 position: absolute;
                 top: 200%;
-                background: #fff;
+                background: $PRIMARY-TEXT-COLOR;
                 border-radius: 0 0 5px 5px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
                 opacity: 0;
@@ -112,15 +123,59 @@ $PRIMARY-COLOR: #D13639;
         position: absolute;
         right: 0;
         justify-content: flex-end;
+        align-items: center;
 
-        li {
-            .lang {
-                height: 1.3rem;
-                width: 1.3rem;
-                cursor: pointer;
+        &__lang {
+            .lang-icon {
+                @include common-for-svg($PRIMARY-COLOR, 1.3rem, 1.3rem);
+                margin-right: 1rem;
+            }
+        }
+
+        &__search {
+            display: flex;
+            width: 12rem;
+            background-color: $PRIMARY-COLOR;
+            padding: .5rem .6rem;
+            border-radius: 50px;
+            align-items: center;
+            margin-right: 1rem;
+
+            .search-icon {
+                margin-right: .4rem;
+                @include common-for-svg(#fff, 1.3rem, 1.3rem);
             }
 
-            .search {}
+            .search-box {
+                color: $PRIMARY-TEXT-COLOR;
+                border: none;
+                font-size: .7rem;
+                outline: none;
+                background-color: $PRIMARY-COLOR;
+                width: 100%;
+
+                &::placeholder {
+                    color: $PRIMARY-TEXT-COLOR;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &__signin {
+            background-color: $PRIMARY-COLOR;
+            padding: .7rem .6rem;
+            border-radius: 50px;
+            margin-right: 1rem;
+            padding: .6rem 1rem;
+            font-size: .7rem;
+
+            a {
+                @include set-letter-spacing;
+                font-size: .8rem;
+                text-transform: uppercase;
+                color: $PRIMARY-TEXT-COLOR;
+                text-decoration: none;
+            }
         }
     }
 }
