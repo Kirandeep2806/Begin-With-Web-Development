@@ -1,5 +1,5 @@
 $PRIMARY-COLOR: #D13639;
-$PRIMARY-TEXT-COLOR: #fff;
+$PRIMARY-TEXT-COLOR: #f9f9f9;
 
 @mixin common-for-svg($color, $h, $w) {
     height: $h;
@@ -34,6 +34,8 @@ $PRIMARY-TEXT-COLOR: #fff;
     align-items: center;
     position: fixed;
     width: 100vw;
+    background-color: #111111;
+    color: $PRIMARY-TEXT-COLOR;
 
     &__list {
         &logo {
@@ -42,7 +44,7 @@ $PRIMARY-TEXT-COLOR: #fff;
             .k-logo {
                 transition: fill 200ms ease-in-out;
                 font-size: 13px;
-                @include common-for-svg(#000, 27px, 85px);
+                @include common-for-svg($PRIMARY-TEXT-COLOR, 27px, 85px);
 
                 &:hover {
                     fill: $PRIMARY-COLOR;
@@ -69,7 +71,7 @@ $PRIMARY-TEXT-COLOR: #fff;
                     position: absolute;
                     border-left: 0.35rem solid transparent;
                     border-right: 0.35rem solid transparent;
-                    border-top: 0.35rem solid $PRIMARY-COLOR;
+                    border-top: 0.35rem solid #7E7E7E;
                     top: 50%;
                     margin-left: 5px;
                     transform: translateY(-80%);
@@ -96,7 +98,7 @@ $PRIMARY-TEXT-COLOR: #fff;
                 width: 9rem;
                 position: absolute;
                 top: 200%;
-                background: $PRIMARY-TEXT-COLOR;
+                background: #222222;
                 border-radius: 0 0 5px 5px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
                 opacity: 0;
@@ -104,12 +106,16 @@ $PRIMARY-TEXT-COLOR: #fff;
                 transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 
                 li {
+                    margin: .5rem;
                     text-transform: capitalize;
                     list-style: none;
-                    padding: 1rem 1rem 0 .5rem;
+                    padding: .5rem;
+                    transition: background 200ms ease-in-out;
 
-                    &:last-child {
-                        padding-bottom: .9rem;
+                    &:hover {
+                        background: #333333;
+                        color: #C7C7C7;
+                        cursor: pointer;
                     }
                 }
             }
@@ -127,7 +133,7 @@ $PRIMARY-TEXT-COLOR: #fff;
 
         &__lang {
             .lang-icon {
-                @include common-for-svg($PRIMARY-COLOR, 1.3rem, 1.3rem);
+                @include common-for-svg($PRIMARY-TEXT-COLOR, 1.2rem, 1.2rem);
                 margin-right: 1rem;
             }
         }
@@ -135,7 +141,7 @@ $PRIMARY-TEXT-COLOR: #fff;
         &__search {
             display: flex;
             width: 12rem;
-            background-color: $PRIMARY-COLOR;
+            background-color: #2B2A29;
             padding: .5rem .3rem .5rem 1.2rem;
             border-radius: 50px;
             align-items: center;
@@ -151,11 +157,11 @@ $PRIMARY-TEXT-COLOR: #fff;
                 border: none;
                 font-size: .7rem;
                 outline: none;
-                background-color: $PRIMARY-COLOR;
+                background-color: #2B2A29;
                 width: 100%;
 
                 &::placeholder {
-                    color: $PRIMARY-TEXT-COLOR;
+                    color: #757575;
                     text-transform: uppercase;
                 }
             }
@@ -163,17 +169,17 @@ $PRIMARY-TEXT-COLOR: #fff;
 
         &__signin {
             background-color: $PRIMARY-COLOR;
-            color: $PRIMARY-TEXT-COLOR;
+            color: #111111;
             padding: .7rem .6rem;
             border-radius: 50px;
             margin-right: 1rem;
             padding: .6rem 1rem;
-            font-size: .7rem;
             cursor: pointer;
 
             a {
                 @include set-letter-spacing;
-                font-size: .8rem;
+                font-size: .7rem;
+                vertical-align: middle;
                 text-transform: uppercase;
                 color: inherit;
                 text-decoration: none;

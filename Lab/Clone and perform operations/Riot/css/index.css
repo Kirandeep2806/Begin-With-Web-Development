@@ -10,7 +10,7 @@
 }
 *::selection {
   background: #D13639;
-  color: #fff;
+  color: #f9f9f9;
 }
 
 .nav {
@@ -18,6 +18,8 @@
   align-items: center;
   position: fixed;
   width: 100vw;
+  background-color: #111111;
+  color: #f9f9f9;
 }
 .nav__list {
   display: flex;
@@ -33,7 +35,7 @@
   font-size: 13px;
   height: 27px;
   width: 85px;
-  fill: #000;
+  fill: #f9f9f9;
   cursor: pointer;
 }
 .nav__listlogo .k-logo:hover {
@@ -53,7 +55,7 @@
   position: absolute;
   border-left: 0.35rem solid transparent;
   border-right: 0.35rem solid transparent;
-  border-top: 0.35rem solid #D13639;
+  border-top: 0.35rem solid #7E7E7E;
   top: 50%;
   margin-left: 5px;
   transform: translateY(-80%);
@@ -73,7 +75,7 @@
   width: 9rem;
   position: absolute;
   top: 200%;
-  background: #fff;
+  background: #222222;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -81,12 +83,16 @@
   transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 }
 .nav__list-itemdrop li {
+  margin: 0.5rem;
   text-transform: capitalize;
   list-style: none;
-  padding: 1rem 1rem 0 0.5rem;
+  padding: 0.5rem;
+  transition: background 200ms ease-in-out;
 }
-.nav__list-itemdrop li:last-child {
-  padding-bottom: 0.9rem;
+.nav__list-itemdrop li:hover {
+  background: #333333;
+  color: #C7C7C7;
+  cursor: pointer;
 }
 .nav__align-right {
   list-style: none;
@@ -98,16 +104,16 @@
   align-items: center;
 }
 .nav__align-right__lang .lang-icon {
-  height: 1.3rem;
-  width: 1.3rem;
-  fill: #D13639;
+  height: 1.2rem;
+  width: 1.2rem;
+  fill: #f9f9f9;
   cursor: pointer;
   margin-right: 1rem;
 }
 .nav__align-right__search {
   display: flex;
   width: 12rem;
-  background-color: #D13639;
+  background-color: #2B2A29;
   padding: 0.5rem 0.3rem 0.5rem 1.2rem;
   border-radius: 50px;
   align-items: center;
@@ -121,36 +127,36 @@
   cursor: pointer;
 }
 .nav__align-right__search .search-box {
-  color: #fff;
+  color: #f9f9f9;
   border: none;
   font-size: 0.7rem;
   outline: none;
-  background-color: #D13639;
+  background-color: #2B2A29;
   width: 100%;
 }
 .nav__align-right__search .search-box::placeholder {
-  color: #fff;
+  color: #757575;
   text-transform: uppercase;
 }
 .nav__align-right__signin {
   background-color: #D13639;
-  color: #fff;
+  color: #111111;
   padding: 0.7rem 0.6rem;
   border-radius: 50px;
   margin-right: 1rem;
   padding: 0.6rem 1rem;
-  font-size: 0.7rem;
   cursor: pointer;
 }
 .nav__align-right__signin a {
   letter-spacing: 1px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  vertical-align: middle;
   text-transform: uppercase;
   color: inherit;
   text-decoration: none;
 }
 .nav__align-right__signin:hover {
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #D13639;
   transition: background-color 200ms ease-in-out;
 }
