@@ -108,7 +108,7 @@
   display: flex;
   width: 12rem;
   background-color: #D13639;
-  padding: 0.5rem 0.6rem;
+  padding: 0.5rem 0.3rem 0.5rem 1.2rem;
   border-radius: 50px;
   align-items: center;
   margin-right: 1rem;
@@ -134,18 +134,25 @@
 }
 .nav__align-right__signin {
   background-color: #D13639;
+  color: #fff;
   padding: 0.7rem 0.6rem;
   border-radius: 50px;
   margin-right: 1rem;
   padding: 0.6rem 1rem;
   font-size: 0.7rem;
+  cursor: pointer;
 }
 .nav__align-right__signin a {
   letter-spacing: 1px;
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #fff;
+  color: inherit;
   text-decoration: none;
+}
+.nav__align-right__signin:hover {
+  background-color: #fff;
+  color: #D13639;
+  transition: background-color 200ms ease-in-out;
 }
 
 /*# sourceMappingURL=index.css.map */

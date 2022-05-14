@@ -136,7 +136,7 @@ $PRIMARY-TEXT-COLOR: #fff;
             display: flex;
             width: 12rem;
             background-color: $PRIMARY-COLOR;
-            padding: .5rem .6rem;
+            padding: .5rem .3rem .5rem 1.2rem;
             border-radius: 50px;
             align-items: center;
             margin-right: 1rem;
@@ -163,18 +163,26 @@ $PRIMARY-TEXT-COLOR: #fff;
 
         &__signin {
             background-color: $PRIMARY-COLOR;
+            color: $PRIMARY-TEXT-COLOR;
             padding: .7rem .6rem;
             border-radius: 50px;
             margin-right: 1rem;
             padding: .6rem 1rem;
             font-size: .7rem;
+            cursor: pointer;
 
             a {
                 @include set-letter-spacing;
                 font-size: .8rem;
                 text-transform: uppercase;
-                color: $PRIMARY-TEXT-COLOR;
+                color: inherit;
                 text-decoration: none;
+            }
+
+            &:hover {
+                background-color: $PRIMARY-TEXT-COLOR;
+                color: $PRIMARY-COLOR;
+                transition: background-color 200ms ease-in-out;
             }
         }
     }
