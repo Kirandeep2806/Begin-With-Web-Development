@@ -1,14 +1,18 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 * {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
   position: absolute;
   left: 50%;
   top: 2rem;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: #202228 url("../static/diagonal-stripes.png");
   color: #cccfd7;
   font: 400 35px "Inter", sans-serif;
@@ -18,144 +22,185 @@ body {
 .container .header span {
   line-height: 2rem;
 }
+
 .container .header span img {
   float: left;
   height: 5rem;
-  margin-right: 0.2em;
+  margin-right: .2em;
 }
+
 .container .header span#sub-heading {
   font-size: 1rem;
   position: absolute;
 }
+
 .container .header .search-box {
   position: relative;
-  right: 0.3rem;
+  right: .3rem;
   bottom: 1rem;
   float: right;
 }
+
 .container .header .search-box #search-box {
   color: #666c7f;
   background-color: #E0E3E6;
   border: none;
-  padding: 0.3rem 0.2rem;
+  padding: .3rem .2rem;
   width: 14rem;
 }
+
 .container .header .search-box #search-box:focus {
   outline: none;
 }
+
 .container .header .search-box #search-button {
   font-weight: bold;
   color: #666c7f;
   border: 1px outset #000;
   background-color: #202228;
-  padding: 0.3rem 0.8rem;
+  padding: .3rem .8rem;
 }
+
 .container .sub-choices {
   z-index: 999;
 }
+
 .container nav {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   font-size: 1.5rem;
   background: #202020;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   clear: both;
-  border-radius: 0.4rem;
-  padding: 0 0.8rem;
+  border-radius: .4rem;
+  padding: 0 .8rem;
 }
+
 .container nav #navbar > li > a:hover {
   background-color: #34363B;
 }
+
 .container nav ul {
   padding: 0 !important;
 }
+
 .container nav ul li {
-  padding: 0.5rem 0.2rem;
+  padding: .5rem .2rem;
   background: #202020;
   list-style: none;
   position: relative;
   display: inline-block;
 }
+
 .container nav ul li .langs-nav {
-  padding: 0.5rem;
-  font-size: 0.9rem;
+  padding: .5rem;
+  font-size: .9rem;
   color: #F2FFFF;
-  border-radius: 0.3rem;
+  border-radius: .3rem;
 }
+
 .container nav ul li .langs-nav.active {
   background: #34363B;
 }
+
 .container nav ul li ul {
   position: absolute;
   top: 3.1rem;
   display: none;
 }
+
 .container nav ul li ul li {
   width: 200px;
   float: none;
   display: list-item;
-  padding-left: 0.5rem;
+  padding-left: .5rem;
 }
+
 .container nav ul li ul li:hover > a {
   color: #fff;
   background: #34363B;
 }
+
 .container nav ul li:hover > ul {
   display: block;
 }
+
 .container nav ul li:hover > ul li:hover {
   background-color: #34363B;
 }
+
 .container nav ul a {
-  font-size: 0.8rem;
+  font-size: .8rem;
   text-decoration: none;
   display: block;
   color: #989eae;
 }
+
 .container .caption {
-  font-size: 0.8rem;
-  margin-top: -0.8rem;
+  font-size: .8rem;
+  margin-top: -.8rem;
   color: #fff;
   border: 1px solid #FF7B09;
+  background: -webkit-gradient(linear, left top, left bottom, from(#272727), to(#070707));
   background: linear-gradient(#272727, #070707);
   text-align: center;
 }
+
 .container .caption p a:first-child {
   color: #c42494;
   text-decoration: none;
 }
+
 .container .caption p a:not(:first-child) {
   color: #FF7B09;
 }
+
 .container .display-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .container .display-two .view-1 {
   margin-right: 1rem;
 }
+
 .container .display-two .view-1 p::after {
   content: "Sarkaru Vaari Paata (2022) Telugu Official Trailer – Mahesh Babu, Keerthy Suresh – Thaman S – Parasuram Petla";
 }
+
 .container .display-two .view-2 p::after {
   content: "Ante Sundharaniki (2022) Telugu Teaser – Nani, Nazriya Fahadh, Vivek Sagar – Vivek Athreya";
 }
+
 .container .display-two * {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .container .display-two * p {
-  font-size: 0.8rem;
-  padding-right: 0.1rem;
+  font-size: .8rem;
+  padding-right: .1rem;
   background: #111111;
   border: 0.3rem solid #202228;
   outline: 1px solid #444855;
 }
+
 .container .display-two * p:hover {
   color: #FF7B09;
   cursor: pointer;
 }
+
 .container .display-two * img {
   float: left;
   width: 70px;
   height: 50px;
-  margin: 0 0.7rem 0 0;
+  margin: 0 .7rem 0 0;
 }
+/*# sourceMappingURL=home.css.map */

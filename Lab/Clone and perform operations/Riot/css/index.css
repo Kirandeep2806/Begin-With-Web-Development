@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "FF Mark";
+  src: url("../fonts/ff mark sv/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "FF Mark";
+}
+
+.nav {
+  position: fixed;
+  width: 100vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 1rem;
+}
+.nav__listlogo {
+  list-style: none;
+}
+.nav__listlogo .k-logo {
+  transition: fill 200ms ease-in-out;
+  font-size: 13px;
+}
+.nav__listlogo .k-logo:hover {
+  fill: #D13639;
+  cursor: pointer;
+}
+.nav__list-item {
+  list-style: none;
+  position: relative;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.nav__list-itemdrop {
+  position: absolute;
+  top: 100%;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.nav__list-itemdrop li {
+  text-transform: capitalize;
+  list-style: none;
+}
+
+/*# sourceMappingURL=index.css.map */
