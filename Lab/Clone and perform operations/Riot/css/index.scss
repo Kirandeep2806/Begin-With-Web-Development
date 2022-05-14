@@ -104,6 +104,7 @@ $PRIMARY-COLOR: #D13639;
             }
         }
     }
+
     &__align-right {
         list-style: none;
         display: flex;
@@ -111,10 +112,15 @@ $PRIMARY-COLOR: #D13639;
         position: absolute;
         right: 0;
         justify-content: flex-end;
-        .lang {
-            height: 1.3rem;
-            width: 1.3rem;
-            cursor: pointer;
+
+        li {
+            .lang {
+                height: 1.3rem;
+                width: 1.3rem;
+                cursor: pointer;
+            }
+
+            .search {}
         }
     }
 }

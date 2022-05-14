@@ -91,7 +91,7 @@
   right: 0;
   justify-content: flex-end;
 }
-.nav__align-right .lang {
+.nav__align-right li .lang {
   height: 1.3rem;
   width: 1.3rem;
   cursor: pointer;
