@@ -18,6 +18,8 @@ $PRIMARY-COLOR: #D13639;
 }
 
 .nav {
+    display: flex;
+    align-items: center;
     position: fixed;
     width: 100vw;
     // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -100,6 +102,16 @@ $PRIMARY-COLOR: #D13639;
                     }
                 }
             }
+        }
+    }
+    &__align-right {
+        list-style: none;
+        position: absolute;
+        right: 0;
+        .lang {
+            height: 1.3rem;
+            width: 1.3rem;
+            cursor: pointer;
         }
     }
 }

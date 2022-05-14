@@ -14,6 +14,8 @@
 }
 
 .nav {
+  display: flex;
+  align-items: center;
   position: fixed;
   width: 100vw;
 }
@@ -80,6 +82,16 @@
 }
 .nav__list-itemdrop li:last-child {
   padding-bottom: 0.9rem;
+}
+.nav__align-right {
+  list-style: none;
+  position: absolute;
+  right: 0;
+}
+.nav__align-right .lang {
+  height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
