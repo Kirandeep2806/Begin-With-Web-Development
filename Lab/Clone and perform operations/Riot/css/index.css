@@ -162,4 +162,9 @@
   transition: background-color 200ms ease-in-out;
 }
 
+.section-container__1 {
+  background: url("../static/annie-tibber-statue-day.png") no-repeat;
+  background-position: top center;
+}
+
 /*# sourceMappingURL=index.css.map */

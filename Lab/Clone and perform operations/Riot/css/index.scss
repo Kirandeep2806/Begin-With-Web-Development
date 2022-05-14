@@ -194,3 +194,10 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
         }
     }
 }
+
+.section-container {
+    &__1 {
+        background: url("../static/annie-tibber-statue-day.png") no-repeat;
+        background-position: top center;
+    }
+}
