@@ -17,7 +17,7 @@
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3.3rem;
   margin: 1rem;
 }
 .nav__listlogo {
@@ -37,16 +37,27 @@
   font-size: 13px;
   text-transform: uppercase;
 }
+.nav__list-item:hover ul, .nav__list-item:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
 .nav__list-itemdrop {
+  display: flex;
+  flex-direction: column;
+  width: 9rem;
   position: absolute;
   top: 100%;
   background: #fff;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 }
 .nav__list-itemdrop li {
   text-transform: capitalize;
   list-style: none;
+  padding: 0.5rem 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
