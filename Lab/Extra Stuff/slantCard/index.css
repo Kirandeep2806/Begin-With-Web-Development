@@ -8,13 +8,22 @@ section {
 }
 
 .content {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding: 1rem;
+    color: white;
     width: 50%;
     height: 100%;
     background: #000;
     box-sizing: border-box;
 }
 
-.imageBox {
+section:hover {
+    outline: 2px solid gray;
+    border-radius: 12px;
+}
+
+.makeSlant {
     height: 100%;
     box-sizing: border-box;
     border-left: 100px solid #000;
@@ -26,6 +35,9 @@ section {
     height: 100%;
     width: 50%;
     right: 0;
-    background: url('./marquee-raze-thumb.png') no-repeat;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: url('./annie.jpg') no-repeat;
+    background-size: cover;
     z-index: -1;
 }
