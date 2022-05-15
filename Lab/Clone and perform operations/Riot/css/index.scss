@@ -201,7 +201,86 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
     &__1 {
         img {
             width: 100%;
+            line-break: 0;
             filter: brightness(0.7);
+        }
+    }
+
+    &__2 {
+        margin-top: -5px;
+        background: #0A0A0A;
+        color: $PRIMARY-TEXT-COLOR;
+        display: grid;
+        grid-template-columns: 60% 40%;
+
+        &>p {
+            margin: 4rem;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        button {
+            display: flex;
+            justify-self: flex-end;
+            align-self: center;
+            width: fit-content;
+            height: fit-content;
+            padding: .4rem .9rem;
+            text-transform: uppercase;
+            margin-right: 4rem;
+            background-color: #222222;
+            outline: none;
+            border: none;
+            letter-spacing: 1px;
+            font-size: .75rem;
+            font-weight: bold;
+            color: $PRIMARY-TEXT-COLOR;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        &__span_2-5 {
+            &__card {
+                position: relative;
+                margin: 0 2rem 0 4rem;
+                cursor: pointer;
+
+                img {
+                    width: 90%;
+                    border-radius: 10px;
+                    height: 20.9rem;
+                    grid-row: span 2;
+                    // padding: .2rem;
+                    // &:hover {
+                    //     outline: 2px solid gray;
+                    //     color: black;
+                    // }
+                }
+
+                &__text {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-direction: column;
+                    padding: 0 0 1rem 1rem;
+
+                    h {
+                        &2 {
+                            font-size: 31px;
+                        }
+
+                        &3 {
+                            font-size: 15px;
+                            color: #5D5C5A;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
         }
     }
 }

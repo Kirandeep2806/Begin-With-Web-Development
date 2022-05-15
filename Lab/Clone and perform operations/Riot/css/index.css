@@ -166,7 +166,69 @@
 
 .section-container__1 img {
   width: 100%;
+  line-break: 0;
   filter: brightness(0.7);
+}
+.section-container__2 {
+  margin-top: -5px;
+  background: #0A0A0A;
+  color: #f9f9f9;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.section-container__2 > p {
+  margin: 4rem;
+  font-size: 48px;
+  font-weight: bold;
+}
+.section-container__2 button {
+  display: flex;
+  justify-self: flex-end;
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.4rem 0.9rem;
+  text-transform: uppercase;
+  margin-right: 4rem;
+  background-color: #222222;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #f9f9f9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section-container__2__span_2-5__card {
+  position: relative;
+  margin: 0 2rem 0 4rem;
+  cursor: pointer;
+}
+.section-container__2__span_2-5__card img {
+  width: 90%;
+  border-radius: 10px;
+  height: 20.9rem;
+  grid-row: span 2;
+}
+.section-container__2__span_2-5__card__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 0 0 1rem 1rem;
+}
+.section-container__2__span_2-5__card__text h2 {
+  font-size: 31px;
+}
+.section-container__2__span_2-5__card__text h3 {
+  font-size: 15px;
+  color: #5D5C5A;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=index.css.map */
