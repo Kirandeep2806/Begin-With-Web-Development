@@ -255,6 +255,16 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 }
 
                 &__text {
+                    #Layer_1 {
+                        position: absolute;
+                        top: 1rem;
+                        left: 1rem;
+                        @include common-for-svg($PRIMARY-TEXT-COLOR, 2rem, 2rem);
+                        border-radius: 50%;
+                        padding: .5rem;
+                        background-color: #141212;
+                    }
+
                     position: absolute;
                     top: 0;
                     left: 0;
