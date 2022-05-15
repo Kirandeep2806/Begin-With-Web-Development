@@ -36,6 +36,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
     width: 100vw;
     background-color: #111111;
     color: $PRIMARY-TEXT-COLOR;
+    z-index: 999;
 
     &__list {
         &logo {
@@ -198,7 +199,9 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
 .section-container {
     &__1 {
-        background: url("../static/annie-tibber-statue-day.png") no-repeat;
-        background-position: top center;
+        img {
+            width: 100%;
+            filter: brightness(0.7);
+        }
     }
 }

@@ -20,6 +20,7 @@
   width: 100vw;
   background-color: #111111;
   color: #f9f9f9;
+  z-index: 999;
 }
 .nav__list {
   display: flex;
@@ -163,9 +164,9 @@
   transition: background-color 200ms ease-in-out;
 }
 
-.section-container__1 {
-  background: url("../static/annie-tibber-statue-day.png") no-repeat;
-  background-position: top center;
+.section-container__1 img {
+  width: 100%;
+  filter: brightness(0.7);
 }
 
 /*# sourceMappingURL=index.css.map */
