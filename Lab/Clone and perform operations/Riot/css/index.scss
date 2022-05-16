@@ -13,6 +13,21 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 }
 
 @font-face {
+    font-family: 'tft';
+    src: url('../fonts/Beaufort\ W01\ Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "valorant";
+    src: url("../fonts/Valorant\ Font.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'lol';
+    src: url("../fonts/Friz\ Quadrata\ Regular.ttf") format("truetype");
+}
+
+@font-face {
     font-family: 'FF Mark';
     src: url("../fonts/ff\ mark\ sv/FontFont_FF.Mark.Pro.otf") format("opentype");
 }
@@ -442,6 +457,86 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                     @include set-svg-pos($PRIMARY-TEXT-COLOR);
                     @include imagePropsSection-2('../static/fortichexrg-4.png');
                 }
+            }
+        }
+    }
+
+    &__3 {
+        color: $PRIMARY-TEXT-COLOR;
+        background: #1F1F1F;
+
+        $TITLE-FONT-SIZE: 2rem;
+
+        @mixin gridProp($freq, $percentage) {
+            display: grid;
+            grid-template-columns: repeat($freq, $percentage);
+        }
+
+        &__cards {
+            div {
+                width: 98%;
+                div {
+                    &.text {
+                        margin-top: 2rem;
+                    }
+                    img {
+                        width: 100%;
+                        height: inherit;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        padding: 3px;
+                        object-fit: cover;
+
+                        &:hover {
+                            border: 2px solid gray;
+                            transform: scale(1.03);
+                            transition: transform 300ms ease-in-out;
+                        }
+                    }
+                    &.section-container__3__cards__img__container {
+                        height: 80%;
+                        width: 90%;
+                        // padding: 1rem 4rem 0 4rem;
+    
+                    }
+                }
+            }
+
+            &__row_1 {
+                @include gridProp(2, 1fr);
+
+                .lol {
+                    text-align: center;
+
+                    span {
+                        font-family: 'lol';
+                        font-size: $TITLE-FONT-SIZE;
+                    }
+
+                    .lower-capital {
+                        font-size: 1.3rem !important;
+                        margin: 0 4px;
+                    }
+                }
+
+                .valorant {
+                    p {
+                        text-align: center;
+                        font-size: $TITLE-FONT-SIZE;
+                        font-family: 'valorant';
+                    }
+                }
+
+                // .section-container__3__cards__img__container {
+                //     height: 80%;
+                //     width: 90%;
+                //     // padding: 1rem 4rem 0 4rem;
+
+                // }
+            }
+
+            &__row_2 {
+                @include gridProp(3, 1fr);
             }
         }
     }

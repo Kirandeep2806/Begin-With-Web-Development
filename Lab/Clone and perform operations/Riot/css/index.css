@@ -1,4 +1,16 @@
 @font-face {
+  font-family: "tft";
+  src: url("../fonts/Beaufort W01 Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "valorant";
+  src: url("../fonts/Valorant Font.ttf") format("truetype");
+}
+@font-face {
+  font-family: "lol";
+  src: url("../fonts/Friz Quadrata Regular.ttf") format("truetype");
+}
+@font-face {
   font-family: "FF Mark";
   src: url("../fonts/ff mark sv/FontFont_FF.Mark.Pro.otf") format("opentype");
 }
@@ -493,6 +505,57 @@
   padding: 0.5rem;
   border-radius: 50%;
   background-color: #141212;
+}
+.section-container__3 {
+  color: #f9f9f9;
+  background: #1F1F1F;
+}
+.section-container__3__cards div {
+  width: 98%;
+}
+.section-container__3__cards div div.text {
+  margin-top: 2rem;
+}
+.section-container__3__cards div div img {
+  width: 100%;
+  height: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 3px;
+  object-fit: cover;
+}
+.section-container__3__cards div div img:hover {
+  border: 2px solid gray;
+  transform: scale(1.03);
+  transition: transform 300ms ease-in-out;
+}
+.section-container__3__cards div div.section-container__3__cards__img__container {
+  height: 80%;
+  width: 90%;
+}
+.section-container__3__cards__row_1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-container__3__cards__row_1 .lol {
+  text-align: center;
+}
+.section-container__3__cards__row_1 .lol span {
+  font-family: "lol";
+  font-size: 2rem;
+}
+.section-container__3__cards__row_1 .lol .lower-capital {
+  font-size: 1.3rem !important;
+  margin: 0 4px;
+}
+.section-container__3__cards__row_1 .valorant p {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "valorant";
+}
+.section-container__3__cards__row_2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /*# sourceMappingURL=index.css.map */
