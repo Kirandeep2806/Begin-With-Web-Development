@@ -1,6 +1,5 @@
 $PRIMARY-COLOR: #D13639;
 $PRIMARY-TEXT-COLOR: #f9f9f9;
-$COL-4-CARD-PAD: .2rem;
 
 @mixin common-for-svg($color, $h, $w) {
     height: $h;
@@ -210,6 +209,7 @@ $COL-4-CARD-PAD: .2rem;
     &__2 {
         margin-top: -5px;
         background: #0A0A0A;
+        z-index: -999;
         color: $PRIMARY-TEXT-COLOR;
         display: grid;
         grid-template-columns: 65% 35%;
@@ -294,6 +294,66 @@ $COL-4-CARD-PAD: .2rem;
                             font-weight: bold;
                         }
                     }
+                }
+            }
+        }
+
+        &__col-4-cards {
+            $CARD-HEIGHT: 180px;
+            $SLANT-WIDTH: 50px;
+            $COL-4-CARD-PAD: 2px;
+
+            &>div {
+                position: relative;
+                height: $CARD-HEIGHT;
+                width: 480px;
+                background: #000;
+                display: flex;
+                background-color: transparent;
+                cursor: pointer;
+                padding: $COL-4-CARD-PAD;
+
+                &:hover {
+                    outline: 2px solid gray;
+                    border-radius: 12px;
+                }
+
+                &>div {
+                    &.section-container__2__col-4-cards-1__makeSlant {
+                        height: 100%;
+                        box-sizing: border-box;
+                        border-left: $SLANT-WIDTH solid #000;
+                        border-bottom: $CARD-HEIGHT solid transparent;
+                        margin-left: -3px;
+                        z-index: 999;
+                    }
+                }
+            }
+
+            &-1 {
+                &__content {
+                    border-top-left-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    padding: 1rem;
+                    color: white;
+                    width: 50%;
+                    height: 100%;
+                    background: #000;
+                    box-sizing: border-box;
+                }
+
+                &__mainImage-1 {
+                    position: absolute;
+                    margin-right: $COL-4-CARD-PAD;
+                    /* adding card-pad-section-2 */
+                    height: calc(100% - 2*$COL-4-CARD-PAD);
+                    /* subtract 2*(card-pad-section-2) from 100% */
+                    width: 50%;
+                    right: 0;
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                    background: url('../static/arcade-riven-vs-blitz-splash.jpg') no-repeat;
+                    background-size: cover;
                 }
             }
         }

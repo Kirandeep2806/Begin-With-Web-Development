@@ -172,6 +172,7 @@
 .section-container__2 {
   margin-top: -5px;
   background: #0A0A0A;
+  z-index: -999;
   color: #f9f9f9;
   display: grid;
   grid-template-columns: 65% 35%;
@@ -249,6 +250,51 @@
   font-size: 15px;
   color: #5D5C5A;
   font-weight: bold;
+}
+.section-container__2__col-4-cards > div {
+  position: relative;
+  height: 180px;
+  width: 480px;
+  background: #000;
+  display: flex;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 2px;
+}
+.section-container__2__col-4-cards > div:hover {
+  outline: 2px solid gray;
+  border-radius: 12px;
+}
+.section-container__2__col-4-cards > div > div.section-container__2__col-4-cards-1__makeSlant {
+  height: 100%;
+  box-sizing: border-box;
+  border-left: 50px solid #000;
+  border-bottom: 180px solid transparent;
+  margin-left: -3px;
+  z-index: 999;
+}
+.section-container__2__col-4-cards-1__content {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 1rem;
+  color: white;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  box-sizing: border-box;
+}
+.section-container__2__col-4-cards-1__mainImage-1 {
+  position: absolute;
+  margin-right: 2px;
+  /* adding card-pad-section-2 */
+  height: calc(100% - 4px);
+  /* subtract 2*(card-pad-section-2) from 100% */
+  width: 50%;
+  right: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: url("../static/arcade-riven-vs-blitz-splash.jpg") no-repeat;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=index.css.map */

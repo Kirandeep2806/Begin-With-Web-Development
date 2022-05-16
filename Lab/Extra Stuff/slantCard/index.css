@@ -1,12 +1,13 @@
 section {
     position: relative;
-    height: 280px;
-    width: 1200px;
+    height: 180px;
+    width: 400px;
     background: #000;
     display: flex;
     background-color: transparent;
     cursor: pointer;
     padding: .2rem; /* declare card-pad-section-2 */
+    z-index: 999;
 }
 
 .content {
@@ -28,8 +29,10 @@ section:hover {
 .makeSlant {
     height: 100%;
     box-sizing: border-box;
-    border-left: 100px solid #000;
-    border-bottom: 280px solid transparent;
+    border-left: 50px solid #000;
+    border-bottom: 180px solid transparent;
+    z-index: 999;
+    margin-left: -3px;
 }
 
 .mainImage {
@@ -42,5 +45,5 @@ section:hover {
     border-bottom-right-radius: 12px;
     background: url('./annie.jpg') no-repeat;
     background-size: cover;
-    z-index: -1;
+    /* z-index: 1; */
 }
