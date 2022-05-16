@@ -1,5 +1,6 @@
 $PRIMARY-COLOR: #D13639;
 $PRIMARY-TEXT-COLOR: #f9f9f9;
+$COL-4-CARD-PAD: .2rem;
 
 @mixin common-for-svg($color, $h, $w) {
     height: $h;
