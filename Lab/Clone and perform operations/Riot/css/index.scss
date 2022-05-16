@@ -307,9 +307,10 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
         &__col-4-cards {
             $CARD-HEIGHT: 120px;
-            $CARD-WIDTH: fit-content;
+            $CARD-WIDTH: 100%;
             $SLANT-WIDTH: 50px;
             $COL-4-CARD-PAD: 3px;
+            margin-right: 4rem;
 
             &>div {
                 line-height: 1.2;
@@ -318,11 +319,10 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 font-family: 'Mark Pro' !important;
                 font-size: 18px;
                 font-weight: 700;
-                margin-right: 4rem;
                 position: relative;
                 height: $CARD-HEIGHT;
                 width: $CARD-WIDTH;
-                background: #303030;
+                background: #2E2E2E;
                 display: flex;
                 background-color: transparent;
                 cursor: pointer;
@@ -334,60 +334,69 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 }
 
                 &>div {
-                    &.section-container__2__col-4-cards-1 {
-                        &__content {
-                            p {
-                                &:last-child {
-                                    user-select: none;
-                                    font-size: 1rem;
-                                    margin-top: .5rem;
-                                    color: #5E5D5B;
-                                    letter-spacing: .5px;
-                                    font-weight: 700;
-                                }
-                            }
-                        }
-
-                        &__makeSlant {
-                            height: 100%;
-                            box-sizing: border-box;
-                            border-left: $SLANT-WIDTH solid #303030;
-                            border-bottom: calc($CARD-HEIGHT - 2*$COL-4-CARD-PAD) solid transparent;
-                            margin-left: -3px;
-                            z-index: 999;
-                        }
+                    &:nth-child(2) {
+                        height: 100%;
+                        box-sizing: border-box;
+                        border-left: $SLANT-WIDTH solid #2E2E2E;
+                        border-bottom: calc($CARD-HEIGHT - 2*$COL-4-CARD-PAD) solid transparent;
+                        margin-left: -3px;
+                        z-index: 999;
                     }
                 }
             }
 
-            &-1 {
-                @mixin imagePropsSection-2($img-url) {
-                    position: absolute;
-                    margin-right: $COL-4-CARD-PAD;
-                    /* adding card-pad-section-2 */
-                    height: calc(100% - 2*$COL-4-CARD-PAD);
-                    /* subtract 2*(card-pad-section-2) from 100% */
-                    width: 40%;
-                    right: 0;
-                    border-top-right-radius: 12px;
-                    border-bottom-right-radius: 12px;
-                    background: url($img-url) no-repeat;
-                    background-size: cover;
-                }
+            @mixin imagePropsSection-2($img-url) {
+                position: absolute;
+                margin-right: $COL-4-CARD-PAD;
+                /* adding card-pad-section-2 */
+                height: calc(100% - 2*$COL-4-CARD-PAD);
+                /* subtract 2*(card-pad-section-2) from 100% */
+                width: 40%;
+                right: 0;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+                background: url($img-url) no-repeat;
+                background-size: cover;
+            }
 
+            @mixin contentPropsSection-2 {
                 &__content {
+
                     border-top-left-radius: 12px;
                     border-bottom-left-radius: 12px;
                     padding: 1rem;
                     color: white;
                     width: 60%;
                     height: 100%;
-                    background: #303030;
+                    background: #2E2E2E;
                     box-sizing: border-box;
+
+                    p {
+                        &:last-child {
+                            user-select: none;
+                            font-size: 1rem;
+                            margin-top: .5rem;
+                            color: #5E5D5B;
+                            letter-spacing: .5px;
+                            font-weight: 700;
+                        }
+                    }
                 }
+            }
+
+            &-1 {
+                @include contentPropsSection-2();
 
                 &__mainImage-1 {
                     @include imagePropsSection-2('../static/rg-fastco-award.png');
+                }
+            }
+
+            &-2 {
+                @include contentPropsSection-2();
+
+                &__mainImage-2 {
+                    @include imagePropsSection-2('../static/whm-riotnet-graphic.png');
                 }
             }
         }
