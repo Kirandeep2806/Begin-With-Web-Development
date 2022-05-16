@@ -218,6 +218,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
         color: $PRIMARY-TEXT-COLOR;
         display: grid;
         grid-template-columns: 57% 43%;
+        padding-bottom: 5.5rem;
 
         &>p {
             margin: 4rem;
