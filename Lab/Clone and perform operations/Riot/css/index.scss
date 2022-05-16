@@ -212,7 +212,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
         z-index: -999;
         color: $PRIMARY-TEXT-COLOR;
         display: grid;
-        grid-template-columns: 65% 35%;
+        grid-template-columns: 57% 43%;
 
         &>p {
             margin: 4rem;
@@ -242,13 +242,15 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
         &__span_2-5 {
             &__card {
+                $FIRST-CARD-WIDTH: 98.5%;
                 user-select: none;
                 position: relative;
-                margin: 0 2rem 0 4rem;
+                margin-left: 4rem;
                 cursor: pointer;
 
                 img {
-                    width: 87.5%;
+                    width: $FIRST-CARD-WIDTH;
+                    // width: 100%;
                     border-radius: 12px;
                     height: 18.9rem;
                     object-fit: cover;
@@ -270,7 +272,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                     top: 0;
                     left: 0;
                     height: 98.8%;
-                    width: 87.5%;
+                    width: $FIRST-CARD-WIDTH;
                     display: flex;
                     justify-content: flex-end;
                     flex-direction: column;
@@ -299,14 +301,16 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
         }
 
         &__col-4-cards {
-            $CARD-HEIGHT: 180px;
+            $CARD-HEIGHT: 100px;
+            $CARD-WIDTH: 420px;
             $SLANT-WIDTH: 50px;
             $COL-4-CARD-PAD: 2px;
 
             &>div {
+                margin-right: 4rem;
                 position: relative;
                 height: $CARD-HEIGHT;
-                width: 480px;
+                width: $CARD-WIDTH;
                 background: #000;
                 display: flex;
                 background-color: transparent;
