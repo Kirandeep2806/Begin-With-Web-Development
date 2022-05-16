@@ -2,6 +2,10 @@
   font-family: "FF Mark";
   src: url("../fonts/ff mark sv/FontFont_FF.Mark.Pro.otf") format("opentype");
 }
+@font-face {
+  font-family: "Mark Pro";
+  src: url("../fonts/Mark Pro/Mark Pro.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -252,25 +256,39 @@
   font-weight: bold;
 }
 .section-container__2__col-4-cards > div {
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  color: #f9f9f9;
+  font-family: "Mark Pro" !important;
+  font-size: 18px;
+  font-weight: 700;
   margin-right: 4rem;
   position: relative;
-  height: 100px;
-  width: 420px;
-  background: #000;
+  height: 120px;
+  width: fit-content;
+  background: #303030;
   display: flex;
   background-color: transparent;
   cursor: pointer;
-  padding: 2px;
+  padding: 3px;
 }
 .section-container__2__col-4-cards > div:hover {
   outline: 2px solid gray;
   border-radius: 12px;
 }
+.section-container__2__col-4-cards > div > div.section-container__2__col-4-cards-1__content p:last-child {
+  user-select: none;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #5E5D5B;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
 .section-container__2__col-4-cards > div > div.section-container__2__col-4-cards-1__makeSlant {
   height: 100%;
   box-sizing: border-box;
-  border-left: 50px solid #000;
-  border-bottom: 96px solid transparent;
+  border-left: 50px solid #303030;
+  border-bottom: 114px solid transparent;
   margin-left: -3px;
   z-index: 999;
 }
@@ -279,22 +297,22 @@
   border-bottom-left-radius: 12px;
   padding: 1rem;
   color: white;
-  width: 50%;
+  width: 60%;
   height: 100%;
-  background: #000;
+  background: #303030;
   box-sizing: border-box;
 }
 .section-container__2__col-4-cards-1__mainImage-1 {
   position: absolute;
-  margin-right: 2px;
+  margin-right: 3px;
   /* adding card-pad-section-2 */
-  height: calc(100% - 4px);
+  height: calc(100% - 6px);
   /* subtract 2*(card-pad-section-2) from 100% */
-  width: 50%;
+  width: 40%;
   right: 0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  background: url("../static/arcade-riven-vs-blitz-splash.jpg") no-repeat;
+  background: url("../static/rg-fastco-award.png") no-repeat;
   background-size: cover;
 }
 

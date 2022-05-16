@@ -17,6 +17,11 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
     src: url("../fonts/ff\ mark\ sv/FontFont_FF.Mark.Pro.otf") format("opentype");
 }
 
+@font-face {
+    font-family: 'Mark Pro';
+    src: url("../fonts/Mark\ Pro/Mark\ Pro.ttf") format("truetype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -301,17 +306,23 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
         }
 
         &__col-4-cards {
-            $CARD-HEIGHT: 100px;
-            $CARD-WIDTH: 420px;
+            $CARD-HEIGHT: 120px;
+            $CARD-WIDTH: fit-content;
             $SLANT-WIDTH: 50px;
-            $COL-4-CARD-PAD: 2px;
+            $COL-4-CARD-PAD: 3px;
 
             &>div {
+                line-height: 1.2;
+                letter-spacing: .5px;
+                color: $PRIMARY-TEXT-COLOR;
+                font-family: 'Mark Pro' !important;
+                font-size: 18px;
+                font-weight: 700;
                 margin-right: 4rem;
                 position: relative;
                 height: $CARD-HEIGHT;
                 width: $CARD-WIDTH;
-                background: #000;
+                background: #303030;
                 display: flex;
                 background-color: transparent;
                 cursor: pointer;
@@ -323,41 +334,60 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 }
 
                 &>div {
-                    &.section-container__2__col-4-cards-1__makeSlant {
-                        height: 100%;
-                        box-sizing: border-box;
-                        border-left: $SLANT-WIDTH solid #000;
-                        border-bottom: calc($CARD-HEIGHT - 2*$COL-4-CARD-PAD) solid transparent;
-                        margin-left: -3px;
-                        z-index: 999;
+                    &.section-container__2__col-4-cards-1 {
+                        &__content {
+                            p {
+                                &:last-child {
+                                    user-select: none;
+                                    font-size: 1rem;
+                                    margin-top: .5rem;
+                                    color: #5E5D5B;
+                                    letter-spacing: .5px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+
+                        &__makeSlant {
+                            height: 100%;
+                            box-sizing: border-box;
+                            border-left: $SLANT-WIDTH solid #303030;
+                            border-bottom: calc($CARD-HEIGHT - 2*$COL-4-CARD-PAD) solid transparent;
+                            margin-left: -3px;
+                            z-index: 999;
+                        }
                     }
                 }
             }
 
             &-1 {
-                &__content {
-                    border-top-left-radius: 12px;
-                    border-bottom-left-radius: 12px;
-                    padding: 1rem;
-                    color: white;
-                    width: 50%;
-                    height: 100%;
-                    background: #000;
-                    box-sizing: border-box;
-                }
-
-                &__mainImage-1 {
+                @mixin imagePropsSection-2($img-url) {
                     position: absolute;
                     margin-right: $COL-4-CARD-PAD;
                     /* adding card-pad-section-2 */
                     height: calc(100% - 2*$COL-4-CARD-PAD);
                     /* subtract 2*(card-pad-section-2) from 100% */
-                    width: 50%;
+                    width: 40%;
                     right: 0;
                     border-top-right-radius: 12px;
                     border-bottom-right-radius: 12px;
-                    background: url('../static/arcade-riven-vs-blitz-splash.jpg') no-repeat;
+                    background: url($img-url) no-repeat;
                     background-size: cover;
+                }
+
+                &__content {
+                    border-top-left-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    padding: 1rem;
+                    color: white;
+                    width: 60%;
+                    height: 100%;
+                    background: #303030;
+                    box-sizing: border-box;
+                }
+
+                &__mainImage-1 {
+                    @include imagePropsSection-2('../static/rg-fastco-award.png');
                 }
             }
         }
