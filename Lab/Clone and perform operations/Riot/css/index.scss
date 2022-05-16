@@ -13,6 +13,16 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 }
 
 @font-face {
+    font-family: 'lor';
+    src: url('../fonts/Prince\ of\ Darkness\ Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'wildrift';
+    src: url('../fonts/Story\ Brush\ Slanted.otf') format('opentype');
+}
+
+@font-face {
     font-family: 'tft';
     src: url('../fonts/Beaufort\ W01\ Regular.ttf') format('truetype');
 }
@@ -475,10 +485,12 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
         &__cards {
             div {
                 width: 98%;
+
                 div {
                     &.text {
-                        margin-top: 2rem;
+                        text-align: center;
                     }
+
                     img {
                         width: 100%;
                         height: inherit;
@@ -493,21 +505,20 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                             transition: transform 300ms ease-in-out;
                         }
                     }
+
                     &.section-container__3__cards__img__container {
                         height: 80%;
                         width: 90%;
-                        // padding: 1rem 4rem 0 4rem;
-    
+
                     }
                 }
             }
 
             &__row_1 {
+                margin-top: 3rem;
                 @include gridProp(2, 1fr);
 
                 .lol {
-                    text-align: center;
-
                     span {
                         font-family: 'lol';
                         font-size: $TITLE-FONT-SIZE;
@@ -521,22 +532,63 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
                 .valorant {
                     p {
-                        text-align: center;
                         font-size: $TITLE-FONT-SIZE;
                         font-family: 'valorant';
                     }
                 }
-
-                // .section-container__3__cards__img__container {
-                //     height: 80%;
-                //     width: 90%;
-                //     // padding: 1rem 4rem 0 4rem;
-
-                // }
             }
 
             &__row_2 {
+                margin-top: -5%;
                 @include gridProp(3, 1fr);
+                column-gap: 0;
+
+                .section-container__3__cards__img__container {
+                    display: flex;
+                    justify-self: center;
+                    margin-top: 10px;
+                }
+
+                .tft {
+                    span {
+                        font-family: 'tft';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+
+                        .big-t {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+
+                .lolw {
+                    span {
+                        font-family: 'lol';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+                    }
+
+                    .lower-capital {
+                        font-size: .9rem !important;
+                        margin: 0 4px;
+                    }
+
+                    .wildrift {
+                        font-family: 'wildrift' !important;
+                        font-size: $TITLE-FONT-SIZE;
+                    }
+                }
+
+                .lor {
+                    span {
+                        font-family: 'lol';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+                    }
+
+                    .runeterra {
+                        font-family: 'lor';
+                        letter-spacing: 1px;
+                        font-size: calc($TITLE-FONT-SIZE - .2rem);
+                    }
+                }
             }
         }
     }

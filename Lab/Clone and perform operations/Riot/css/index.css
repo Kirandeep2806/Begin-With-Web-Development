@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "lor";
+  src: url("../fonts/Prince of Darkness Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "wildrift";
+  src: url("../fonts/Story Brush Slanted.otf") format("opentype");
+}
+@font-face {
   font-family: "tft";
   src: url("../fonts/Beaufort W01 Regular.ttf") format("truetype");
 }
@@ -514,7 +522,7 @@
   width: 98%;
 }
 .section-container__3__cards div div.text {
-  margin-top: 2rem;
+  text-align: center;
 }
 .section-container__3__cards div div img {
   width: 100%;
@@ -534,11 +542,9 @@
   width: 90%;
 }
 .section-container__3__cards__row_1 {
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-.section-container__3__cards__row_1 .lol {
-  text-align: center;
 }
 .section-container__3__cards__row_1 .lol span {
   font-family: "lol";
@@ -549,13 +555,47 @@
   margin: 0 4px;
 }
 .section-container__3__cards__row_1 .valorant p {
-  text-align: center;
   font-size: 2rem;
   font-family: "valorant";
 }
 .section-container__3__cards__row_2 {
+  margin-top: -5%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 0;
+}
+.section-container__3__cards__row_2 .section-container__3__cards__img__container {
+  display: flex;
+  justify-self: center;
+  margin-top: 10px;
+}
+.section-container__3__cards__row_2 .tft span {
+  font-family: "tft";
+  font-size: 1.3rem;
+}
+.section-container__3__cards__row_2 .tft span .big-t {
+  font-size: 1.7rem;
+}
+.section-container__3__cards__row_2 .lolw span {
+  font-family: "lol";
+  font-size: 1.3rem;
+}
+.section-container__3__cards__row_2 .lolw .lower-capital {
+  font-size: 0.9rem !important;
+  margin: 0 4px;
+}
+.section-container__3__cards__row_2 .lolw .wildrift {
+  font-family: "wildrift" !important;
+  font-size: 2rem;
+}
+.section-container__3__cards__row_2 .lor span {
+  font-family: "lol";
+  font-size: 1.3rem;
+}
+.section-container__3__cards__row_2 .lor .runeterra {
+  font-family: "lor";
+  letter-spacing: 1px;
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=index.css.map */
