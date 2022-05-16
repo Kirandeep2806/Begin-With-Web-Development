@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+
 $PRIMARY-COLOR: #D13639;
 $PRIMARY-TEXT-COLOR: #f9f9f9;
 
@@ -10,6 +12,11 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
 @mixin set-letter-spacing {
     letter-spacing: 1px;
+}
+
+@font-face {
+    font-family: 'rk';
+    src: url('../fonts/NocturneSerif-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -488,7 +495,9 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
                 div {
                     &.text {
-                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
 
                     img {
@@ -541,7 +550,6 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
             &__row_2 {
                 margin-top: -5%;
                 @include gridProp(3, 1fr);
-                column-gap: 0;
 
                 .section-container__3__cards__img__container {
                     display: flex;
@@ -587,6 +595,43 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                         font-family: 'lor';
                         letter-spacing: 1px;
                         font-size: calc($TITLE-FONT-SIZE - .2rem);
+                    }
+                }
+            }
+
+            &__row_3 {
+                margin-top: -2%;
+                @include gridProp(3, 1fr);
+
+                .section-container__3__cards__img__container {
+                    display: flex;
+                    justify-self: center;
+                    margin-top: 10px;
+                }
+
+                .rk {
+                    span {
+                        font-family: 'rk';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+                    }
+
+                    .caps {
+                        font-size: calc($TITLE-FONT-SIZE);
+                    }
+                }
+
+                .hm {
+                    span {
+                        font-family: 'lol';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+                    }
+                }
+
+                .convrgence {
+                    span {
+                        font-family: 'Oswald', Arial, serif;
+                        font-size: calc($TITLE-FONT-SIZE - .5rem);
+                        letter-spacing: 1px;
                     }
                 }
             }

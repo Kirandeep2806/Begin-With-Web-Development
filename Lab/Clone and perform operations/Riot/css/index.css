@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@font-face {
+  font-family: "rk";
+  src: url("../fonts/NocturneSerif-Regular.ttf") format("truetype");
+}
 @font-face {
   font-family: "lor";
   src: url("../fonts/Prince of Darkness Regular.otf") format("opentype");
@@ -522,7 +527,9 @@
   width: 98%;
 }
 .section-container__3__cards div div.text {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section-container__3__cards div div img {
   width: 100%;
@@ -562,7 +569,6 @@
   margin-top: -5%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 0;
 }
 .section-container__3__cards__row_2 .section-container__3__cards__img__container {
   display: flex;
@@ -596,6 +602,32 @@
   font-family: "lor";
   letter-spacing: 1px;
   font-size: 1.8rem;
+}
+.section-container__3__cards__row_3 {
+  margin-top: -2%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.section-container__3__cards__row_3 .section-container__3__cards__img__container {
+  display: flex;
+  justify-self: center;
+  margin-top: 10px;
+}
+.section-container__3__cards__row_3 .rk span {
+  font-family: "rk";
+  font-size: 1.3rem;
+}
+.section-container__3__cards__row_3 .rk .caps {
+  font-size: 2rem;
+}
+.section-container__3__cards__row_3 .hm span {
+  font-family: "lol";
+  font-size: 1.3rem;
+}
+.section-container__3__cards__row_3 .convrgence span {
+  font-family: "Oswald", Arial, serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
 }
 
 /*# sourceMappingURL=index.css.map */
