@@ -323,7 +323,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                         height: 100%;
                         box-sizing: border-box;
                         border-left: $SLANT-WIDTH solid #000;
-                        border-bottom: $CARD-HEIGHT solid transparent;
+                        border-bottom: calc($CARD-HEIGHT - 2*$COL-4-CARD-PAD) solid transparent;
                         margin-left: -3px;
                         z-index: 999;
                     }

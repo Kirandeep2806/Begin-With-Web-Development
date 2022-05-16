@@ -269,7 +269,7 @@
   height: 100%;
   box-sizing: border-box;
   border-left: 50px solid #000;
-  border-bottom: 180px solid transparent;
+  border-bottom: 176px solid transparent;
   margin-left: -3px;
   z-index: 999;
 }
