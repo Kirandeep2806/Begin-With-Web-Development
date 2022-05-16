@@ -268,7 +268,7 @@
   position: relative;
   height: 120px;
   width: 100%;
-  background: #2E2E2E;
+  background: #2B2A29;
   display: flex;
   background-color: transparent;
   cursor: pointer;
@@ -284,7 +284,7 @@
 .section-container__2__col-4-cards > div > div:nth-child(2) {
   height: 100%;
   box-sizing: border-box;
-  border-left: 50px solid #2E2E2E;
+  border-left: 50px solid #2B2A29;
   border-bottom: 114px solid transparent;
   margin-left: -3px;
   z-index: 999;
@@ -299,7 +299,7 @@
   color: white;
   width: 60%;
   height: 100%;
-  background: #2E2E2E;
+  background: #2B2A29;
   box-sizing: border-box;
 }
 .section-container__2__col-4-cards-1__content p:first-child {
@@ -309,7 +309,7 @@
 }
 .section-container__2__col-4-cards-1__content p:last-child {
   user-select: none;
-  font-size: 1rem;
+  font-size: 0.88rem;
   margin-top: 0.5rem;
   color: #5E5D5B;
   letter-spacing: 0.5px;
@@ -328,6 +328,18 @@
   background: url("../static/rg-fastco-award.png") no-repeat;
   background-size: cover;
 }
+.section-container__2__col-4-cards-1__mainImage-1 svg {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  fill: #f9f9f9;
+  cursor: pointer;
+  right: 0;
+  margin: 0.4rem 0.4rem 0 0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #141212;
+}
 .section-container__2__col-4-cards-2 {
   user-select: none;
 }
@@ -338,7 +350,7 @@
   color: white;
   width: 60%;
   height: 100%;
-  background: #2E2E2E;
+  background: #2B2A29;
   box-sizing: border-box;
 }
 .section-container__2__col-4-cards-2__content p:first-child {
@@ -348,7 +360,7 @@
 }
 .section-container__2__col-4-cards-2__content p:last-child {
   user-select: none;
-  font-size: 1rem;
+  font-size: 0.88rem;
   margin-top: 0.5rem;
   color: #5E5D5B;
   letter-spacing: 0.5px;
@@ -367,6 +379,18 @@
   background: url("../static/whm-riotnet-graphic.png") no-repeat;
   background-size: cover;
 }
+.section-container__2__col-4-cards-2__mainImage-2 svg {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  fill: #f9f9f9;
+  cursor: pointer;
+  right: 0;
+  margin: 0.4rem 0.4rem 0 0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #141212;
+}
 .section-container__2__col-4-cards-3 {
   user-select: none;
 }
@@ -377,7 +401,7 @@
   color: white;
   width: 60%;
   height: 100%;
-  background: #2E2E2E;
+  background: #2B2A29;
   box-sizing: border-box;
 }
 .section-container__2__col-4-cards-3__content p:first-child {
@@ -387,7 +411,7 @@
 }
 .section-container__2__col-4-cards-3__content p:last-child {
   user-select: none;
-  font-size: 1rem;
+  font-size: 0.88rem;
   margin-top: 0.5rem;
   color: #5E5D5B;
   letter-spacing: 0.5px;
@@ -406,6 +430,18 @@
   background: url("../static/marquee-raze-thumb.png") no-repeat;
   background-size: cover;
 }
+.section-container__2__col-4-cards-3__mainImage-3 svg {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  fill: #FF4654;
+  cursor: pointer;
+  right: 0;
+  margin: 0.4rem 0.4rem 0 0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #141212;
+}
 .section-container__2__col-4-cards-4 {
   user-select: none;
 }
@@ -416,7 +452,7 @@
   color: white;
   width: 60%;
   height: 100%;
-  background: #2E2E2E;
+  background: #2B2A29;
   box-sizing: border-box;
 }
 .section-container__2__col-4-cards-4__content p:first-child {
@@ -426,7 +462,7 @@
 }
 .section-container__2__col-4-cards-4__content p:last-child {
   user-select: none;
-  font-size: 1rem;
+  font-size: 0.88rem;
   margin-top: 0.5rem;
   color: #5E5D5B;
   letter-spacing: 0.5px;
@@ -444,6 +480,18 @@
   border-bottom-right-radius: 12px;
   background: url("../static/fortichexrg-4.png") no-repeat;
   background-size: cover;
+}
+.section-container__2__col-4-cards-4__mainImage-4 svg {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  fill: #f9f9f9;
+  cursor: pointer;
+  right: 0;
+  margin: 0.4rem 0.4rem 0 0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #141212;
 }
 
 /*# sourceMappingURL=index.css.map */

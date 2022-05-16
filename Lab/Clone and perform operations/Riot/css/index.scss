@@ -322,7 +322,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 position: relative;
                 height: $CARD-HEIGHT;
                 width: $CARD-WIDTH;
-                background: #2E2E2E;
+                background: #2B2A29;
                 display: flex;
                 background-color: transparent;
                 cursor: pointer;
@@ -341,7 +341,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                     &:nth-child(2) {
                         height: 100%;
                         box-sizing: border-box;
-                        border-left: $SLANT-WIDTH solid #2E2E2E;
+                        border-left: $SLANT-WIDTH solid #2B2A29;
                         border-bottom: calc($CARD-HEIGHT - 2*$COL-4-CARD-PAD) solid transparent;
                         margin-left: -3px;
                         z-index: 999;
@@ -373,7 +373,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                     color: white;
                     width: 60%;
                     height: 100%;
-                    background: #2E2E2E;
+                    background: #2B2A29;
                     box-sizing: border-box;
 
                     p {
@@ -385,7 +385,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
                         &:last-child {
                             user-select: none;
-                            font-size: 1rem;
+                            font-size: .88rem;
                             margin-top: .5rem;
                             color: #5E5D5B;
                             letter-spacing: .5px;
@@ -395,10 +395,23 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 }
             }
 
+            @mixin set-svg-pos($set-color) {
+                svg {
+                    position: absolute;
+                    @include common-for-svg($set-color, 2rem, 2rem);
+                    right: 0;
+                    margin: .4rem .4rem 0 0;
+                    padding: .5rem;
+                    border-radius: 50%;
+                    background-color: #141212;
+                }
+            }
+
             &-1 {
                 @include contentPropsSection-2();
 
                 &__mainImage-1 {
+                    @include set-svg-pos($PRIMARY-TEXT-COLOR);
                     @include imagePropsSection-2('../static/rg-fastco-award.png');
                 }
             }
@@ -407,6 +420,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 @include contentPropsSection-2();
 
                 &__mainImage-2 {
+                    @include set-svg-pos($PRIMARY-TEXT-COLOR);
                     @include imagePropsSection-2('../static/whm-riotnet-graphic.png');
                 }
             }
@@ -415,6 +429,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 @include contentPropsSection-2();
 
                 &__mainImage-3 {
+                    @include set-svg-pos(#FF4654);
                     @include imagePropsSection-2('../static/marquee-raze-thumb.png');
                 }
             }
@@ -423,6 +438,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 @include contentPropsSection-2();
 
                 &__mainImage-4 {
+                    @include set-svg-pos($PRIMARY-TEXT-COLOR);
                     @include imagePropsSection-2('../static/fortichexrg-4.png');
                 }
             }
