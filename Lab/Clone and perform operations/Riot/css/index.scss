@@ -333,6 +333,10 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                     border-radius: 12px;
                 }
 
+                &:not(:first-child) {
+                    margin-top: .4rem;
+                }
+
                 &>div {
                     &:nth-child(2) {
                         height: 100%;
@@ -360,11 +364,12 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
             }
 
             @mixin contentPropsSection-2 {
-                &__content {
+                user-select: none;
 
+                &__content {
                     border-top-left-radius: 12px;
                     border-bottom-left-radius: 12px;
-                    padding: 1rem;
+                    padding: 1.5rem 0 0 1.5rem;
                     color: white;
                     width: 60%;
                     height: 100%;
@@ -372,6 +377,12 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                     box-sizing: border-box;
 
                     p {
+                        &:first-child {
+                            height: 40px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
                         &:last-child {
                             user-select: none;
                             font-size: 1rem;
@@ -397,6 +408,22 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
                 &__mainImage-2 {
                     @include imagePropsSection-2('../static/whm-riotnet-graphic.png');
+                }
+            }
+
+            &-3 {
+                @include contentPropsSection-2();
+
+                &__mainImage-3 {
+                    @include imagePropsSection-2('../static/marquee-raze-thumb.png');
+                }
+            }
+
+            &-4 {
+                @include contentPropsSection-2();
+
+                &__mainImage-4 {
+                    @include imagePropsSection-2('../static/fortichexrg-4.png');
                 }
             }
         }
