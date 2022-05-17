@@ -157,6 +157,7 @@ html {
   border-radius: 50px;
   align-items: center;
   margin-right: 1rem;
+  z-index: 9999;
 }
 .nav__align-right__search .search-icon {
   margin-right: 0.4rem;
@@ -321,7 +322,7 @@ html {
   border-left: 50px solid #2B2A29;
   border-bottom: 114px solid transparent;
   margin-left: -3px;
-  z-index: 999;
+  z-index: 99;
 }
 .section-container__2__col-4-cards-1 {
   user-select: none;
