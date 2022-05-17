@@ -34,10 +34,22 @@
 .slantCard_2 {
   width: inherit;
   height: inherit;
-  background: #1E1E1E;
   clip-path: polygon(99% 0%, 100% 0%, 85% 100%, 84% 100%);
   shape-outside: polygon(99% 0%, 100% 0%, 85% 100%, 84% 100%);
   float: right;
+}
+
+.imageSlant {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translateX(-40%);
+  width: inherit;
+  height: inherit;
+  clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 25% 100%);
+  background: url("./annie.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*# sourceMappingURL=index.css.map */
