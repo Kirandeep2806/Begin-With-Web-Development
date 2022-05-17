@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic);
+@font-face {
+  font-family: "son";
+  src: url("../fonts/FRGROT.TTF") format("truetype");
+}
 @font-face {
   font-family: "rk";
   src: url("../fonts/NocturneSerif-Regular.ttf") format("truetype");
@@ -523,6 +528,27 @@
   color: #f9f9f9;
   background: #1F1F1F;
 }
+.section-container__3 .our-games {
+  font-size: 4rem;
+  padding: 6rem 0 2rem 4rem;
+  font-weight: bold;
+  position: relative;
+  width: fit-content;
+}
+.section-container__3 .our-games::after {
+  position: absolute;
+  content: "";
+  height: 0.4rem;
+  bottom: 2rem;
+  left: 4rem;
+  right: 0;
+  width: 0;
+  background-color: #D13639;
+}
+.section-container__3 .our-games:hover::after {
+  width: 85%;
+  transition: width 500ms ease-in;
+}
 .section-container__3__cards div {
   width: 98%;
 }
@@ -628,6 +654,28 @@
   font-family: "Oswald", Arial, serif;
   font-size: 1.5rem;
   letter-spacing: 1px;
+}
+.section-container__3__cards__row_4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: -2%;
+}
+.section-container__3__cards__row_4 .son span {
+  font-family: "son", Arial, serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.section-container__3__cards__row_4 .son .caps {
+  font-size: 2.3rem;
+}
+.section-container__3__cards__row_4 .son .lower-capital {
+  font-size: 0.9rem !important;
+  margin: 0 7px;
+}
+.section-container__3__cards__row_4 .section-container__3__cards__img__container {
+  display: flex;
+  justify-self: center;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

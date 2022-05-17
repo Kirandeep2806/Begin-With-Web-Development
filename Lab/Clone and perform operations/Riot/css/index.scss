@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic);
 
 $PRIMARY-COLOR: #D13639;
 $PRIMARY-TEXT-COLOR: #f9f9f9;
@@ -12,6 +13,11 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
 @mixin set-letter-spacing {
     letter-spacing: 1px;
+}
+
+@font-face {
+    font-family: 'son';
+    src: url('../fonts/FRGROT.TTF') format('truetype');
 }
 
 @font-face {
@@ -479,6 +485,32 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
     }
 
     &__3 {
+        .our-games {
+            font-size: 4rem;
+            padding: 6rem 0 2rem 4rem;
+            font-weight: bold;
+            position: relative;
+            width: fit-content;
+
+            &::after {
+                position: absolute;
+                content: '';
+                height: .4rem;
+                bottom: 2rem;
+                left: 4rem;
+                right: 0;
+                width: 0;
+                background-color: $PRIMARY-COLOR;
+            }
+
+            &:hover {
+                &::after {
+                    width: 85%;
+                    transition: width 500ms ease-in;
+                }
+            }
+        }
+
         color: $PRIMARY-TEXT-COLOR;
         background: #1F1F1F;
 
@@ -633,6 +665,34 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                         font-size: calc($TITLE-FONT-SIZE - .5rem);
                         letter-spacing: 1px;
                     }
+                }
+            }
+
+            &__row_4 {
+                @include gridProp(3, 1fr);
+                margin-top: -2%;
+
+                .son {
+                    span {
+                        font-family: 'son', Arial, serif;
+                        font-size: calc($TITLE-FONT-SIZE - .5rem);
+                        font-weight: 300;
+                    }
+
+                    .caps {
+                        font-size: calc($TITLE-FONT-SIZE + .3rem);
+                    }
+
+                    .lower-capital {
+                        font-size: .9rem !important;
+                        margin: 0 7px;
+                    }
+                }
+
+                .section-container__3__cards__img__container {
+                    display: flex;
+                    justify-self: center;
+                    margin-top: 10px;
                 }
             }
         }

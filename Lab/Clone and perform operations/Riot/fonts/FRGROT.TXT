@@ -1,0 +1,58 @@
+
+                             French Grotesque
+                          -----------------------
+                    Released as shareware in June 1997.
+
+     "Grotesque" is one of the most misused words in typography. In
+     this case, it has its normal, non-typographic meaning, as French
+     Grotesque is roughly based on a series described simply as
+     "lettres grotesques" (grotesque letters) shown in a specimen
+     sheet issued by the Deberny foundry in Paris in 1910. Deberny
+     produced the series as outline and fill fonts for two-colour
+     printing in 18 pt., 24 pt. and 36 pt. sizes. A hollow version,
+     similar to the outline but with no fill, was available in 10, 12,
+     18, 24 and 36 points.
+
+     The specimen sheet shows only a few words in each size. In most
+     cases I have followed the design of the letters shown, and I have
+     added missing letters and a full Adobe Standard character set.
+     Two pairs of ornaments shown in the specimen sheet are in the [ ]
+     and { } positions.
+
+     French Grotesque was drawn in Fontographer 3.5 on a Windows
+     computer, and FontLab 2.5 was used extensively in correcting and
+     refining the font. The Macintosh versions were generated with
+     Fontographer 4.0.4.
+
+     I am releasing this font as shareware and asking for a
+     registration fee of $15 (Canadian dollars for Canadian users;
+     U.S. dollars or the equivalent of US$15 in local currency for
+     users outside Canada).
+
+     Registered users will receive a receipt and notice of any new
+     versions or fonts that I release. For Canadian users, the price
+     includes GST and, in Quebec, QST.
+
+     Please send your registration fee in the form of a Canadian
+     cheque or an international money order, with your name and return
+     address, to:
+
+          Jonathan Paterson
+          3534 de Lorimier
+          Montreal, Quebec
+          Canada  H2K 3X6
+
+          E-Mail: paterson@mlink.net
+ 
+     This font may not be sold or modified without my written consent.
+     French Grotesque may not be distributed without this text file.
+
+     To avoid loss of quality, please do not convert this font to other 
+     formats without checking with me first. French Grotesque is currently 
+     available in four formats (PostScript and TrueType for both 
+     Macintosh and Windows) and has been tested in all four formats. 
+     If you have received the wrong version, please download the version 
+     you need from:
+
+          http://www.mlink.net/~paterson/jpfonts.htm
+
