@@ -485,9 +485,12 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
     }
 
     &__3 {
+        padding-top: 7rem;
+
         .our-games {
             font-size: 4rem;
-            padding: 6rem 0 2rem 4rem;
+            margin-left: 4rem;
+            margin-bottom: 6rem;
             font-weight: bold;
             position: relative;
             width: fit-content;
@@ -496,17 +499,19 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 position: absolute;
                 content: '';
                 height: .4rem;
-                bottom: 2rem;
-                left: 4rem;
+                // bottom: 2rem;
+                bottom: 0;
+                // left: 4rem;
+                left: 0;
                 right: 0;
                 width: 0;
                 background-color: $PRIMARY-COLOR;
+                transition: width 500ms ease-in-out;
             }
 
             &:hover {
                 &::after {
-                    width: 85%;
-                    transition: width 500ms ease-in;
+                    width: 100%;
                 }
             }
         }
