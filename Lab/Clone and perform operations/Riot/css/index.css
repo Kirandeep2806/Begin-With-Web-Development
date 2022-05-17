@@ -29,11 +29,11 @@
 }
 @font-face {
   font-family: "FF Mark";
-  src: url("../fonts/ff mark sv/FontFont_FF.Mark.Pro.otf") format("opentype");
+  src: url("../fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
 }
 @font-face {
   font-family: "Mark Pro";
-  src: url("../fonts/Mark Pro/Mark Pro.ttf") format("truetype");
+  src: url("../fonts/Mark Pro.ttf") format("truetype");
 }
 html {
   scroll-behavior: smooth;
