@@ -35,6 +35,10 @@
   font-family: "Mark Pro";
   src: url("../fonts/Mark Pro/Mark Pro.ttf") format("truetype");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -781,14 +785,37 @@
 }
 .section-container__5 {
   background: #252423;
+  padding: 2.4rem;
+}
+.section-container__5 .footer {
+  display: grid;
+  grid-template-columns: 8% 80% 12%;
 }
 .section-container__5 .footer > div.footer-logo svg {
-  width: 2rem;
+  cursor: pointer;
   height: 2rem;
+  width: 2rem;
+  fill: #656462;
+  cursor: pointer;
 }
-.section-container__5 .footer > div.social-handles svg {
-  width: 1.5rem;
-  height: 1.5rem;
+.section-container__5 .footer > div.social-handles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+}
+.section-container__5 .footer > div.social-handles > svg {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  fill: #656462;
+  cursor: pointer;
+}
+.section-container__5 .footer > div.footer-content ul {
+  list-style: none;
+}
+.section-container__5 .footer > div.footer-content ul li {
+  display: inline-block;
+  margin-right: 1rem;
 }
 .section-container__5 .footer > div.footer-content ul li a {
   font-family: "Mark Pro";
@@ -797,6 +824,7 @@
   text-transform: uppercase;
   font-size: 11px;
   font-weight: bold;
+  transition: color 0.2s ease-in-out;
 }
 .section-container__5 .footer > div.footer-content ul li a:hover {
   text-decoration: underline;
@@ -808,7 +836,36 @@
   height: 2rem;
 }
 .section-container__5 .footer > div > svg {
+  transition: fill 200ms ease-in-out;
+}
+.section-container__5 .footer > div > svg:hover {
   fill: #D13639;
+}
+.section-container__5 hr {
+  border: 1px solid #656462;
+  margin-top: 1.5rem;
+}
+.section-container__5 .other-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-container__5 .other-content span {
+  font-family: "FF Mark";
+  color: #656462;
+  font-size: 12px;
+  padding-top: 2rem;
+}
+.section-container__5 .other-content span.go-up {
+  cursor: pointer;
+  font-stretch: extra-condensed;
+  text-align: right;
+}
+.section-container__5 .other-content span.go-up svg {
+  margin-left: 1px;
+  height: 12px;
+  width: 12px;
+  fill: #656462;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -59,6 +59,10 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
     src: url("../fonts/Mark\ Pro/Mark\ Pro.ttf") format("truetype");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -827,26 +831,39 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
 
     &__5 {
         background: #252423;
+        padding: 2.4rem;
 
         .footer {
+            display: grid;
+            grid-template-columns: 8% 80% 12%;
+
             &>div {
                 &.footer-logo {
                     svg {
-                        width: 2rem;
-                        height: 2rem;
+                        cursor: pointer;
+                        @include common-for-svg(#656462, 2rem, 2rem);
                     }
                 }
 
                 &.social-handles {
-                    svg {
-                        width: 1.5rem;
-                        height: 1.5rem;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 1rem;
+
+                    &>svg {
+                        cursor: pointer;
+                        @include common-for-svg(#656462, 1rem, 1rem);
                     }
                 }
 
                 &.footer-content {
                     ul {
+                        list-style: none;
+
                         li {
+                            display: inline-block;
+                            margin-right: 1rem;
+
                             a {
                                 font-family: 'Mark Pro';
                                 text-decoration: none;
@@ -854,6 +871,7 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                                 text-transform: uppercase;
                                 font-size: 11px;
                                 font-weight: bold;
+                                transition: color .2s ease-in-out;
 
                                 &:hover {
                                     text-decoration: underline;
@@ -871,7 +889,39 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                 }
 
                 &>svg {
-                    fill: $PRIMARY-COLOR;
+                    transition: fill 200ms ease-in-out;
+
+                    &:hover {
+                        fill: $PRIMARY-COLOR;
+                    }
+                }
+            }
+        }
+
+        hr {
+            border: 1px solid #656462;
+            margin-top: 1.5rem;
+        }
+
+        .other-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            span {
+                font-family: 'FF Mark';
+                color: #656462;
+                font-size: 12px;
+                padding-top: 2rem;
+
+                &.go-up {
+                    cursor: pointer;
+                    font-stretch: extra-condensed;
+                    text-align: right;
+
+                    svg {
+                        margin-left: 1px;
+                        @include common-for-svg(#656462, 12px, 12px);
+                    }
                 }
             }
         }
