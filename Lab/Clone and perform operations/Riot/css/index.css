@@ -678,6 +678,9 @@
   justify-self: center;
   margin-top: 10px;
 }
+.section-container__4 {
+  background: #EBEBEB !important;
+}
 .section-container__4__slantCardContainer {
   position: relative;
   width: 100%;
@@ -686,7 +689,6 @@
 }
 .section-container__4__slantCardContainer__slantCard1 {
   width: inherit;
-  background: #EBEBEB;
   clip-path: polygon(0% 0%, 55% 0%, 50% 100%, 0% 100%);
 }
 .section-container__4__slantCardContainer__wrapText {

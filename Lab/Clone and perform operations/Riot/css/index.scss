@@ -707,16 +707,17 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
         $X1-POS: 55%;
         $X2-POS: 50%;
         $DIFF-OF-X1-X2: calc($X1-POS - $X2-POS);
+        background: #EBEBEB !important;
 
         &__slantCardContainer {
             position: relative;
             width: 100%;
             height: 600px;
             overflow-x: hidden;
+            // background: rgba(235,235,235, 0);
 
             &__slantCard1 {
                 width: inherit;
-                background: #EBEBEB;
                 clip-path: polygon(0% 0%, $X1-POS 0%, $X2-POS 100%, 0% 100%);
             }
 
