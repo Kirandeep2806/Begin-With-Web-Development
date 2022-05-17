@@ -825,6 +825,23 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
         }
     }
     &__5 {
-        
+        background: #252423;
+        .footer {
+            &>div {
+                &.footer-logo {
+                    svg {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+                &.social-handles {
+                    width: 2rem;
+                    height: 2rem;
+                }
+                &>svg {
+                    fill: $PRIMARY-COLOR;
+                }
+            }
+        }
     }
 }

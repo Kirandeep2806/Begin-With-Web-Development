@@ -779,5 +779,19 @@
   background: url("../static/annie.jpg") no-repeat;
   background-size: cover;
 }
+.section-container__5 {
+  background: #252423;
+}
+.section-container__5 .footer > div.footer-logo svg {
+  width: 2rem;
+  height: 2rem;
+}
+.section-container__5 .footer > div.social-handles {
+  width: 2rem;
+  height: 2rem;
+}
+.section-container__5 .footer > div > svg {
+  fill: #D13639;
+}
 
 /*# sourceMappingURL=index.css.map */
