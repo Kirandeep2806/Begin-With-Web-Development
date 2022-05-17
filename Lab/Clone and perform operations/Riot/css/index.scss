@@ -824,8 +824,10 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
             }
         }
     }
+
     &__5 {
         background: #252423;
+
         .footer {
             &>div {
                 &.footer-logo {
@@ -834,10 +836,40 @@ $PRIMARY-TEXT-COLOR: #f9f9f9;
                         height: 2rem;
                     }
                 }
+
+                &.social-handles {
+                    svg {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+
+                &.footer-content {
+                    ul {
+                        li {
+                            a {
+                                font-family: 'Mark Pro';
+                                text-decoration: none;
+                                color: #656462;
+                                text-transform: uppercase;
+                                font-size: 11px;
+                                font-weight: bold;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                    color: $PRIMARY-TEXT-COLOR;
+                                    text-underline-offset: 1px;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 &.social-handles {
                     width: 2rem;
                     height: 2rem;
                 }
+
                 &>svg {
                     fill: $PRIMARY-COLOR;
                 }
