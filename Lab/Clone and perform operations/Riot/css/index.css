@@ -777,7 +777,7 @@
   height: inherit;
   clip-path: polygon(5% 0%, 50% 0%, 50% 100%, 0% 100%);
   background: url("../static/annie.jpg") no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=index.css.map */
