@@ -791,24 +791,31 @@ html {
   display: grid;
   grid-template-columns: 8% 80% 12%;
 }
-.section-container__5 .footer > div.footer-logo svg {
+.section-container__5 .footer > div.footer-logo a svg {
   cursor: pointer;
   height: 2rem;
   width: 2rem;
   fill: #656462;
   cursor: pointer;
+  transition: fill 200ms ease-in-out;
+}
+.section-container__5 .footer > div.footer-logo a svg:hover {
+  fill: #D13639;
 }
 .section-container__5 .footer > div.social-handles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 1rem;
 }
-.section-container__5 .footer > div.social-handles > svg {
+.section-container__5 .footer > div.social-handles a > svg {
   cursor: pointer;
   height: 1rem;
   width: 1rem;
   fill: #656462;
   cursor: pointer;
+}
+.section-container__5 .footer > div.social-handles a > svg:hover {
+  fill: #D13639;
 }
 .section-container__5 .footer > div.footer-content ul {
   list-style: none;
@@ -831,14 +838,10 @@ html {
   color: #f9f9f9;
   text-underline-offset: 1px;
 }
-.section-container__5 .footer > div.social-handles {
-  width: 2rem;
-  height: 2rem;
-}
-.section-container__5 .footer > div > svg {
+.section-container__5 .footer > div.social-handles a > svg {
   transition: fill 200ms ease-in-out;
 }
-.section-container__5 .footer > div > svg:hover {
+.section-container__5 .footer > div.social-handles a > svg:hover {
   fill: #D13639;
 }
 .section-container__5 hr {
@@ -860,7 +863,7 @@ html {
   font-stretch: extra-condensed;
   text-align: right;
 }
-.section-container__5 .other-content span.go-up svg {
+.section-container__5 .other-content span.go-up a svg {
   margin-left: 1px;
   height: 12px;
   width: 12px;
