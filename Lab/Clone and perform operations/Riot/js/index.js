@@ -17,7 +17,10 @@ getFooterToGoToTop.addEventListener('click', () => {
 })
 
 document.addEventListener('mousedown', e => {
-    const regexpForCards = /section-container__2__col-4-cards-[1234]/;
-    let res = e.path.filter(e => e.className === 'section-container__2__span_2-5' ||  regexpForCards.test(e.className));
-    console.log(res);
+    const regexpForCards1 = /section-container__2__col-4-cards-[1234]/;
+    const regexpForCards2 = /section-container__2__span_2-5/;
+
+    let res = e.path.filter(e => regexpForCards1.test(e.className) || regexpForCards2.test(e.className));
+    let getParent = res.pop();
+    console.log(getParent);
 })
