@@ -15,3 +15,9 @@ const getFooterToGoToTop = document.getElementsByClassName('go-up')[0];
 getFooterToGoToTop.addEventListener('click', () => {
     window.scrollTo('0', '0');
 })
+
+document.addEventListener('mousedown', e => {
+    const regexpForCards = /section-container-col-4-cards-[1234]/;
+    let res = e.path.filter(e => e.className === 'section-container__2__span_2-5' ||  regexpForCards.test(e.className));
+    console.log(res);
+})
