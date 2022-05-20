@@ -10,23 +10,19 @@
     font-family: 'Mark Pro', Arial, Helvetica, sans-serif;
 }
 
+
 .container {
-    $LABEL-PERCENT: 16%;
+    // width: 85vw;
+    $LABEL-PERCENT: 20%;
     $INPUT-PERCENT: calc((100% - (2*$LABEL-PERCENT))/2);
-    position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    top: 0;
-    bottom: 0;left: 0;right: 0;
     .registration-card {
-        // width: 100%;
+        width: 100%;
         font-size: 1.1rem;
         display: grid;
         row-gap: .6rem;
         grid-template-columns: $LABEL-PERCENT $INPUT-PERCENT $LABEL-PERCENT $INPUT-PERCENT ;
         padding: 2rem;
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         label {
             user-select: none;
             span {
