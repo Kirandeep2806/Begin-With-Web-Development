@@ -4,15 +4,36 @@
   box-sizing: border-box;
 }
 
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .container .registration-card {
-  width: 100%;
+  font-size: 1.1rem;
   display: grid;
-  grid-template-columns: 12% 38% 12% 38%;
+  grid-template-columns: 20% 30% 20% 30%;
   padding: 2rem;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
-.container .registration-card p {
-  grid-column: span 3;
+.container .registration-card label {
+  user-select: none;
+}
+.container .registration-card label span {
+  color: #c00c0c;
+}
+.container .registration-card .agree-to-rules {
+  grid-column: span 4;
+  user-select: none;
+}
+.container .registration-card .register-btn {
+  grid-column: span 4;
+  text-align: center;
+}
+.container .registration-card .register-btn #register {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=registration.css.map */

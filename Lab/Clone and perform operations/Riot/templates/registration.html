@@ -21,7 +21,8 @@
             <div></div>
             <div></div>
             <label for="email">E-mail<span>*</span> :&ensp;</label>
-            <input type="email" name="email" id="email" placeholder="Enter your Email ID" autocomplete="email" required />
+            <input type="email" name="email" id="email" placeholder="Enter your Email ID" autocomplete="email"
+                required />
             <div></div>
             <div></div>
             <label for="gender">Gender<span>*</span> :&ensp;</label>
@@ -49,8 +50,14 @@
             <input type="text" name="phNo" id="ph-no" autocomplete="mobile" maxlength="10" />
             <div></div>
             <div></div>
-            <input type="checkbox" name="agree" id="agree" />
-            <p>I abide all the rules & regulations, also I ensure to provide my credentials when mandatory.</p>
+            <div class="agree-to-rules">
+                <input type="checkbox" name="agree" id="agree" />
+                <label for="agree">I abide all the rules & regulations, also I ensure to provide my credentials when
+                    mandatory.</label>
+            </div>
+            <div class="register-btn">
+            <input type="submit" name="register" id="register" value="REGISTER" />
+        </div>
         </div>
     </div>
 </body>
