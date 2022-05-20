@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riot | Registration</title>
+    <link rel="stylesheet" href="../css/registration/registration.css" />
 </head>
 <body>
-    
+    <div class="container">
+        <div class="registration-card">
+            <div class="registration-card__name">
+                <label for="fname">First Name<span>*</span> :&ensp;</label>
+                <input type="text" name="fname" id="fname" placeholder="First Name" required />
+                <label for="lname">Last Name<span>*</span> :&ensp;</label>
+                <input type="text" name="lname" id="lname" placeholder="Last Name" required />
+            </div>
+            <label for="uname">Username<span>*</span></label>
+            <input type="text" id="uname" name="uname" placeholder="Enter Username" required />
+            
+        </div>
+    </div>
 </body>
 </html>
