@@ -1,11 +1,17 @@
+@font-face {
+    font-family: 'Mark Pro';
+    src: url(../../fonts/FontFont_FF.Mark.Pro.otf) format('opentype');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Mark Pro', Arial, Helvetica, sans-serif;
 }
 
 .container {
-    $LABEL-PERCENT: 20%;
+    $LABEL-PERCENT: 16%;
     $INPUT-PERCENT: calc((100% - (2*$LABEL-PERCENT))/2);
     position: absolute;
     // top: 50%;
@@ -17,6 +23,7 @@
         // width: 100%;
         font-size: 1.1rem;
         display: grid;
+        row-gap: .6rem;
         grid-template-columns: $LABEL-PERCENT $INPUT-PERCENT $LABEL-PERCENT $INPUT-PERCENT ;
         padding: 2rem;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
@@ -24,6 +31,20 @@
             user-select: none;
             span {
                 color: rgb(192, 12, 12);
+            }
+        }
+        input {
+            padding: 2px .2rem;
+            outline: none;
+            &[type="submit"] {
+                padding: .4rem 1rem;
+                border: 1px solid transparent;
+                border-radius: 4px;
+            }
+        }
+        * {
+            &:nth-child(2n) {
+                margin-right: 2rem;
             }
         }
         .agree-to-rules {
