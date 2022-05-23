@@ -9,42 +9,8 @@
   font-family: "Mark Pro", Arial, Helvetica, sans-serif;
 }
 
-.container .registration-card {
-  width: 100%;
-  font-size: 1.1rem;
-  display: grid;
-  row-gap: 0.6rem;
-  grid-template-columns: 20% 30% 20% 30%;
-  padding: 2rem;
-}
-.container .registration-card label {
-  user-select: none;
-}
-.container .registration-card label span {
-  color: #c00c0c;
-}
-.container .registration-card input {
-  padding: 2px 0.2rem;
-  outline: none;
-}
-.container .registration-card input[type=submit] {
-  padding: 0.4rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-.container .registration-card *:nth-child(2n) {
-  margin-right: 2rem;
-}
-.container .registration-card .agree-to-rules {
-  grid-column: span 4;
-  user-select: none;
-}
-.container .registration-card .register-btn {
-  grid-column: span 4;
-  text-align: center;
-}
-.container .registration-card .register-btn #register {
-  cursor: pointer;
+body {
+  background: url(../../static/registration/explore-hero-bg--large.jpg);
 }
 
 /*# sourceMappingURL=registration.css.map */
