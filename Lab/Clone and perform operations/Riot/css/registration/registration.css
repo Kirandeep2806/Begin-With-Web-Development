@@ -33,7 +33,7 @@ body {
 .container .registration-card > .register-btn input {
   margin-top: 1.5rem;
   background: #d13639;
-  color: #fefefe;
+  color: #fcf8f8;
   border: 1px solid #d13639;
   border-radius: 5px;
   padding: 0.5rem 1.4rem;
@@ -152,6 +152,9 @@ body {
   display: flex;
   align-items: center;
 }
+.container .registration-card > .agree-to-rules > input {
+  cursor: pointer;
+}
 .container .registration-card > .agree-to-rules > input[type=checkbox] {
   margin-right: 0.6rem;
   appearance: none;
@@ -174,6 +177,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.container .registration-card > .agree-to-rules > label {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=registration.css.map */

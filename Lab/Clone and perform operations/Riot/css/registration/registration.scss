@@ -39,7 +39,7 @@ body {
             input {
                 margin-top: 1.5rem;
                 background: $PRIMARY-COLOR;
-                color: $WHITE;
+                color: #fcf8f8;
                 border: 1px solid $PRIMARY-COLOR;
                 border-radius: 5px;
                 padding: 0.5rem 1.4rem;
@@ -180,6 +180,7 @@ body {
             align-items: center;
 
             &>input {
+                cursor: pointer;
                 &[type="checkbox"] {
                     margin-right: .6rem;
                     appearance: none;
@@ -206,6 +207,10 @@ body {
                         background: $PRIMARY-COLOR;
                     }
                 }
+            }
+
+            &>label {
+                cursor: pointer;
             }
         }
     }
