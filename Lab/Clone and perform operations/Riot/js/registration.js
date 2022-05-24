@@ -13,8 +13,9 @@ const password2ErrorDisplay = document.getElementById('confirm-password-error');
 const getGender = document.querySelectorAll('input[name=gender]');
 
 const registerBtn = document.getElementById('register');
+const agreeBtn = document.getElementById('agree');
 
-let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = genderValid = false;
+let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = genderValid = agreeValid =  false;
 
 getFName.addEventListener('keyup', () => {
     const nameRegex = /^[a-zA-Z]+$/;
@@ -74,6 +75,7 @@ for(const eachGender of getGender) {
         if(eachGender.checked) {
             // console.log(eachGender.value);
             genderValid = true;
+            shallEnableChecker();
         }
     });
 }
@@ -144,6 +146,13 @@ getPassword2.addEventListener('keyup', () => {
     shallEnableChecker();
 });
 
+agreeBtn.addEventListener('change', () => {
+    if(agreeBtn.checked)
+        agreeValid = true;
+    else
+        agreeValid = false;
+})
+
 
 const getForm = document.querySelector('.registration-card');
 getForm.addEventListener('submit', (e) => {
@@ -155,7 +164,8 @@ getForm.addEventListener('submit', (e) => {
 // Age - At least 16 years old
 
 const shallEnableChecker = () => {
-    if (fnameValid && lnameValid && unameValid && pass1Valid && pass2Valid && dobValid && genderValid)
+    // console.log(genderValid);
+    if (fnameValid && lnameValid && unameValid && pass1Valid && pass2Valid && dobValid && genderValid && agreeValid)
         registerBtn.disabled = false;
     else
         return false;
