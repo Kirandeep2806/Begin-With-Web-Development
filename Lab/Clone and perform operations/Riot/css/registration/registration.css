@@ -25,11 +25,6 @@ input:disabled {
   background: rgba(97, 95, 95, 0.2) !important;
   cursor: default !important;
 }
-input[type=submit]:disabled {
-  background: rgba(255, 251, 251, 0.5) !important;
-  border: none !important;
-  color: #252424 !important;
-}
 
 .container {
   z-index: 999;
@@ -119,6 +114,18 @@ input[type=submit]:disabled {
   width: 100%;
   padding: 15px 0 0;
   margin-top: 10px;
+}
+.container .registration-card .form_group_slideUp > #fname-error {
+  margin-top: 0.7rem;
+  color: #d13639;
+}
+.container .registration-card .form_group_slideUp > #lname-error {
+  margin-top: 0.7rem;
+  color: #d13639;
+}
+.container .registration-card .form_group_slideUp > #uname-error {
+  margin-top: 0.7rem;
+  color: #d13639;
 }
 .container .registration-card .form_group_slideUp > #confirm-password-error {
   margin-top: 0.7rem;
