@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Mark Pro";
   src: url(../../fonts/FontFont_FF.Mark.Pro.otf) format("opentype");
@@ -122,6 +123,34 @@ body {
   transition: 0.2s;
   font-size: 0.8rem;
   color: gray;
+}
+.container .registration-card > .agree-to-rules {
+  color: #fefefe;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+.container .registration-card > .agree-to-rules > input[type=checkbox] {
+  margin-right: 0.6rem;
+  appearance: none;
+  position: relative;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #d13639;
+  background-clip: content-box;
+  padding: 3px;
+}
+.container .registration-card > .agree-to-rules > input[type=checkbox]:checked {
+  background: #d13639;
+}
+.container .registration-card > .agree-to-rules > input[type=checkbox]:checked::before {
+  font-size: 1rem;
+  content: "✓";
+  color: #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=registration.css.map */
