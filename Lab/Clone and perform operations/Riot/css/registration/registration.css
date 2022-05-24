@@ -27,6 +27,25 @@ body {
   width: fit-content;
   background: url(../../static/registration/explore-hero-bg--large.jpg);
 }
+.container .registration-card > .register-btn {
+  text-align: center;
+}
+.container .registration-card > .register-btn input {
+  margin-top: 1.5rem;
+  background: #d13639;
+  color: #fefefe;
+  border: 1px solid #d13639;
+  border-radius: 5px;
+  padding: 0.5rem 1.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.container .registration-card > .register-btn input:hover {
+  background: #fefefe;
+  color: #d13639;
+  border: 1px solid #d13639;
+}
 .container .registration-card > div {
   margin-bottom: 1rem;
 }
@@ -144,9 +163,10 @@ body {
   padding: 3px;
 }
 .container .registration-card > .agree-to-rules > input[type=checkbox]:checked {
+  transition: all 100ms ease-in-out;
   background: #d13639;
 }
-.container .registration-card > .agree-to-rules > input[type=checkbox]:checked::before {
+.container .registration-card > .agree-to-rules > input[type=checkbox]:checked::after {
   font-size: 1rem;
   content: "✓";
   color: #fefefe;

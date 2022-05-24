@@ -33,6 +33,28 @@ body {
     background: url(../../static/registration/explore-hero-bg--large.jpg);
 
     .registration-card {
+        &>.register-btn {
+            text-align: center;
+
+            input {
+                margin-top: 1.5rem;
+                background: $PRIMARY-COLOR;
+                color: $WHITE;
+                border: 1px solid $PRIMARY-COLOR;
+                border-radius: 5px;
+                padding: 0.5rem 1.4rem;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background: $WHITE;
+                    color: $PRIMARY-COLOR;
+                    border: 1px solid $PRIMARY-COLOR;
+                }
+            }
+        }
+
         &>div {
             margin-bottom: 1rem;
         }
@@ -169,7 +191,9 @@ body {
                     padding: 3px;
 
                     &:checked {
-                        &::before {
+                        transition: all 100ms ease-in-out;
+
+                        &::after {
                             font-size: 1rem;
                             content: '\2713';
                             color: $WHITE;
