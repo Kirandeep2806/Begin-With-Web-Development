@@ -98,7 +98,7 @@ input[type=submit]:disabled {
 .container .registration-card > p {
   display: inline-block;
   font-size: 2rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #fefefe;
   text-transform: uppercase;
   position: relative;
