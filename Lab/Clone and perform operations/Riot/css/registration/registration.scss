@@ -26,6 +26,18 @@ body {
     filter: invert(1);
 }
 
+input {
+    &:disabled {
+        background: rgba(97, 95, 95, 0.2) !important;
+        cursor: default !important;
+    }
+    &[type="submit"]:disabled {
+        background: rgba(255, 251, 251, 0.5) !important;
+        border: none !important;
+        color: #252424 !important;
+    }
+}
+
 .container {
     z-index: 999;
     margin: 2rem 0;
@@ -150,11 +162,6 @@ body {
                 padding: 7px 0;
                 background: transparent;
                 transition: border-color 0.2s;
-
-                &:disabled {
-                    background: rgba(97, 95, 95, 0.2);
-                    cursor: default;
-                }
 
                 &::placeholder {
                     color: transparent;

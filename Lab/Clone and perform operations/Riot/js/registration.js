@@ -1,7 +1,6 @@
 const getAge = document.getElementById('age');
 const getDob = document.getElementById('dob');
 const getPassword1 = document.getElementById('password');
-// console.log(getPassword1);
 const getPassword2 = document.getElementById('confirm-password');
 const getSubmitBtn = document.getElementById('register');
 const password1ErrorDisplay = document.getElementById('password-error');
@@ -51,7 +50,15 @@ getPassword1.addEventListener('keyup', () => {
         getPassword2.disabled = true;
         getPassword2.background = 'rgba(97, 95, 95, 0.2)';
     }
-})
+});
+
+getPassword2.addEventListener('keyup', () => {
+    if (getPassword1.value != getPassword2.value) {
+        password2ErrorDisplay.innerHTML = 'Passwords do not match';
+        getSubmitBtn.disabled = true;
+        getSubmitBtn.background = 'rgba(97, 95, 95, 0.2)';
+    }
+});
 
 
 const getForm = document.querySelector('.registration-card');
