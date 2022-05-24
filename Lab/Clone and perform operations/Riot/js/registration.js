@@ -1,6 +1,7 @@
 const getAge = document.getElementById('age');
 const getDob = document.getElementById('dob');
 const getPassword1 = document.getElementById('password');
+// console.log(getPassword1);
 const getPassword2 = document.getElementById('confirm-password');
 const getSubmitBtn = document.getElementById('register');
 
@@ -12,22 +13,32 @@ getDob.addEventListener('change', () => {
     getAge.value = age > 0 ? age : 0;
 });
 
-getPassword1.addEventListener('change', () => {
+// Password - At least 8 characters, atleast one special character and one number
+
+getPassword1.addEventListener('keyup', () => {
+    const password = getPassword1.value;
     const alphaRegexp = new RegExp('[a-zA-Z]', 'g');
     const numericRegexp = new RegExp('[0-9]', 'g');
-    const specialRegexp = new RegExp('[^a-zA-Z ]', 'g');
+    const specialRegexp = new RegExp('[^a-zA-Z0-9 ]', 'g');
     let specialCharacterCount = 0;
     let numericCount = 0;
     let alphaCount = 0;
-    for (let match of abc.matchAll(alphaRegexp))
+    for (let match of password.matchAll(alphaRegexp))
         alphaCount++;
-    for (let match of abc.matchAll(numericRegexp))
+    for (let match of password.matchAll(numericRegexp))
         numericCount++;
-    for (let match of abc.matchAll(specialRegexp))
+    for (let match of password.matchAll(specialRegexp))
         specialCharacterCount++;
-    
-    
-});
+
+    if(password.length > 7 && alphaCount > 0 && numericCount > 0 && specialCharacterCount > 0) {
+        getPassword2.disabled = false;
+        getPassword2.background = auto;
+    }
+    else {
+        getPassword2.disabled = true;
+        getPassword2.background = 'rgba(97, 95, 95, 0.2)';
+    }
+})
 
 
 const getForm = document.querySelector('.registration-card');
@@ -38,7 +49,6 @@ getForm.addEventListener('submit', (e) => {
 
 // User Name Validation - At least 6 characters, no special characters
 // Age - At least 16 years old
-// Password - At least 8 characters, atleast one special character and one number
 
 const validation = () => {
     const uName = document.userDetails.uname.value;

@@ -130,6 +130,14 @@ body {
             padding: 15px 0 0;
             margin-top: 10px;
 
+            &>#confirm-password-error {
+                color: $PRIMARY-COLOR;
+            }
+
+            &>#password-error {
+                color: $PRIMARY-COLOR;
+            }
+
             &>input {
                 width: 100%;
                 border: 0;
@@ -140,6 +148,11 @@ body {
                 padding: 7px 0;
                 background: transparent;
                 transition: border-color 0.2s;
+
+                &:disabled {
+                    background: rgba(97, 95, 95, 0.2);
+                    cursor: default;
+                }
 
                 &::placeholder {
                     color: transparent;
