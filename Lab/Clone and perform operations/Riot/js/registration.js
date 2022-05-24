@@ -18,6 +18,8 @@ getFName.addEventListener('keyup', () => {
         fNameErrorDisplay.innerHTML = 'First Name should be alphabetical';
     else
         fNameErrorDisplay.innerHTML = '';
+    if (getFName.value == '')
+        fNameErrorDisplay.innerHTML = '';
 });
 
 getLName.addEventListener('keyup', () => {
@@ -27,6 +29,8 @@ getLName.addEventListener('keyup', () => {
         lNameErrorDisplay.innerHTML = 'Last Name should be alphabetical';
     else
         lNameErrorDisplay.innerHTML = '';
+    if (getLName.value === '')
+        LNameErrorDisplay.innerHTML = '';
 });
 
 getUName.addEventListener('keyup', () => {
@@ -43,6 +47,8 @@ getUName.addEventListener('keyup', () => {
     if (error)
         uNameErrorDisplay.innerHTML = error;
     else
+        uNameErrorDisplay.innerHTML = '';
+    if (uName.value === '')
         uNameErrorDisplay.innerHTML = '';
 });
 
@@ -90,12 +96,16 @@ getPassword1.addEventListener('keyup', () => {
         getPassword2.disabled = true;
         getPassword2.background = 'rgba(97, 95, 95, 0.2)';
     }
+    if (getPassword1.value === '')
+        password1ErrorDisplay.innerHTML = '';
 });
 
 getPassword2.addEventListener('keyup', () => {
     if (getPassword1.value != getPassword2.value)
         password2ErrorDisplay.innerHTML = 'Passwords do not match';
     else
+        password2ErrorDisplay.innerHTML = '';
+    if (getPassword2.value === '')
         password2ErrorDisplay.innerHTML = '';
 });
 
