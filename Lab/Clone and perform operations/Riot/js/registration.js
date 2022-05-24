@@ -11,26 +11,38 @@ const getPassword2 = document.getElementById('confirm-password');
 const password1ErrorDisplay = document.getElementById('password-error');
 const password2ErrorDisplay = document.getElementById('confirm-password-error');
 
+const registerBtn = document.getElementById('register');
+
+let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = false;
+
 getFName.addEventListener('keyup', () => {
     const nameRegex = /^[a-zA-Z]+$/;
     const fName = getFName.value;
-    if (!nameRegex.test(fName))
+    if (!nameRegex.test(fName)) {
         fNameErrorDisplay.innerHTML = 'First Name should be alphabetical';
+        return false;
+    }
     else
         fNameErrorDisplay.innerHTML = '';
     if (getFName.value == '')
         fNameErrorDisplay.innerHTML = '';
+    fnameValid = true;
+    shallEnableChecker();
 });
 
 getLName.addEventListener('keyup', () => {
     const nameRegex = /^[a-zA-Z]+$/;
     const lName = getLName.value;
-    if (!nameRegex.test(lName))
+    if (!nameRegex.test(lName)) {
         lNameErrorDisplay.innerHTML = 'Last Name should be alphabetical';
+        return false;
+    }
     else
         lNameErrorDisplay.innerHTML = '';
     if (getLName.value === '')
         LNameErrorDisplay.innerHTML = '';
+    lnameValid = true;
+    shallEnableChecker();
 });
 
 getUName.addEventListener('keyup', () => {
@@ -44,12 +56,16 @@ getUName.addEventListener('keyup', () => {
     if (!uNameRegex.test(uName))
         error += 'User Name should be alphanumeric<br/>';
 
-    if (error)
+    if (error) {
         uNameErrorDisplay.innerHTML = error;
+        return false;
+    }
     else
         uNameErrorDisplay.innerHTML = '';
     if (uName.value === '')
         uNameErrorDisplay.innerHTML = '';
+    unameValid = true;
+    shallEnableChecker();
 });
 
 getDob.addEventListener('change', () => {
@@ -58,6 +74,8 @@ getDob.addEventListener('change', () => {
     const ageDate = new Date(ageDifMs);
     let age = ageDate.getUTCFullYear() - 1970;
     getAge.value = age > 0 ? age : 0;
+    dobValid = true;
+    shallEnableChecker();
 });
 
 // Password - At least 8 characters, atleast one special character and one number
@@ -81,7 +99,9 @@ getPassword1.addEventListener('keyup', () => {
     if (password.length > 7 && alphaCount > 0 && numericCount > 0 && specialCharacterCount > 0) {
         password1ErrorDisplay.innerHTML = '';
         getPassword2.disabled = false;
-        getPassword2.background = auto;
+        getPassword2.style.background = 'none';
+        pass1Valid = true;
+        console.log(pass1Valid, pass2Valid);
     }
     else {
         if (password.length < 8)
@@ -95,18 +115,25 @@ getPassword1.addEventListener('keyup', () => {
         password1ErrorDisplay.innerHTML = errorMsg;
         getPassword2.disabled = true;
         getPassword2.background = 'rgba(97, 95, 95, 0.2)';
+        return false;
     }
     if (getPassword1.value === '')
         password1ErrorDisplay.innerHTML = '';
+    shallEnableChecker();
 });
 
 getPassword2.addEventListener('keyup', () => {
-    if (getPassword1.value != getPassword2.value)
+    if (getPassword1.value != getPassword2.value) {
         password2ErrorDisplay.innerHTML = 'Passwords do not match';
+        return false;
+    }
     else
         password2ErrorDisplay.innerHTML = '';
     if (getPassword2.value === '')
         password2ErrorDisplay.innerHTML = '';
+    pass2Valid = true;
+    console.log(pass1Valid, pass2Valid);
+    shallEnableChecker();
 });
 
 
@@ -118,6 +145,13 @@ getForm.addEventListener('submit', (e) => {
 
 // User Name Validation - At least 6 characters, no special characters
 // Age - At least 16 years old
+
+const shallEnableChecker = () => {
+    if (fnameValid && lnameValid && unameValid && pass1Valid && pass2Valid && dobValid)
+        registerBtn.disabled = false;
+    else
+        return false;
+}
 
 const validation = () => {
     const age = document.userDetails.age.value;

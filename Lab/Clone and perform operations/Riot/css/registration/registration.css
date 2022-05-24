@@ -25,6 +25,12 @@ input:disabled {
   background: rgba(97, 95, 95, 0.2) !important;
   cursor: default !important;
 }
+input[type=submit]:disabled {
+  background: rgba(97, 95, 95, 0.2) !important;
+  cursor: default !important;
+  border: none !important;
+  color: #fff !important;
+}
 
 .container {
   z-index: 999;
