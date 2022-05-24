@@ -15,7 +15,7 @@ const getGender = document.querySelectorAll('input[name=gender]');
 const registerBtn = document.getElementById('register');
 const agreeBtn = document.getElementById('agree');
 
-let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = genderValid = agreeValid =  false;
+let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = genderValid = agreeValid = false;
 
 getFName.addEventListener('keyup', () => {
     const nameRegex = /^[a-zA-Z]+$/;
@@ -70,9 +70,9 @@ getUName.addEventListener('keyup', () => {
     shallEnableChecker();
 });
 
-for(const eachGender of getGender) {
+for (const eachGender of getGender) {
     eachGender.addEventListener('change', () => {
-        if(eachGender.checked) {
+        if (eachGender.checked) {
             // console.log(eachGender.value);
             genderValid = true;
             shallEnableChecker();
@@ -147,10 +147,11 @@ getPassword2.addEventListener('keyup', () => {
 });
 
 agreeBtn.addEventListener('change', () => {
-    if(agreeBtn.checked)
+    if (agreeBtn.checked)
         agreeValid = true;
     else
         agreeValid = false;
+    shallEnableChecker();
 })
 
 
@@ -168,7 +169,7 @@ const shallEnableChecker = () => {
     if (fnameValid && lnameValid && unameValid && pass1Valid && pass2Valid && dobValid && genderValid && agreeValid)
         registerBtn.disabled = false;
     else
-        return false;
+        registerBtn.disabled = true;
 }
 
 const validation = () => {
