@@ -13,4 +13,54 @@ body {
   background: url(../../static/registration/explore-hero-bg--large.jpg);
 }
 
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.container .registration-card .form_group_slideUp {
+  position: relative;
+  width: 50%;
+  padding: 15px 0 0;
+  margin-top: 10px;
+}
+.container .registration-card .form_group_slideUp > input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #fefefe;
+  outline: none;
+  font-size: 1.1rem;
+  color: #fefefe;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.container .registration-card .form_group_slideUp > input::placeholder {
+  color: transparent;
+}
+.container .registration-card .form_group_slideUp > input:placeholder-shown ~ label {
+  font-size: 1.1rem;
+  cursor: text;
+  top: 20px;
+}
+.container .registration-card .form_group_slideUp > input:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #d13639;
+}
+.container .registration-card .form_group_slideUp > input:focus ~ label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 0.8rem;
+  color: gray;
+}
+.container .registration-card .form_group_slideUp > label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 0.8rem;
+  color: gray;
+}
+
 /*# sourceMappingURL=registration.css.map */

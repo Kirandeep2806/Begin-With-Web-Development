@@ -1,79 +1,80 @@
 $PRIMARY-COLOR: #d13639;
+$WHITE: #fefefe;
+$label-font-size: 0.8rem;
+$content-font-size: 1.1rem;
 
 @font-face {
-    font-family: 'Mark Pro';
-    src: url(../../fonts/FontFont_FF.Mark.Pro.otf) format('opentype');
+    font-family: "Mark Pro";
+    src: url(../../fonts/FontFont_FF.Mark.Pro.otf) format("opentype");
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Mark Pro', Arial, Helvetica, sans-serif;
+    font-family: "Mark Pro", Arial, Helvetica, sans-serif;
 }
 
 body {
     background: url(../../static/registration/explore-hero-bg--large.jpg);
 }
 
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
 
 .container {
-    // width: 85vw;
-    $LABEL-PERCENT: 20%;
-    $INPUT-PERCENT: calc(100% - $LABEL-PERCENT);
     .registration-card {
-        // position: relative;
-        // width: 100%;
-        // font-size: 1.1rem;
-        // // display: grid;
-        // // row-gap: .6rem;
-        // // grid-template-columns: $LABEL-PERCENT $INPUT-PERCENT;
-        // padding: 2rem;
-        // background-color: white;
-        // margin-top: 2rem;
-        // // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-        // label {
-        //     user-select: none;
-        //     z-index: 999;
-        //     span {
-        //         color: rgb(192, 12, 12);
-        //     }
-        // }
-        // input {
-        //     position: absolute;
-        //     left: 0;
-        //     width: 100%;
-        //     padding: 2px .2rem;
-        //     outline: none;
-        //     border: none;
-        //     // border-bottom: 1px solid #312f2f;
-        //     padding-bottom: .4rem;
-        //     transition: border-bottom 200ms ease-in-out;
-        //     &[type="submit"] {
-        //         padding: .4rem 1rem;
-        //         border: 1px solid transparent;
-        //         border-radius: 4px;
-        //     }
-        //     &:focus {
-        //         border-bottom: 1px solid $PRIMARY-COLOR;
-        //     }
-        // }
-        // // * {
-        // //     &:nth-child(2n) {
-        // //         margin-right: 2rem;
-        // //     }
-        // // }
-        // .agree-to-rules {
-        //     // grid-column: span 2;
-        //     user-select: none;
-        // }
-        // .register-btn {
-        //     // grid-column: span 2;
-        //     text-align: center;
-        //     #register {
-        //         cursor: pointer;
-        //     }
-        // }
-        
+        .form_group_slideUp {
+            position: relative;
+            width: 50%;
+            padding: 15px 0 0;
+            margin-top: 10px;
+
+            &>input {
+                width: 100%;
+                border: 0;
+                border-bottom: 1px solid $WHITE;
+                outline: none;
+                font-size: $content-font-size;
+                color: $WHITE;
+                padding: 7px 0;
+                background: transparent;
+                transition: border-color 0.2s;
+
+                &::placeholder {
+                    color: transparent;
+                }
+
+                &:placeholder-shown~label {
+                    font-size: $content-font-size;
+                    cursor: text;
+                    top: 20px;
+                }
+
+                &:focus {
+                    ~label {
+                        position: absolute;
+                        top: 0;
+                        display: block;
+                        transition: 0.2s;
+                        font-size: $label-font-size;
+                        color: gray;
+                    }
+
+                    padding-bottom: 6px;
+                    border-bottom: 2px solid $PRIMARY-COLOR;
+                }
+            }
+
+            &>label {
+                position: absolute;
+                top: 0;
+                display: block;
+                transition: 0.2s;
+                font-size: $label-font-size;
+                color: gray;
+            }
+        }
     }
 }
