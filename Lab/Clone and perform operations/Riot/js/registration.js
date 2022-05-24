@@ -13,6 +13,7 @@ const password2ErrorDisplay = document.getElementById('confirm-password-error');
 const getGender = document.querySelectorAll('input[name=gender]');
 
 const registerBtn = document.getElementById('register');
+const getForm = document.querySelector('.registration-card');
 const agreeBtn = document.getElementById('agree');
 
 let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = genderValid = agreeValid = false;
@@ -46,6 +47,8 @@ getLName.addEventListener('keyup', () => {
     lnameValid = true;
     shallEnableChecker();
 });
+
+// User Name Validation - At least 6 characters, no special characters
 
 getUName.addEventListener('keyup', () => {
     let error = '';
@@ -154,14 +157,6 @@ agreeBtn.addEventListener('change', () => {
     shallEnableChecker();
 })
 
-
-const getForm = document.querySelector('.registration-card');
-getForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    validation();
-});
-
-// User Name Validation - At least 6 characters, no special characters
 // Age - At least 16 years old
 
 const shallEnableChecker = () => {
@@ -172,11 +167,7 @@ const shallEnableChecker = () => {
         registerBtn.disabled = true;
 }
 
-const validation = () => {
-    const age = document.userDetails.age.value;
-
-    if (age < 16) {
-        alert('Age should be atleast 16 years old');
-        return false;
-    }
-}
+getForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    validation();
+});
