@@ -111,9 +111,11 @@ body {
   margin-top: 10px;
 }
 .container .registration-card .form_group_slideUp > #confirm-password-error {
+  margin-top: 0.7rem;
   color: #d13639;
 }
 .container .registration-card .form_group_slideUp > #password-error {
+  margin-top: 0.7rem;
   color: #d13639;
 }
 .container .registration-card .form_group_slideUp > input {

@@ -4,6 +4,8 @@ const getPassword1 = document.getElementById('password');
 // console.log(getPassword1);
 const getPassword2 = document.getElementById('confirm-password');
 const getSubmitBtn = document.getElementById('register');
+const password1ErrorDisplay = document.getElementById('password-error');
+const password2ErrorDisplay = document.getElementById('confirm-password-error');
 
 getDob.addEventListener('change', () => {
     const dob = new Date(getDob.value);
@@ -16,6 +18,7 @@ getDob.addEventListener('change', () => {
 // Password - At least 8 characters, atleast one special character and one number
 
 getPassword1.addEventListener('keyup', () => {
+    let errorMsg = '';
     const password = getPassword1.value;
     const alphaRegexp = new RegExp('[a-zA-Z]', 'g');
     const numericRegexp = new RegExp('[0-9]', 'g');
@@ -29,12 +32,22 @@ getPassword1.addEventListener('keyup', () => {
         numericCount++;
     for (let match of password.matchAll(specialRegexp))
         specialCharacterCount++;
-
+        
     if(password.length > 7 && alphaCount > 0 && numericCount > 0 && specialCharacterCount > 0) {
+        password1ErrorDisplay.innerHTML = '';
         getPassword2.disabled = false;
         getPassword2.background = auto;
     }
     else {
+        if(password.length < 8)
+            errorMsg += 'Password should be atleast 8 characters<br>';
+        if(alphaCount == 0)
+            errorMsg += 'Password should contain atleast one alphabet<br>';
+        if(numericCount == 0)
+            errorMsg += 'Password should contain atleast one numeric value<br>';
+        if(specialCharacterCount == 0)
+            errorMsg += 'Password should contain atleast one special character<br>';
+        password1ErrorDisplay.innerHTML = errorMsg;
         getPassword2.disabled = true;
         getPassword2.background = 'rgba(97, 95, 95, 0.2)';
     }

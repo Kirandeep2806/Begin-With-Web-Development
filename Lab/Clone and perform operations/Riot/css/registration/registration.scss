@@ -131,10 +131,12 @@ body {
             margin-top: 10px;
 
             &>#confirm-password-error {
+                margin-top: .7rem;
                 color: $PRIMARY-COLOR;
             }
 
             &>#password-error {
+                margin-top: .7rem;
                 color: $PRIMARY-COLOR;
             }
 
