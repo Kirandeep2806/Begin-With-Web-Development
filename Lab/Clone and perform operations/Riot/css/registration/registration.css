@@ -26,6 +26,12 @@ body {
   width: fit-content;
   background: url(../../static/registration/explore-hero-bg--large.jpg);
 }
+.container .registration-card > .form_group {
+  color: gray;
+}
+.container .registration-card > .form_group > .gender-values > input[type=radio] {
+  accent-color: #d13639;
+}
 .container .registration-card > p {
   display: inline-block;
   font-size: 2rem;

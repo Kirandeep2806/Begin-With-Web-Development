@@ -31,18 +31,31 @@ body {
     padding: 2rem;
     width: fit-content;
     background: url(../../static/registration/explore-hero-bg--large.jpg);
+
     .registration-card {
+        &>.form_group {
+            color: gray;
+            &>.gender-values {
+                &>input {
+                    &[type="radio"] {
+                        accent-color: $PRIMARY-COLOR;
+                    }
+                }
+            }
+        }
+
         &>p {
             display: inline-block;
             font-size: 2rem;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
             color: $WHITE;
             text-transform: uppercase;
             position: relative;
             left: 50%;
             transform: translateX(-50%);
+
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 bottom: -1px;
                 left: 50%;
@@ -52,6 +65,7 @@ body {
                 background: #d13639;
             }
         }
+
         .form_group_slideUp {
             position: relative;
             width: 100%;
