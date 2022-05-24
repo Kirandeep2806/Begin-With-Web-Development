@@ -10,10 +10,11 @@ const getPassword1 = document.getElementById('password');
 const getPassword2 = document.getElementById('confirm-password');
 const password1ErrorDisplay = document.getElementById('password-error');
 const password2ErrorDisplay = document.getElementById('confirm-password-error');
+const getGender = document.querySelectorAll('input[name=gender]');
 
 const registerBtn = document.getElementById('register');
 
-let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = false;
+let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = genderValid = false;
 
 getFName.addEventListener('keyup', () => {
     const nameRegex = /^[a-zA-Z]+$/;
@@ -68,6 +69,15 @@ getUName.addEventListener('keyup', () => {
     shallEnableChecker();
 });
 
+for(const eachGender of getGender) {
+    eachGender.addEventListener('change', () => {
+        if(eachGender.checked) {
+            // console.log(eachGender.value);
+            genderValid = true;
+        }
+    });
+}
+
 getDob.addEventListener('change', () => {
     const dob = new Date(getDob.value);
     const ageDifMs = Date.now() - dob.getTime();
@@ -101,7 +111,6 @@ getPassword1.addEventListener('keyup', () => {
         getPassword2.disabled = false;
         getPassword2.style.background = 'none';
         pass1Valid = true;
-        console.log(pass1Valid, pass2Valid);
     }
     else {
         if (password.length < 8)
@@ -132,7 +141,6 @@ getPassword2.addEventListener('keyup', () => {
     if (getPassword2.value === '')
         password2ErrorDisplay.innerHTML = '';
     pass2Valid = true;
-    console.log(pass1Valid, pass2Valid);
     shallEnableChecker();
 });
 
@@ -147,7 +155,7 @@ getForm.addEventListener('submit', (e) => {
 // Age - At least 16 years old
 
 const shallEnableChecker = () => {
-    if (fnameValid && lnameValid && unameValid && pass1Valid && pass2Valid && dobValid)
+    if (fnameValid && lnameValid && unameValid && pass1Valid && pass2Valid && dobValid && genderValid)
         registerBtn.disabled = false;
     else
         return false;
