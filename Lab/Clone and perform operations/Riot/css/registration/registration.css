@@ -10,16 +10,45 @@
 }
 
 body {
-  background: url(../../static/registration/explore-hero-bg--large.jpg);
+  display: flex;
+  justify-content: center;
 }
 
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
+.container {
+  margin: 2rem 0;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: fit-content;
+  background: url(../../static/registration/explore-hero-bg--large.jpg);
+}
+.container .registration-card > p {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #fefefe;
+  text-transform: uppercase;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .registration-card > p::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 105%;
+  height: 2px;
+  background: #d13639;
+}
 .container .registration-card .form_group_slideUp {
   position: relative;
-  width: 50%;
+  width: 100%;
   padding: 15px 0 0;
   margin-top: 10px;
 }
