@@ -12,7 +12,9 @@
 
 body {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  margin: 0 2%;
+  background: url(../../static/registration/valo-7.png) repeat;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -20,9 +22,10 @@ body {
 }
 
 .container {
+  z-index: 999;
   margin: 2rem 0;
   border-radius: 5px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
   padding: 2rem;
   width: fit-content;
   background: url(../../static/registration/explore-hero-bg--large.jpg);
