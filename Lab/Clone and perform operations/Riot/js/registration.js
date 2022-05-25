@@ -93,6 +93,7 @@ getDob.addEventListener('change', () => {
     getAge.value = age > 0 ? age : 0;
     if (getAge.value < 16) {
         ageErrorDisplay.innerHTML = 'You must be atleast 16';
+        registerBtn.disabled = true;
         return false;
     }
     else
