@@ -149,6 +149,10 @@ input {
             padding: 15px 0 0;
             margin-top: 10px;
 
+            &>#age-error {
+                @include error;
+            }
+
             &>#fname-error {
                 @include error;
             }

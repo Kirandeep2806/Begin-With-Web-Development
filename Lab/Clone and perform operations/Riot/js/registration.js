@@ -11,6 +11,7 @@ const getPassword2 = document.getElementById('confirm-password');
 const password1ErrorDisplay = document.getElementById('password-error');
 const password2ErrorDisplay = document.getElementById('confirm-password-error');
 const getGender = document.querySelectorAll('input[name=gender]');
+const ageErrorDisplay = document.getElementById('age-error');
 
 const registerBtn = document.getElementById('register');
 const getForm = document.querySelector('.registration-card');
@@ -19,7 +20,7 @@ const agreeBtn = document.getElementById('agree');
 let fnameValid = lnameValid = unameValid = pass1Valid = pass2Valid = dobValid = genderValid = agreeValid = false;
 
 getFName.addEventListener('keyup', () => {
-    const nameRegex = /^[a-zA-Z]+$/;
+    const nameRegex = /^[a-zA-Z ]+$/;
     const fName = getFName.value;
     if (!nameRegex.test(fName)) {
         fNameErrorDisplay.innerHTML = 'First Name should be alphabetical';
@@ -27,6 +28,7 @@ getFName.addEventListener('keyup', () => {
     }
     else
         fNameErrorDisplay.innerHTML = '';
+    console.log(getFName.value);
     if (getFName.value == '')
         fNameErrorDisplay.innerHTML = '';
     fnameValid = true;
@@ -34,7 +36,7 @@ getFName.addEventListener('keyup', () => {
 });
 
 getLName.addEventListener('keyup', () => {
-    const nameRegex = /^[a-zA-Z]+$/;
+    const nameRegex = /^[a-zA-Z ]+$/;
     const lName = getLName.value;
     if (!nameRegex.test(lName)) {
         lNameErrorDisplay.innerHTML = 'Last Name should be alphabetical';
@@ -89,9 +91,17 @@ getDob.addEventListener('change', () => {
     const ageDate = new Date(ageDifMs);
     let age = ageDate.getUTCFullYear() - 1970;
     getAge.value = age > 0 ? age : 0;
+    if (getAge.value < 16) {
+        ageErrorDisplay.innerHTML = 'You must be atleast 16';
+        return false;
+    }
+    else
+        ageErrorDisplay.innerHTML = '';
     dobValid = true;
     shallEnableChecker();
 });
+
+
 
 // Password - At least 8 characters, atleast one special character and one number
 
@@ -139,6 +149,7 @@ getPassword1.addEventListener('keyup', () => {
 getPassword2.addEventListener('keyup', () => {
     if (getPassword1.value != getPassword2.value) {
         password2ErrorDisplay.innerHTML = 'Passwords do not match';
+        registerBtn.disabled = true;
         return false;
     }
     else
@@ -171,3 +182,20 @@ getForm.addEventListener('submit', (e) => {
     e.preventDefault();
     validation();
 });
+
+
+const validation = () => {
+    let p1 = document.userDetails.password;
+    let p2 = document.userDetails.confirmPassword;
+    let age = document.userDetails.age;
+
+    let msg = '';
+
+    if (p1.value !== p2.value)
+        msg += 'Passwords do not match';
+
+    if (age.value <= 0)
+        msg += 'Invalid Age';
+
+    confirm(msg);
+}
