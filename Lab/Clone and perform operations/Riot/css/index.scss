@@ -274,7 +274,7 @@ html {
     grid-template-columns: 57% 43%;
     padding-bottom: 5.5rem;
 
-    & > p {
+    &>p {
       margin: 4rem;
       font-size: 48px;
       font-weight: bold;
@@ -367,7 +367,7 @@ html {
       $COL-4-CARD-PAD: 3px;
       margin-right: 4rem;
 
-      & > div {
+      &>div {
         line-height: 1.2;
         letter-spacing: 0.5px;
         color: $PRIMARY-TEXT-COLOR;
@@ -392,13 +392,12 @@ html {
           margin-top: 0.4rem;
         }
 
-        & > div {
+        &>div {
           &:nth-child(2) {
             height: 100%;
             box-sizing: border-box;
             border-left: $SLANT-WIDTH solid #2b2a29;
-            border-bottom: calc($CARD-HEIGHT - 2 * $COL-4-CARD-PAD) solid
-              transparent;
+            border-bottom: calc($CARD-HEIGHT - 2 * $COL-4-CARD-PAD) solid transparent;
             margin-left: -3px;
             z-index: 99;
           }
@@ -745,18 +744,14 @@ html {
         &__makeSlant {
           width: inherit;
           height: 100%;
-          clip-path: polygon(
-            calc($X1-POS - 1%) 0%,
-            $X1-POS 0%,
-            $X2-POS 100%,
-            calc($X2-POS - 1%) 100%
-          );
-          shape-outside: polygon(
-            calc($X1-POS - 1%) 0%,
-            $X1-POS 0%,
-            $X2-POS 100%,
-            calc($X2-POS - 1%) 100%
-          );
+          clip-path: polygon(calc($X1-POS - 1%) 0%,
+              $X1-POS 0%,
+              $X2-POS 100%,
+              calc($X2-POS - 1%) 100%);
+          shape-outside: polygon(calc($X1-POS - 1%) 0%,
+              $X1-POS 0%,
+              $X2-POS 100%,
+              calc($X2-POS - 1%) 100%);
           float: right;
         }
 
@@ -793,13 +788,13 @@ html {
             background-color: #dfdede;
             transition: background-color 0.3s ease-in-out;
 
-            & > .number-count {
+            &>.number-count {
               font-family: "Mark Pro";
               font-size: 3rem;
               font-weight: bold;
             }
 
-            & > .designation {
+            &>.designation {
               font-family: "Mark Pro";
               font-weight: bold;
               font-size: 1.5rem;
@@ -812,11 +807,11 @@ html {
           }
         }
 
-        & > .explore-careers {
+        &>.explore-careers {
           text-align: center;
           margin-top: 1rem;
 
-          & > button {
+          &>button {
             cursor: pointer;
             font-family: "Mark Pro";
             font-size: 1.2rem;
@@ -844,12 +839,10 @@ html {
         transform: translateX(-$X2-POS);
         width: inherit;
         height: inherit;
-        clip-path: polygon(
-          $DIFF-OF-X1-X2 0%,
-          $X2-POS 0%,
-          $X2-POS 100%,
-          0% 100%
-        );
+        clip-path: polygon($DIFF-OF-X1-X2 0%,
+            $X2-POS 0%,
+            $X2-POS 100%,
+            0% 100%);
         background: url("../static/annie.jpg") no-repeat;
         background-size: cover;
       }
@@ -864,7 +857,7 @@ html {
       display: grid;
       grid-template-columns: 8% 80% 12%;
 
-      & > div {
+      &>div {
         &.footer-logo {
           a {
             svg {
@@ -885,7 +878,7 @@ html {
           column-gap: 1rem;
 
           a {
-            & > svg {
+            &>svg {
               cursor: pointer;
               @include common-for-svg(#656462, 1rem, 1rem);
 
@@ -925,7 +918,7 @@ html {
 
         &.social-handles {
           a {
-            & > svg {
+            &>svg {
               transition: fill 200ms ease-in-out;
 
               &:hover {
