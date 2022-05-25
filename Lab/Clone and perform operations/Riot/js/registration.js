@@ -122,6 +122,14 @@ getPassword1.addEventListener('keyup', () => {
     for (let match of password.matchAll(specialRegexp))
         specialCharacterCount++;
 
+    if(getPassword2.value && (getPassword1.value !== getPassword2.value)) {
+        password2ErrorDisplay.innerHTML = 'Passwords do not match';
+        registerBtn.disabled = true;
+        return false;
+    }
+    else
+        password2ErrorDisplay.innerHTML = '';
+
     if (password.length > 7 && alphaCount > 0 && numericCount > 0 && specialCharacterCount > 0) {
         password1ErrorDisplay.innerHTML = '';
         getPassword2.disabled = false;
