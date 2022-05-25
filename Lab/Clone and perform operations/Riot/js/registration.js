@@ -189,22 +189,4 @@ const shallEnableChecker = () => {
 
 getForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    validation();
 });
-
-
-const validation = () => {
-    let p1 = document.userDetails.password;
-    let p2 = document.userDetails.confirmPassword;
-    let age = document.userDetails.age;
-
-    let msg = '';
-
-    if (p1.value !== p2.value)
-        msg += 'Passwords do not match';
-
-    if (age.value <= 0)
-        msg += 'Invalid Age';
-
-    confirm(msg);
-}
