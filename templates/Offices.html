@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-image: url("saiteja.jpg");
+        height: 544px;
+        width: 100%;
+        border: 2px solid black;
+        background-size: cover;
+        background-position-y: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #center2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        /* background-color: red; */
+        color: white;
+    }
+
+    #center1 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+        background-color: rgb(207, 10, 10);
+        color: white;
+        padding: 10px;
+    }
+
+    body {
+        background: rgb(231, 230, 227);
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 0%;
+        /* border: 2px solid black; */
+    }
+
+    .matter {
+        text-align: center;
+        font-size: 30px;
+        padding-left: 150px;
+        padding-right: 150px;
+        margin: 0%;
+        padding-bottom: 100px;
+        /* border: 2px solid black; */
+    }
+
+    .container3 {
+        height: 950px;
+        width: 100%;
+        /* border: 2px solid black; */
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .item {
+        width: 300px;
+        height: 200px;
+        background-color: brown;
+        border: 2px solid green;
+        margin: 50px;
+        padding: 3px;
+    }
+    .item:hover{
+        transform: scale(1.5);
+    }
+
+    #item-1 {
+        background-image: url("adobestock-91600450.jpeg");
+        background-size: cover;
+    }
+
+    #item-2 {
+        background-image: url("barcelonia-spain.jpeg");
+        background-size: cover;
+    }
+
+    #item-3 {
+        background-image: url("Dubai-UAE.jpeg");
+        background-size: cover;
+    }
+
+    #item-4 {
+        background-image: url("dublin.jpeg");
+        background-size: cover;
+    }
+
+    #item-5 {
+        background-image: url("hongkong.jpeg");
+        background-size: cover;
+    }
+
+    #item-6 {
+        background-image: url("istanbul.jpeg");
+        background-size: cover;
+    }
+
+    #item-7 {
+        background-image: url("Los_angels.png");
+        background-size: cover;
+    }
+
+    #item-8 {
+        background-image: url("Mexico.jpeg");
+        background-size: cover;
+    }
+
+    #item-9 {
+        background-image: url("moscow.jpeg");
+        background-size: cover;
+    }
+
+    .container4 {
+        padding: 500px;
+        align-items: center;
+    }
+
+    .heading2 {
+        text-align: justify;
+        font-size: 80px;
+        padding-left: 360px;
+        padding-right: 360px;
+
+    }
+
+    .question {
+        text-align: justify;
+        font-size: 35px;
+        padding-left: 310px;
+        padding-right: 310px;
+        margin: 50px;
+        margin-bottom: 8px;
+        font-weight: 900;
+    }
+
+    .answer {
+        text-align: justify;
+        font-size: 25px;
+        padding-left: 360px;
+        padding-right: 360px;
+    }
+    .info{
+        font-size: 30px;
+        position: relative;
+        top: 220px;
+        align-items: center;
+        font-weight: bold;
+    }
+    .container5{
+        align-items: center;
+        padding-left: 360px;
+        margin-top: 20px;
+    }
+    .container5{
+        margin-top: 50px;
+    }
+    #questions{
+        border: 2px solid black;
+        padding: 15px;
+        color: red;
+        border-radius: 30px;
+    }
+    #questions:hover{
+        background-color: rgb(53, 52, 52);
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="center1">
+            CAREERS
+        </div>
+        <div id="center2">
+           <strong> OFFICES </strong>
+        </div>
+    </div>
+    <div class="container2">
+        <p class="heading"> <strong> Riot Games Around The World </strong></p>
+        <p class="matter">Riot’s HQ is in Los Angeles but we build and support games in offices around the world. Take a
+            tour through
+            all our offices and meet the Rioters who work there delivering value to players each and every day.</p>
+    </div>
+    <div class="container3">
+        <div class="flex">
+            <div class="item" id="item-1"><div class="info">Berlin-Germany</div></div>
+            <div class="item" id="item-2"><div class="info">barcelonia-spain</div></div>
+            <div class="item" id="item-3"><div class="info">Dubai-UAE</div></div>
+            <div class="item" id="item-4"><div class="info">dublin</div></div>
+            <div class="item" id="item-5"><div class="info">hongkong</div></div>
+            <div class="item" id="item-6"><div class="info">istanbul</div></div>
+            <div class="item" id="item-7"><div class="info">Los_angels</div></div>
+            <div class="item" id="item-8"><div class="info">Mexico</div></div>
+            <div class="item" id="item-9"><div class="info">moscow</div></div>
+        </div>
+    </div>
+    <div class="container-4">
+        <div class="heading2"> <strong> Frequently Asked Questions </strong></div>
+        <div class="question">I don't live in any of the cities with a Riot office. Is there an opportunity to work
+            remotely?</div>
+        <div class="answer">It's highly unlikely that we'll be able to consider you for a role that isn't based out of
+            one of the locations where we currently do business. If you're open to relocating, please make sure to
+            indicate that in your application.​</div>
+        <div class="question">I want to work at one of Riot's global offices but I’m not a citizen of that country. Is
+            that possible?</div>
+        <div class="answer">Working globally depends on the immigration restrictions of the relevant country/region. If
+            you apply to a role in a global office, those recruiting teams will respond if they see a match.</div>
+        <div class="question">I want to work at one of Riot's global offices but I’m not a citizen of that country. Is
+            that possible?</div>
+        <div class="answer">Working globally depends on the immigration restrictions of the relevant country/region. If
+            you apply to a role in a global office, those recruiting teams will respond if they see a match.</div>
+    </div>
+    <div class="container5">
+        <span id="questions"><a href="https://www.riotgames.com/en/faq">/ View all questions </a></span>
+    </div>
+</body>
+
+</html>
