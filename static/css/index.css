@@ -61,6 +61,15 @@ html {
   color: #f9f9f9;
 }
 
+#loader > svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 15rem;
+  width: 15rem;
+}
+
 .section-container__1 img {
   width: 100%;
   line-break: 0;
