@@ -59,16 +59,19 @@ html {
   color: #f9f9f9;
   z-index: 999;
 }
+
 .nav__list {
   display: flex;
   align-items: center;
   gap: 3.3rem;
   margin: 1rem;
 }
+
 .nav__listlogo {
   list-style: none;
 }
-.nav__listlogo .k-logo {
+
+.nav__listlogo a .k-logo {
   transition: fill 200ms ease-in-out;
   font-size: 13px;
   height: 27px;
@@ -76,14 +79,17 @@ html {
   fill: #f9f9f9;
   cursor: pointer;
 }
+
 .nav__listlogo .k-logo:hover {
   fill: #D13639;
   cursor: pointer;
 }
-a{
+
+a {
   color: white;
   text-decoration: none;
 }
+
 .nav__list-item {
   list-style: none;
   position: relative;
@@ -92,6 +98,7 @@ a{
   letter-spacing: 1px;
   cursor: pointer;
 }
+
 .nav__list-item:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -102,15 +109,19 @@ a{
   margin-left: 5px;
   transform: translateY(-80%);
 }
+
 .nav__list-item:hover {
   text-decoration: 2px underline #D13639;
   text-underline-offset: 0.5rem;
   transition: text-decoration 200ms ease-in-out;
 }
-.nav__list-item:hover ul, .nav__list-item:focus ul {
+
+.nav__list-item:hover ul,
+.nav__list-item:focus ul {
   opacity: 1;
   visibility: visible;
 }
+
 .nav__list-itemdrop {
   display: flex;
   flex-direction: column;
@@ -124,6 +135,7 @@ a{
   visibility: hidden;
   transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 }
+
 .nav__list-itemdrop li {
   margin: 0.5rem;
   text-transform: capitalize;
@@ -131,12 +143,14 @@ a{
   padding: 0.5rem;
   transition: background 200ms ease-in-out;
 }
+
 .nav__list-itemdrop li:hover {
   background: #333333;
   border-radius: 5px;
   color: #C7C7C7;
   cursor: pointer;
 }
+
 .nav__align-right {
   list-style: none;
   display: flex;
@@ -146,6 +160,7 @@ a{
   justify-content: flex-end;
   align-items: center;
 }
+
 .nav__align-right__lang .lang-icon {
   height: 1.2rem;
   width: 1.2rem;
@@ -153,6 +168,7 @@ a{
   cursor: pointer;
   margin-right: 1rem;
 }
+
 .nav__align-right__search {
   display: flex;
   width: 12rem;
@@ -163,6 +179,7 @@ a{
   margin-right: 1rem;
   z-index: 9999;
 }
+
 .nav__align-right__search .search-icon {
   margin-right: 0.4rem;
   height: 1.3rem;
@@ -170,6 +187,7 @@ a{
   fill: #fff;
   cursor: pointer;
 }
+
 .nav__align-right__search .search-box {
   color: #f9f9f9;
   border: none;
@@ -178,10 +196,12 @@ a{
   background-color: #2B2A29;
   width: 100%;
 }
+
 .nav__align-right__search .search-box::placeholder {
   color: #757575;
   text-transform: uppercase;
 }
+
 .nav__align-right__signin {
   background-color: #D13639;
   color: #111111;
@@ -191,6 +211,7 @@ a{
   padding: 0.6rem 1rem;
   cursor: pointer;
 }
+
 .nav__align-right__signin a {
   letter-spacing: 1px;
   font-size: 0.7rem;
@@ -200,11 +221,13 @@ a{
   text-decoration: none;
   font-weight: bold;
 }
+
 .nav__align-right__signin:hover {
   background-color: #f9f9f9;
   color: #D13639;
   transition: background-color 200ms ease-in-out;
 }
+
 
 .section-container__1 img {
   width: 100%;
@@ -364,7 +387,7 @@ a{
   right: 0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  background: url("../static/rg-fastco-award.png") no-repeat;
+  background: url("../images/index/rg-fastco-award.png") no-repeat;
   background-size: cover;
 }
 .section-container__2__col-4-cards-1__mainImage-1 svg {
@@ -415,7 +438,7 @@ a{
   right: 0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  background: url("../static/whm-riotnet-graphic.png") no-repeat;
+  background: url("../images/index/whm-riotnet-graphic.png") no-repeat;
   background-size: cover;
 }
 .section-container__2__col-4-cards-2__mainImage-2 svg {
@@ -466,7 +489,7 @@ a{
   right: 0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  background: url("../static/marquee-raze-thumb.png") no-repeat;
+  background: url("../images/index/marquee-raze-thumb.png") no-repeat;
   background-size: cover;
 }
 .section-container__2__col-4-cards-3__mainImage-3 svg {
@@ -517,7 +540,7 @@ a{
   right: 0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  background: url("../static/fortichexrg-4.png") no-repeat;
+  background: url("../images/index/fortichexrg-4.png") no-repeat;
   background-size: cover;
 }
 .section-container__2__col-4-cards-4__mainImage-4 svg {
@@ -785,7 +808,7 @@ a{
   width: inherit;
   height: inherit;
   clip-path: polygon(5% 0%, 50% 0%, 50% 100%, 0% 100%);
-  background: url("../static/annie.jpg") no-repeat;
+  background: url("../images/index/annie.jpg") no-repeat;
   background-size: cover;
 }
 .section-container__5 {
