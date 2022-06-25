@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Item</title>
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <style>
         h2 {
             font-size: 2rem;
@@ -22,58 +23,58 @@
 <body>
     <div class="container-fluid">
         <h2 class="text-center">Add Item</h2>
-        <form action="" method="post">
+        <form action="/push-data/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="form-group row">
                 <label for="fname" class="col-sm-3 col-md-2">Food Name</label>
                 <div class="col-sm-9 col-md-10">
-                    <input type="text" name="" id="fname" class="form-control" />
+                    <input type="text" name="fname" id="fname" class="form-control" />
                 </div>
             </div>
             <br>
             <div class="form-group row">
                 <label for="rname" class="col-sm-3 col-md-2">Restaurant Name</label>
                 <div class="col-sm-9 col-md-10">
-                    <input type="text" name="" id="rname" class="form-control" />
+                    <input type="text" name="rname" id="rname" class="form-control" />
                 </div>
             </div>
             <br>
             <div class="form-group row">
                 <label for="image" class="col-sm-3 col-md-2">Image</label>
                 <div class="col-sm-9 col-md-10">
-                    <input type="file" class="form-control" id="image" />
+                    <input type="file" class="form-control" id="image" name="image" accept=".png,.jpg,.jpeg,.svg,.gif" />
                 </div>
             </div>
             <br>
             <div class="form-group row">
                 <label for="place" class="col-sm-3 col-md-2">Place</label>
                 <div class="col-sm-9 col-md-10">
-                    <input type="text" name="" id="place" class="form-control" />
+                    <input type="text" name="place" id="place" class="form-control" />
                 </div>
             </div>
             <br>
             <div class="form-group row">
                 <label for="rating" class="col-sm-3 col-md-2">Rating</label>
                 <div class="col-sm-9 col-md-10">
-                    <input type="text" name="" id="rating" class="form-control" />
+                    <input type="text" name="rating" id="rating" class="form-control" />
                 </div>
             </div>
             <br>
             <div class="form-group row">
                 <label for="price" class="col-sm-3 col-md-2">Price</label>
                 <div class="col-sm-9 col-md-10">
-                    <input type="text" name="" id="price" class="form-control" />
+                    <input type="text" name="price" id="price" class="form-control" />
                 </div>
             </div>
             <br>
             <br>
             <div class="text-center row">
                 <p class="col-1"></p>
-                <input type="submit" value="UPLOAD" class="btn btn-primary col-10" />
+                <input type="submit" value="UPLOAD" class="btn btn-primary col-10" name="submit" />
                 <p class="col-1"></p>
             </div>
         </form>
     </div>
 </body>
-<script src="./bootstrap.min.js"></script>
 
 </html>
