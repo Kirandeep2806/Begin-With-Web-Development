@@ -5,7 +5,6 @@ from .models import Swiggy
 
 def home(request):
     swiggy = Swiggy.objects.all()
-    print(swiggy)
     return render(request, 'index.html', {'swiggy': swiggy})
 
 
@@ -36,9 +35,6 @@ def pushData(request):
                 itemToBeUpdated.image = request.FILES['image']
             itemToBeUpdated.save()
             return redirect('/')
-
-        print(request.POST)
-        print("***", request.FILES)
         data = Swiggy(restaurant=restaurant, food=food, place=place,
                       cost=cost, rating=rating, image=request.FILES['image'])
         data.save()
