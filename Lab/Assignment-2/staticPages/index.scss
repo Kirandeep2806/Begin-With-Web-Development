@@ -102,7 +102,7 @@ hr {
         &>img {
             object-fit: cover;
             width: 300px;
-            height: 200px;
+            // height: 250px;
             text-overflow: ellipsis;
             overflow: hidden;
             margin-bottom: 1rem;
@@ -131,6 +131,42 @@ hr {
 
             span {
                 color: #fff;
+            }
+        }
+
+        hr {
+            margin: 10px 0 !important;
+        }
+
+        .edit-delete {
+            $svgWidth: 2.2rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: .5rem 0;
+
+            a {
+                text-decoration: none;
+
+                svg {
+                    width: $svgWidth;
+                    padding: .5rem;
+
+                    &.edit {
+                        fill: #219ebc;
+                    }
+
+                    &.delete {
+                        fill: #d62828;
+                    }
+
+                    transition: 200ms ease-in;
+
+                    &:hover {
+                        background-color: rgba(224, 218, 218, 0.849);
+                        border-radius: 10px;
+                    }
+                }
             }
         }
     }
