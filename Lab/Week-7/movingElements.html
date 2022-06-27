@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Elements</title>
+</head>
+
+<body>
+    <img src="./icecream.jpg" alt="ice-cream" id="ice-cream"/>
+    <p id="pos"></p>
+</body>
+<script>
+    var x, y;
+    const inputCoordinates = () => {
+        x = parseInt(prompt("Enter the X co-ordinate value : "));
+        y = parseInt(prompt("Enter the Y co-ordinate value : "));
+    };
+    const iceCream = document.getElementById('ice-cream');
+    inputCoordinates();
+    if (x <= window.innerWidth && y <= window.innerHeight) {
+        iceCream.style.left = x + 'px';
+        iceCream.style.top = y + 'px';
+        iceCream.style.position = 'absolute';
+        document.getElementById('pos').innerHTML = `X : ${x}, Y : ${y}`;
+    } else {
+        alert("Invalid co-ordinates");
+    }
+</script>
+
+</html>
