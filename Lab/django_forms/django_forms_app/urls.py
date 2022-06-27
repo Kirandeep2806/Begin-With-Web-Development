@@ -19,4 +19,5 @@ from . import views
 
 urlpatterns = [
     path('', views.homePage, name="home-page"),
+    path('process-form/', views.processForm, name="process-form"),
 ]
