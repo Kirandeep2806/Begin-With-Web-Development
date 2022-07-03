@@ -10,13 +10,15 @@
 </head>
 
 <body>
-    <p>Kiran Deep</p>
+    <span>Mouse position : </span><span id="mouse-pos"></span>
+    <br>
     <a href="">First Link</a>
     <a href="">Second Link</a>
     <a href="">Third Link</a>
     <br>
     <br>
     <button id="f-btn">Hi Buddy</button>
+
 </body>
 <script>
     $(document).ready(() => {
@@ -32,6 +34,13 @@
                 $(element).text(index);
             });
         });
+    })
+    var mousePos = $('#mouse-pos');
+    $(document).mousemove((e) => {
+        mousePos.text(e.pageX + ',' + e.pageY);
+    })
+    $(document).click((e) => {
+        alert('Positions are : '+ e.pageX + ',' + e.pageY);
     })
 
 </script>
