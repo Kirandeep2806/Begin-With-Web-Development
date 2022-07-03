@@ -70,7 +70,8 @@
         })
 
         $('#hide-all').on('click', () => {
-            $('a, span, button:not(#hide-all)').toggle();
+            var temp = $('a, span, button:not(#hide-all)').toggle(3000);
+            console.log(temp);
         })
     })
 
