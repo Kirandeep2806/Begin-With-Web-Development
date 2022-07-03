@@ -12,7 +12,7 @@
 <body>
     <span>Mouse position : </span><span id="mouse-pos"></span>
     <br>
-    <a href="">First Link</a>
+    <a href="https://www.google.com">First Link</a>
     <a href="">Second Link</a>
     <a href="">Third Link</a>
     <br>
@@ -27,21 +27,26 @@
         btn.one('click', () => {
             console.log(anchors.text());
             anchors.each((index, element) => {
-                if(index == 0) {
+                if (index == 0) {
                     $(element).text('Kiran Deep');
                     return;
                 }
                 $(element).text(index);
             });
         });
-    })
-    var mousePos = $('#mouse-pos');
-    $(document).mousemove((e) => {
-        mousePos.text(e.pageX + ',' + e.pageY);
-    })
-    $(document).click((e) => {
-        alert('Positions are : '+ e.pageX + ',' + e.pageY);
+
+        var mousePos = $('#mouse-pos');
+        $(document).mousemove((e) => {
+            mousePos.text(e.pageX + ',' + e.pageY);
+        })
+        $(document).click((e) => {
+            alert('Positions are : ' + e.pageX + ',' + e.pageY);
+        })
+
+        console.log(anchors.attr('href'));
+
     })
 
 </script>
+
 </html>
