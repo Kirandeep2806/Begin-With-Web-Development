@@ -24,6 +24,8 @@
     <br>
     <button id="f-btn">Hi Buddy</button>
     <button id="switch-blue">Click Me to Change Color</button>
+    <br>
+    <button id="hide-all">Hide All except Me</button>
 
 </body>
 <script>
@@ -65,6 +67,10 @@
 
         $('#switch-blue').on('click', () => {
             $('body').toggleClass('change-color');
+        })
+
+        $('#hide-all').on('click', () => {
+            $('a, span, button:not(#hide-all)').toggle();
         })
     })
 
