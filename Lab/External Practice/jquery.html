@@ -43,7 +43,12 @@
             alert('Positions are : ' + e.pageX + ',' + e.pageY);
         })
 
-        console.log(anchors.attr('href'));
+        anchors.each((index, element) => {
+            $(element).attr('target', '_blank');
+            if($(element).attr('href'))
+                return;
+            $(element).attr('href', 'https://www.instagram.com');
+        })
 
     })
 
