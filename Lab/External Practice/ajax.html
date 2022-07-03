@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Demonstration</title>
+    <style>
+        table, td, tr, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Ajax</p>
+    <table id="data"></table>
+    <button id="btn">Click Me</button>
+</body>
+<script>
+    var button = document.getElementById("btn")
+    button.addEventListener('click', () => {
+        var xhr = new XMLHttpRequest()
+        var data = document.getElementById('data')
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                var json = JSON.parse(xhr.responseText)
+                console.log(json["student"].length);
+                for (let i = 0; i < json["student"].length; i++) {
+                    var tdata = document.createElement('td');
+                    var rows = document.createElement("tr");
+                    tdata.append(json["student"][i].fname)
+                    rows.append(tdata)
+                    data.append(rows)
+                }
+            }
+        }
+        xhr.open('GET', 'data.json', true)
+        xhr.send()
+    })
+</script>
+
+</html>
