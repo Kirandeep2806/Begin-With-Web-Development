@@ -22,11 +22,16 @@
     $(document).ready(() => {
         var anchors = $('a');
         var btn = $('#f-btn');
-        btn.click(() => {
+        btn.one('click', () => {
+            console.log(anchors.text());
             anchors.each((index, element) => {
+                if(index == 0) {
+                    $(element).text('Kiran Deep');
+                    return;
+                }
+
                 $(element).text(index);
             });
-            console.log(anchors.text());
         });
     })
 
