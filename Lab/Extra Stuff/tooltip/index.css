@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    /* display: block; */
+    margin: 1rem;
+    padding: .5rem 1rem;
+    font-size: .9rem;
+}
+
+[data-tool-tip] {
+    position: relative;
+}
+
+[data-tool-tip]:hover::after {
+    content: attr(data-tool-tip);
+    position: absolute;
+    background-color: rgba(124, 122, 119, 0.4);
+    padding: 2px 12px;
+    border-radius: 3px;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+
+
+
