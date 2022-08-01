@@ -20,14 +20,10 @@ button {
     content: attr(data-tool-tip);
     position: absolute;
     background-color: rgba(124, 122, 119, 0.4);
-    padding: 2px 12px;
+    padding: 4px 12px;
     border-radius: 3px;
     top: calc(100% + 5px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
 }
-
-
-
-
